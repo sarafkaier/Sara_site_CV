@@ -1,10 +1,17 @@
+<?php
+require 'connexion.php';
+?>
 <!DOCTYPE html>
 <html lang="fr">
     <head>
         <meta charset="utf-8">
-        <title>Admin : prénom nom</title>
+        <?php
+        $resultat = $pdo -> query('SELECT * FROM t_utilisateurs');
+        $ligne_utilisateur = $resultat -> fetch();
+        ?>
+        <title>Admin : <?= ($ligne_utilisateur['pseudo']); ?></title>
     </head>
     <body>
-        <h1>Admin</h1>
+        <h1>Admin : <?= ($ligne_utilisateur['pseudo']); ?></h1>
     </body>
 </html>
