@@ -12,6 +12,6 @@ require 'connexion.php';
         <title>Admin : <?= ($ligne_utilisateur['pseudo']); ?></title>
     </head>
     <body>
-        <h1>Admin : <?= ($ligne_utilisateur['pseudo']); ?></h1>
+        <h1>Admin : <?= ($ligne_utilisateur['prenom']); ?></h1>
     </body>
 </html>
