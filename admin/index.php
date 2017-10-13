@@ -6,7 +6,7 @@ require 'connexion.php';
     <head>
         <meta charset="utf-8">
         <?php
-        $resultat = $pdo -> query('SELECT * FROM t_utilisateurs');
+        $resultat = $pdo -> query("SELECT * FROM t_utilisateurs WHERE id_utilisateur = '1'");
         $ligne_utilisateur = $resultat -> fetch();
         ?>
         <title>Admin : <?= ($ligne_utilisateur['pseudo']); ?></title>
@@ -15,9 +15,6 @@ require 'connexion.php';
         <h1>Admin : <?= ($ligne_utilisateur['prenom']); ?></h1>
         <p>texte</p>
         <hr>
-        <?php
-        $resultat = $pdo -> query('SELECT * FROM t_competences');
-        $ligne_competence = $resultat -> fetch();
-        ?>
+        <h2>Accueil admin</h2>
     </body>
 </html>

@@ -1,2 +1,47 @@
 @charset "UTF-8";
 /*CSS Document admin sara*/
+
+table{
+    border-radius: 7px;
+    box-shadow: 11px 11px 4px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border: 0px;
+}
+
+th{
+    padding: 10px;
+}
+
+td{
+    padding: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: #000249;
+}
+
+h1{
+    font-family: 'Concert One', cursive;
+}
+
+h2{
+    font-family: 'Concert One', cursive;
+    margin-left: 727px;
+}
+
+.conteneur{
+    margin-left: 641px;
+}
+
+.titre{
+    margin-left: 156px;
+    margin-top: 3px;
+    font-family: 'Concert One', cursive;
+}
+
+.competence{
+    position: absolute;
+    left: 665px;
+    top: 147px;
+}
