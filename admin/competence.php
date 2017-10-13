@@ -17,7 +17,7 @@ if (isset($_POST['competence'])) { // Si on a posté une nouvelle comp.
 
     } // ferme le if n'est pas vide
     else {
-        $msg .= '<p style="padding:5px; background:#6A0000; color:white; width:12%">Veuillez renseigner les champs ! :)</p>';
+        $msg .= '<p style="padding:5px; background:#6A0000; color:white; width:12%">Veuillez renseigner les champs ! </p>';
     }
 
 } // ferme le if(isset) du form
