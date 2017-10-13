@@ -13,5 +13,11 @@ require 'connexion.php';
     </head>
     <body>
         <h1>Admin : <?= ($ligne_utilisateur['prenom']); ?></h1>
+        <p>texte</p>
+        <hr>
+        <?php
+        $resultat = $pdo -> query('SELECT * FROM t_competences');
+        $ligne_competence = $resultat -> fetch();
+        ?>
     </body>
 </html>
