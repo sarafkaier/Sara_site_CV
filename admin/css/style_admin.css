@@ -1,12 +1,22 @@
 @charset "UTF-8";
 /*CSS Document admin sara*/
 
+
 table{
     border-radius: 7px;
     box-shadow: 11px 11px 4px rgba(0, 0, 0, 0.2);
     padding: 10px;
     border: 0px;
 }
+
+.table2{
+    border-radius: 7px;
+    box-shadow: 11px 11px 4px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border: 0px;
+    margin-left: 48px;
+}
+
 
 th{
     padding: 10px;
@@ -21,14 +31,29 @@ a{
     color: #000249;
 }
 
-h1{
-    font-family: 'Concert One', cursive;
+.btn-danger{
+    margin-left: 23px;
 }
 
 h2{
     font-family: 'Concert One', cursive;
+    margin-left: 797px;
+}
+
+.titre{
+    font-family: 'Concert One', cursive;
     margin-left: 727px;
 }
+
+.row{
+    margin-left: 712px;
+}
+/*
+h1{
+    font-family: 'Concert One', cursive;
+}
+
+
 
 .conteneur{
     margin-left: 641px;
@@ -40,8 +65,33 @@ h2{
     font-family: 'Concert One', cursive;
 }
 
+.titre2{
+    font-family: 'Concert One', cursive;
+    margin-left: 752px;
+}
+
 .competence{
     position: absolute;
-    left: 665px;
-    top: 147px;
+    left: 642px;
+    top: 122px;
 }
+
+.loisir{
+    position: absolute;
+    left: 712px;
+    top: 110px;
+}
+
+form{
+    margin-left: 485px;
+    width: 40%;
+    margin-top: 50px;
+}
+
+fieldset{
+    text-align: center;
+    font-size: 20px;
+}
+
+
+*/
