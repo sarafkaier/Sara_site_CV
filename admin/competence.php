@@ -54,7 +54,7 @@ if (isset($_GET['id_competence'])) { // on récupère la comp. par son id dans l
     <link rel="stylesheet" href="css/style_admin.css">
 </head>
 <body>
-    <h1>Admin : <?= ($ligne_utilisateur['prenom']); ?></h1>
+    <?php include ('nav.inc.php'); ?>
     <hr>
     <?php
     $resultat = $pdo -> prepare("SELECT * FROM t_competences WHERE utilisateur_id ='1'");
@@ -63,61 +63,70 @@ if (isset($_GET['id_competence'])) { // on récupère la comp. par son id dans l
 
     // $ligne_competence = $resultat -> fetch();
     ?>
-    <div class="conteneur">
-
-            <div class="col-md-12">
+    <div class="container">
+        <div class="page-header">
+            <h1>Admin : <?= ($ligne_utilisateur['prenom']); ?></h1>
+        </div>
+        <!-- Fil d'ariane -->
+        <ol class="breadcrumb">
+            <li><a href="index.php">Accueil</a></li>
+            <li><a href="#">Parcours</a></li>
+            <li class="active">Compétences</li>
+        </ol>
+        <div class="row">
+            <div class="col-md-8">
                 <h2>Les compétences :</h2>
+                <h4 class="well">J'ai <?= $nbr_competences;?> compétence<?= ($nbr_competences>1)?'s':''?></h4>
+            </div>
             <div class="row">
-                <h4>J'ai <?= $nbr_competences;?> compétence<?= ($nbr_competences>1)?'s':''?></h4>
+                <div class="col-md-8">
+                    <table border="2" class="table table-condensed table-hover">
+                        <tr>
+                            <th>Compétences</th>
+                            <th>Niveau en %</th>
+                            <th>Suppression</th>
+                            <th>Modification</th>
+                        </tr>
+                        <tr>
+                            <?php while ($ligne_competence = $resultat -> fetch()) { ?>
+                                <td><?= $ligne_competence['competence'];?></td>
+                                <td><?= $ligne_competence['c_niveau'];?></td>
+                                <td><a href="competence.php?id_competence=<?= $ligne_competence['id_competence'];?>"><button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></a></td>
+                                <td><a href="modif_competence.php?id_competence=<?= $ligne_competence['id_competence'];?>"><button type="button" class="btn btn-success"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button></a></td>
+                            </tr>
+                            <?php } ?>
+                        </table>
+                </div>
+            <div class="col-md-4">
+                <div class="panel panel-info">
+                    <div class="panel-body">
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <div>Insertion d'une compétence :</div>
+                            </div>
+                        </div>
+                            <form action="competence.php" method="post">
+                                <fieldset>
+                                    <?= $msg; ?>
+                                    <div class="form-group">
+                                        <label for="disabledSelect">Compétence</label>
+                                        <input type="text" name="competence" id="competence" placeholder="Insérer une compétence"  class="form-control">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="disabledSelect">Niveau</label>
+                                        <input type="text" name="c_niveau" id="c_niveau" placeholder="Insérer le niveau"  class="form-control">
+                                    </div>
+
+                                    <input type="submit" class="btn btn-primary" value="Insérez">
+
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <div class="row">
-
-            <table border="2">
-                <tr>
-                    <th>Compétences</th>
-                    <th>Niveau en %</th>
-                    <th>Suppression</th>
-                    <th>Modification</th>
-                </tr>
-
-                <tr>
-                    <?php while ($ligne_competence = $resultat -> fetch()) { ?>
-                        <td><?= $ligne_competence['competence'];?></td>
-                        <td><?= $ligne_competence['c_niveau'];?></td>
-                        <td><a href="competence.php?id_competence=<?= $ligne_competence['id_competence'];?>"><button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></a></td>
-                        <td><a href="modif_competence.php?id_competence=<?= $ligne_competence['id_competence'];?>">Modifier</a></td>
-                    </tr>
-                <?php } ?>
-
-            </table><br>
-
-        </div>
     </div>
-
-        <hr>
-
-        <h2 class="titre">Insertion d'une compétence :</h2>
-
-        <form action="competence.php" method="post">
-            <fieldset>
-                <legend>Compétence</legend><br>
-                <?= $msg; ?>
-                <input type="text" name="competence" id="competence" placeholder="Insérer une compétence"><br><br>
-
-                <input type="text" name="c_niveau" id="c_niveau" placeholder="Insérer le niveau"><br><br>
-
-                <input type="submit" value="Insérez">
-
-            </fieldset>
-        </form>
-
-
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="js/bootstrap.min.js"></script>
-
-    </body>
-    </html>
+    <hr>
+    <?php include ('footer.inc.php'); ?>

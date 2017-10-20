@@ -2,7 +2,7 @@
 /*CSS Document admin sara*/
 
 
-table{
+/*table{
     border-radius: 7px;
     box-shadow: 11px 11px 4px rgba(0, 0, 0, 0.2);
     padding: 10px;
@@ -29,13 +29,36 @@ td{
 a{
     text-decoration: none;
     color: #000249;
+}*/
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #222222;
+  text-align: center;
 }
 
 .btn-danger{
-    margin-left: 23px;
+    margin-left: 60px;
 }
 
-h2{
+.btn-success{
+    margin-left: 60px;
+}
+
+
+/*h2{
     font-family: 'Concert One', cursive;
     margin-left: 797px;
 }
@@ -47,7 +70,9 @@ h2{
 
 .row{
     margin-left: 712px;
-}
+}*/
+
+
 /*
 h1{
     font-family: 'Concert One', cursive;
@@ -76,11 +101,7 @@ h1{
     top: 122px;
 }
 
-.loisir{
-    position: absolute;
-    left: 712px;
-    top: 110px;
-}
+
 
 form{
     margin-left: 485px;
