@@ -129,4 +129,4 @@ if (isset($_GET['id_competence'])) { // on récupère la comp. par son id dans l
         </div>
     </div>
     <hr>
-    <?php include ('footer.inc.php'); ?>
+    <?php include('footer.inc.php'); ?>
