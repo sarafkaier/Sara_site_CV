@@ -75,7 +75,7 @@ if (isset($_GET['id_loisir'])) { // on récupère la comp. par son id dans l'url
     <div class="row">
         <div class="col-md-8">
             <h2>Les loisirs :</h2>
-            <h4 class="well">J'ai <?= $nbr_loisirs;?> compétence<?= ($nbr_loisirs>1)?'s':''?></h4>
+            <h4 class="well">J'ai <?= $nbr_loisirs;?> loisir<?= ($nbr_loisirs>1)?'s':''?></h4>
         </div>
         <div class="row">
             <div class="col-md-8">
