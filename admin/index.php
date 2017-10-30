@@ -24,7 +24,7 @@
     <![endif]-->
   </head>
   <body>
-      <?php include ('nav.inc.php'); ?>
+      <?php include('inc/nav.inc.php'); ?>
       <h1>Admin : <?= ($ligne_utilisateur['prenom']); ?></h1>
       <hr>
       <h2>Accueil admin</h2>

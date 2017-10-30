@@ -54,7 +54,7 @@ if (isset($_GET['id_competence'])) { // on récupère la comp. par son id dans l
     <link rel="stylesheet" href="css/style_admin.css">
 </head>
 <body>
-    <?php include ('nav.inc.php'); ?>
+    <?php include('inc/nav.inc.php'); ?>
     <hr>
     <?php
     $resultat = $pdo -> prepare("SELECT * FROM t_competences WHERE utilisateur_id ='1'");
@@ -129,4 +129,4 @@ if (isset($_GET['id_competence'])) { // on récupère la comp. par son id dans l
         </div>
     </div>
     <hr>
-    <?php include('footer.inc.php'); ?>
+    <?php include('inc/footer.inc.php'); ?>
