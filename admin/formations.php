@@ -20,7 +20,7 @@ if (isset($_POST['f_titre'])) { // Si on a posté une nouvelle form.
       exit();
     }
     else {
-        $msg .= '<p style="background:#6A0000; color:white; width:48%">Veuillez renseigner le champs !</p>';
+        $msg .= '<p style="background:#6A0000; color:white; width:72%">Veuillez renseigner les champs !</p>';
     }
 } // ferme le if(isset) du form
 
