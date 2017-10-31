@@ -109,7 +109,7 @@ $ligne_utilisateur = $resultat->fetch();
 
                           <input hidden name="id_utilisateur" value="<?= $ligne_utilisateur['id_utilisateur']; ?>">
 
-                          <input type="submit" class="btn btn-wwarning" value="Mettre à jour">
+                          <input type="submit" class="btn btn-warning" value="Mettre à jour">
                       </form>
                     </div>
                 </div>
