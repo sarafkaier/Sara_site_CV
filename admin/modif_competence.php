@@ -28,24 +28,46 @@ $ligne_competence = $resultat->fetch();
         $ligne_utilisateur = $resultat -> fetch();
         ?>
         <title>Admin : <?= $ligne_utilisateur['pseudo']; ?></title>
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <link href="https://fonts.googleapis.com/css?family=Concert+One" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/style_admin.css">
     </head>
     <body>
         <h1>Admin : <?= $ligne_utilisateur['prenom']; ?></h1>
-        <p>texte</p>
         <hr>
-        <h2>Modification d'une compétence</h2>
-        <p><b><?= $ligne_competence['competence']; ?></p>
+        <h2 class="well">Modification d'une compétence</h2><br>
+        <div class="col-md-4">
+            <div class="panel panel-warning">
+                <div class="panel-body">
+                    <div class="panel panel-warning">
+                        <div class="panel-heading">
+                            <div><?= $ligne_competence['competence']; ?></div>
+                        </div>
+                    </div>
+                      <form action="modif_competence.php" method="post">
 
-        <form action="modif_competence.php" method="post">
+                        <div class="form-group">
+                          <label for="competence">Compétence :</label><br><br>
+                          <input type="text" name="competence" value="<?= $ligne_competence['competence']; ?>"><br><br>
+                        </div>
 
-            <label for="competence">Compétence :</label><br><br>
-            <input type="text" name="competence" value="<?= $ligne_competence['competence']; ?>"><br><br>
+                        <div class="form-group">
+                          <input type="number" name="c_niveau" value="<?= $ligne_competence['c_niveau']; ?>"><br><br>
+                        </div>
 
-            <input type="number" name="c_niveau" value="<?= $ligne_competence['c_niveau']; ?>"><br><br>
+                        <div class="form-group">
+                          <input hidden name="id_competence" value="<?= $ligne_competence['id_competence']; ?>">
+                        </div>
 
-            <input hidden name="id_competence" value="<?= $ligne_competence['id_competence']; ?>">
-
-            <input type="submit" value="Mettre à jour">
-        </form>
-    </body>
+                          <input type="submit" class="btn btn-warning" value="Mettre à jour">
+                      </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
 </html>

@@ -36,49 +36,85 @@ $ligne_utilisateur = $resultat->fetch();
         $ligne_utilisateur = $resultat -> fetch();
         ?>
         <title>Admin : <?= $ligne_utilisateur['pseudo']; ?></title>
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <link href="https://fonts.googleapis.com/css?family=Concert+One" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/style_admin.css">
     </head>
     <body>
         <h1>Admin : <?= $ligne_utilisateur['prenom']; ?></h1>
-        <p>texte</p>
         <hr>
-        <h2>Modification d'un utilisateur</h2>
-        <p><b><?= $ligne_utilisateur['prenom']; ?></p>
+        <h2 class="well">Modification d'un utilisateur</h2>
+        <div class="col-md-4">
+            <div class="panel panel-warning">
+                <div class="panel-body">
+                    <div class="panel panel-warning">
+                        <div class="panel-heading">
+                          <div><?= $ligne_utilisateur['prenom']; ?></div>
+                        </div>
+                    </div>
+                      <form action="modif_utilisateur.php" method="post">
 
-        <form action="modif_utilisateur.php" method="post">
+                          <div class="form-group">
+                            <label for="prenom">Prenom :</label><br>
+                            <input type="text" name="prenom" value="<?= $ligne_utilisateur['prenom']; ?>"><br><br>
+                          </div>
 
-            <label for="prenom">Prenom :</label><br><br>
-            <input type="text" name="prenom" value="<?= $ligne_utilisateur['prenom']; ?>"><br><br>
+                          <div class="form-group">
+                            <label for="Nom">Nom :</label><br>
+                            <input type="text" name="nom" value="<?= $ligne_utilisateur['nom']; ?>"><br><br>
+                          </div>
 
-            <label for="Nom">Nom :</label><br><br>
-            <input type="text" name="nom" value="<?= $ligne_utilisateur['nom']; ?>"><br><br>
+                          <div class="form-group">
+                            <label for="email">Email :</label><br>
+                            <input type="text" name="email" value="<?= $ligne_utilisateur['email']; ?>"><br><br>
+                          </div>
 
-            <label for="email">Email :</label><br><br>
-            <input type="text" name="email" value="<?= $ligne_utilisateur['email']; ?>"><br><br>
+                          <div class="form-group">
+                            <label for="telephone">Téléphone :</label><br>
+                            <input type="number" name="telephone" value="<?= $ligne_utilisateur['telephone']; ?>"><br><br>
+                          </div>
 
-            <label for="telephone">Téléphone :</label><br><br>
-            <input type="number" name="telephone" value="<?= $ligne_utilisateur['telephone']; ?>"><br><br>
+                          <div class="form-group">
+                            <label for="pseudo">Pseudo :</label><br>
+                            <input type="text" name="pseudo" value="<?= $ligne_utilisateur['pseudo']; ?>"><br><br>
+                          </div>
 
-            <label for="pseudo">Pseudo :</label><br><br>
-            <input type="text" name="pseudo" value="<?= $ligne_utilisateur['pseudo']; ?>"><br><br>
+                          <div class="form-group">
+                            <label for="age">Age :</label><br>
+                            <input type="number" name="age" value="<?= $ligne_utilisateur['age']; ?>"><br><br>
+                          <div class="form-group">
 
-            <label for="age">Age :</label><br><br>
-            <input type="number" name="age" value="<?= $ligne_utilisateur['age']; ?>"><br><br>
+                          <div class="form-group">
+                            <label for="adresse">Adresse :</label><br>
+                            <input type="text" name="adresse" value="<?= $ligne_utilisateur['adresse']; ?>"><br><br>
+                          </div>
 
-            <label for="adresse">Adresse :</label><br><br>
-            <input type="text" name="adresse" value="<?= $ligne_utilisateur['adresse']; ?>"><br><br>
+                          <div class="form-group">
+                            <label for="code_postal">Code postal :</label><br>
+                            <input type="number" name="code_postal" value="<?= $ligne_utilisateur['code_postal']; ?>"><br><br>
+                          </div>
 
-            <label for="code_postal">Code postal :</label><br><br>
-            <input type="number" name="code_postal" value="<?= $ligne_utilisateur['code_postal']; ?>"><br><br>
+                          <div class="form-group">
+                            <label for="ville">Ville :</label><br>
+                            <input type="text" name="ville" value="<?= $ligne_utilisateur['ville']; ?>"><br><br>
+                          </div>
 
-            <label for="ville">Ville :</label><br><br>
-            <input type="text" name="ville" value="<?= $ligne_utilisateur['ville']; ?>"><br><br>
+                          <div class="form-group">
+                            <label for="pays">Pays :</label><br>
+                            <input type="text" name="pays" value="<?= $ligne_utilisateur['pays']; ?>"><br><br>
+                          </div>
 
-            <label for="pays">Pays :</label><br><br>
-            <input type="text" name="pays" value="<?= $ligne_utilisateur['pays']; ?>"><br><br>
+                          <input hidden name="id_utilisateur" value="<?= $ligne_utilisateur['id_utilisateur']; ?>">
 
-            <input hidden name="id_utilisateur" value="<?= $ligne_utilisateur['id_utilisateur']; ?>">
-
-            <input type="submit" value="Mettre à jour">
-        </form>
-    </body>
+                          <input type="submit" class="btn btn-wwarning" value="Mettre à jour">
+                      </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </body>
 </html>

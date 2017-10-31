@@ -30,31 +30,55 @@ $ligne_formation = $resultat->fetch();
         $ligne_utilisateur = $resultat -> fetch();
         ?>
         <title>Admin : <?= $ligne_utilisateur['pseudo']; ?></title>
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <link href="https://fonts.googleapis.com/css?family=Concert+One" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/style_admin.css">
     </head>
     <body>
         <h1>Admin : <?= $ligne_utilisateur['prenom']; ?></h1>
-        <p>texte</p>
         <hr>
-        <h2>Modification d'une formation</h2>
-        <p><b><?= $ligne_formation['f_titre']; ?></p>
+        <h2 class="well">Modification d'une formation</h2>
+        <div class="col-md-4">
+            <div class="panel panel-warning">
+                <div class="panel-body">
+                    <div class="panel panel-warning">
+                        <div class="panel-heading">
+                          <div><?= $ligne_formation['f_titre']; ?></div>
+                        </div>
+                    </div>
+                      <form action="modif_formation.php" method="post">
 
-        <form action="modif_formation.php" method="post">
+                          <div class="form-group">
+                            <label for="f_titre">Titre :</label><br>
+                            <input type="text" name="f_titre" value="<?= $ligne_formation['f_titre']; ?>"><br><br>
+                          </div>
 
-            <label for="f_titre">Titre :</label><br><br>
-            <input type="text" name="f_titre" value="<?= $ligne_formation['f_titre']; ?>"><br><br>
+                          <div class="form-group">
+                            <label for="f_soustitre">Soustitre :</label><br>
+                            <input type="text" name="f_soustitre" value="<?= $ligne_formation['f_soustitre']; ?>"><br><br>
+                          </div>
 
-            <label for="f_soustitre">Soustitre :</label><br><br>
-            <input type="text" name="f_soustitre" value="<?= $ligne_formation['f_soustitre']; ?>"><br><br>
+                          <div class="form-group">
+                            <label for="f_dates">Dates :</label><br>
+                            <input type="text" name="f_dates" value="<?= $ligne_formation['f_dates']; ?>"><br><br>
+                          </div>
 
-            <label for="f_dates">Dates :</label><br><br>
-            <input type="text" name="f_dates" value="<?= $ligne_formation['f_dates']; ?>"><br><br>
+                          <div class="form-group">
+                            <label for="f_description">Description :</label><br>
+                            <input type="text" name="f_description" value="<?= $ligne_formation['f_description']; ?>"><br><br>
+                          </div>
 
-            <label for="f_description">Description :</label><br><br>
-            <input type="text" name="f_description" value="<?= $ligne_formation['f_description']; ?>"><br><br>
+                          <input hidden name="id_formation" value="<?= $ligne_formation['id_formation']; ?>">
 
-            <input hidden name="id_formation" value="<?= $ligne_formation['id_formation']; ?>">
-
-            <input type="submit" value="Mettre à jour">
-        </form>
-    </body>
+                          <input type="submit" class="btn btn-warning" value="Mettre à jour">
+                      </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
 </html>

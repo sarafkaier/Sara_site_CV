@@ -27,22 +27,41 @@ $ligne_loisir = $resultat->fetch();
         $ligne_utilisateur = $resultat -> fetch();
         ?>
         <title>Admin : <?= $ligne_utilisateur['pseudo']; ?></title>
+        <title>Admin : <?= $ligne_utilisateur['pseudo']; ?></title>
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <link href="https://fonts.googleapis.com/css?family=Concert+One" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/style_admin.css">
     </head>
     <body>
         <h1>Admin : <?= $ligne_utilisateur['prenom']; ?></h1>
-        <p>texte</p>
         <hr>
-        <h2>Modification d'un loisir</h2>
-        <p><b><?= $ligne_loisir['loisir']; ?></p>
+        <h2 class="well">Modification d'un loisir</h2>
+        <div class="col-md-4">
+            <div class="panel panel-warning">
+                <div class="panel-body">
+                    <div class="panel panel-warning">
+                        <div class="panel-heading">
+                          <div><?= $ligne_loisir['loisir']; ?></div>
+                        </div>
+                    </div>
+                      <form action="modif_loisir.php" method="post">
 
-        <form action="modif_loisir.php" method="post">
+                          <div class="form-group">
+                            <label for="loisir">Loisir :</label><br>
+                            <input type="text" name="loisir" value="<?= $ligne_loisir['loisir']; ?>"><br><br>
+                          </div>
 
-            <label for="loisir">Loisir :</label><br><br>
-            <input type="text" name="loisir" value="<?= $ligne_loisir['loisir']; ?>"><br><br>
+                          <input hidden name="id_loisir" value="<?= $ligne_loisir['id_loisir']; ?>">
 
-            <input hidden name="id_loisir" value="<?= $ligne_loisir['id_loisir']; ?>">
-
-            <input type="submit" value="Mettre à jour">
-        </form>
-    </body>
+                          <input type="submit" class="btn btn-warning" value="Mettre à jour">
+                      </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </body>
 </html>

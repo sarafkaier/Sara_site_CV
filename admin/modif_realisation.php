@@ -30,31 +30,55 @@ $ligne_realisation = $resultat->fetch();
         $ligne_utilisateur = $resultat -> fetch();
         ?>
         <title>Admin : <?= $ligne_utilisateur['pseudo']; ?></title>
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <link href="https://fonts.googleapis.com/css?family=Concert+One" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/style_admin.css">
     </head>
     <body>
         <h1>Admin : <?= $ligne_utilisateur['prenom']; ?></h1>
-        <p>texte</p>
         <hr>
-        <h2>Modification d'une réalisation</h2>
-        <p><b><?= $ligne_realisation['r_titre']; ?></p>
+        <h2 class="well">Modification d'une réalisation</h2>
+        <div class="col-md-4">
+            <div class="panel panel-warning">
+                <div class="panel-body">
+                    <div class="panel panel-warning">
+                        <div class="panel-heading">
+                          <div><?= $ligne_realisation['r_titre']; ?></div>
+                        </div>
+                    </div>
+                      <form action="modif_realisation.php" method="post">
 
-        <form action="modif_realisation.php" method="post">
+                          <div class="form-group">
+                            <label for="r_titre">Titre :</label><br><br>
+                            <input type="text" name="r_titre" value="<?= $ligne_realisation['r_titre']; ?>"><br><br>
+                          </div>
 
-            <label for="r_titre">Titre :</label><br><br>
-            <input type="text" name="r_titre" value="<?= $ligne_realisation['r_titre']; ?>"><br><br>
+                          <div class="form-group">
+                            <label for="r_soustitre">Soustitre :</label><br><br>
+                            <input type="text" name="r_soustitre" value="<?= $ligne_realisation['r_soustitre']; ?>"><br><br>
+                          </div>
 
-            <label for="r_soustitre">Soustitre :</label><br><br>
-            <input type="text" name="r_soustitre" value="<?= $ligne_realisation['r_soustitre']; ?>"><br><br>
+                          <div class="form-group">
+                            <label for="r_dates">Dates :</label><br><br>
+                            <input type="text" name="r_dates" value="<?= $ligne_realisation['r_dates']; ?>"><br><br>
+                          </div>
 
-            <label for="r_dates">Dates :</label><br><br>
-            <input type="text" name="r_dates" value="<?= $ligne_realisation['r_dates']; ?>"><br><br>
+                          <div class="form-group">
+                            <label for="f_description">Description :</label><br><br>
+                            <input type="text" name="r_description" value="<?= $ligne_realisation['r_description']; ?>"><br><br>
+                          </div>
 
-            <label for="f_description">Description :</label><br><br>
-            <input type="text" name="r_description" value="<?= $ligne_realisation['r_description']; ?>"><br><br>
+                          <input hidden name="id_realisation" value="<?= $ligne_realisation['id_realisation']; ?>">
 
-            <input hidden name="id_realisation" value="<?= $ligne_realisation['id_realisation']; ?>">
-
-            <input type="submit" value="Mettre à jour">
-        </form>
-    </body>
+                          <input type="submit" class="btn btn-warning" value="Mettre à jour">
+                      </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </body>
 </html>
