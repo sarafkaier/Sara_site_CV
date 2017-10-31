@@ -50,11 +50,12 @@ $ligne_competence = $resultat->fetch();
                       <form action="modif_competence.php" method="post">
 
                         <div class="form-group">
-                          <label for="competence">Compétence :</label><br><br>
+                          <label for="competence">Compétence :</label><br>
                           <input type="text" name="competence" value="<?= $ligne_competence['competence']; ?>"><br><br>
                         </div>
 
                         <div class="form-group">
+                          <label for="competence">Niveau en % :</label><br>
                           <input type="number" name="c_niveau" value="<?= $ligne_competence['c_niveau']; ?>"><br><br>
                         </div>
 

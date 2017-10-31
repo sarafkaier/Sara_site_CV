@@ -52,22 +52,22 @@ $ligne_realisation = $resultat->fetch();
                       <form action="modif_realisation.php" method="post">
 
                           <div class="form-group">
-                            <label for="r_titre">Titre :</label><br><br>
+                            <label for="r_titre">Titre :</label><br>
                             <input type="text" name="r_titre" value="<?= $ligne_realisation['r_titre']; ?>"><br><br>
                           </div>
 
                           <div class="form-group">
-                            <label for="r_soustitre">Soustitre :</label><br><br>
+                            <label for="r_soustitre">Soustitre :</label><br>
                             <input type="text" name="r_soustitre" value="<?= $ligne_realisation['r_soustitre']; ?>"><br><br>
                           </div>
 
                           <div class="form-group">
-                            <label for="r_dates">Dates :</label><br><br>
+                            <label for="r_dates">Dates :</label><br>
                             <input type="text" name="r_dates" value="<?= $ligne_realisation['r_dates']; ?>"><br><br>
                           </div>
 
                           <div class="form-group">
-                            <label for="f_description">Description :</label><br><br>
+                            <label for="f_description">Description :</label><br>
                             <input type="text" name="r_description" value="<?= $ligne_realisation['r_description']; ?>"><br><br>
                           </div>
 
