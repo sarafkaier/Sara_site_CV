@@ -1,16 +1,25 @@
 <?php
 require('connexion.php');
 
-
 $resultat = $pdo -> query("SELECT * FROM t_utilisateurs WHERE id_utilisateur = '1'");
 $ligne_utilisateur = $resultat -> fetch(PDO::FETCH_ASSOC);
 
+// Suppression d'un loisir
+if (isset($_GET['id_formation'])) { // on récupère la comp. par son id dans l'url
+    $efface =  $_GET['id_formation'];
+
+    $resultat = "DELETE FROM t_formations WHERE id_formation = '$efface'";
+    $pdo -> query($resultat); // on peut avec exec aussi si on veut
+    header("location: formations.php"); // pour revenir sur la page
+
+} // ferme le if(isset)
+
 include('inc/nav.inc.php');
 ?>
+
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
     <meta charset="utf-8">
     <?php
     $resultat = $pdo -> query("SELECT * FROM t_utilisateurs WHERE id_utilisateur = '1'");
@@ -29,7 +38,7 @@ include('inc/nav.inc.php');
 
 <div class="container-fluid">
     <div class="row">
-        <h1><?= $ligne_utilisateur['prenom']?></h1>
+        <h1><?= $ligne_utilisateur['prenom']?></h1><br>
         <!-- <h2>Admin Baba</h2> -->
     </div>
     <div class="row">
@@ -40,7 +49,6 @@ include('inc/nav.inc.php');
                     <p>Profil de l'utilisateur</p>
                 </div>
                 <div class="container-fluid">
-
 
                 <div class="panel-body">
                     <table class="table table-bordered table-striped">
@@ -59,7 +67,6 @@ include('inc/nav.inc.php');
                             <th>Pays</th>
                             <th>Avatar</th>
                             <th>Modifier</th>
-                            <th>Supprimer</th>
                         </tr>
                         <tr>
 
@@ -76,8 +83,7 @@ include('inc/nav.inc.php');
                            <td><?php echo $ligne_utilisateur['ville'] ;?></td>
                            <td><?php echo $ligne_utilisateur['pays'] ;?></td>
                            <td><?php echo $ligne_utilisateur['avatar'] ;?></td>
-                           <td><a href="modif_utilisateur.php?id_utilisateur=<?= $ligne_utilisateur['id_utilisateur']; ?>"><button type="button" class="btn btn-success">Modifier</button></a></td>
-                           <td><a href="utilisateur.php?id_utilisateur=<?= $ligne_utilisateur['id_utilisateur']; ?>"><button type="button" class="btn btn-danger">Supprimer</button></a></td>
+                           <td><a href="modif_utilisateur.php?id_utilisateur=<?= $ligne_utilisateur['id_utilisateur']; ?>"><button type="button" class="btn btn-success"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button></a></td>
                        </tr>
 
 
@@ -87,9 +93,6 @@ include('inc/nav.inc.php');
             </div>
         </div>
     </div>
-</div>
-
-</body>
-</html>
-
-<?php include('inc/footer.inc.php'); ?>
+  </body>
+  </html>
+  <?php include('inc/footer.inc.php'); ?>
