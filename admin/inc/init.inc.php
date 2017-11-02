@@ -16,7 +16,8 @@ $contenu = ''; // contenu nous permettra ponctuellemnt de stocker du contenu à 
 
 
 // CHEMINS
-define('URL', '/github/Sara_site_CV/');
+define('RACINE_SITE', '/github/Sara_site_CV/');
+define('URL', 'http://localhost/github//github/Sara_site_CV/');
 
 
 // AUTRES INCLUSIONS
