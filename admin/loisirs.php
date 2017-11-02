@@ -70,7 +70,7 @@ if (isset($_GET['id_loisir'])) { // on récupère la comp. par son id dans l'url
     <ol class="breadcrumb">
         <li><a href="index.php">Accueil</a></li>
         <li><a href="#">Parcours</a></li>
-        <li class="active">Loisir</li>
+        <li class="active">Loisirs</li>
     </ol>
     <div class="row">
         <div class="col-md-8">
