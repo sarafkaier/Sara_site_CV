@@ -17,7 +17,7 @@ $contenu = ''; // contenu nous permettra ponctuellemnt de stocker du contenu à 
 
 // CHEMINS
 define('RACINE_SITE', $_SERVER['DOCUMENT_ROOT'] . '/github/Sara_site_CV/');
-define('URL', 'http://localhost/github//github/Sara_site_CV/');
+define('URL', 'http://localhost/github/Sara_site_CV/');
 
 
 // AUTRES INCLUSIONS
