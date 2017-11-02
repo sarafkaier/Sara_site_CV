@@ -22,7 +22,7 @@
                     <ul class="dropdown-menu">
                         <li><a href="experiences.php">Expériences</a></li>
                         <li><a href="realisations.php">Réalisations</a></li>
-                        <li><a href="formations.php">Formation</a></li>
+                        <li><a href="formations.php">Formations</a></li>
                         <li><a href="competence.php">Compétences</a></li>
                         <li><a href="loisirs.php">Loisirs</a></li>
                         <li role="separator" class="divider"></li>
