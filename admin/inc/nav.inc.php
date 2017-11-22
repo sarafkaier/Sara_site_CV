@@ -9,7 +9,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.php"><?= ($ligne_utilisateur['pseudo']); ?></a>
+            <a class="navbar-brand" href="index.php"><?= $ligne_utilisateur['pseudo']; ?></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -39,13 +39,14 @@
                 <button type="submit" class="btn btn-default">Envoyer</button>
             </form>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Lien</a></li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Connexion<span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-off" aria-hidden="true"></span><span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Déconnexion</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
+                      <?php if(userConnecte()) : ?>
+                        <li><a class="<?= ($page =='Connexion') ? 'active' : '' ?>" href="<?= RACINE_SITE ?>connexion.php">Connexion</a></li>
+                      <?php else : ?>
+                        <li><a href="connexion.php?action=deconnexion">Déconnexion</a></li>
+                      <?php endif; ?>
                     </ul>
                 </li>
             </ul>

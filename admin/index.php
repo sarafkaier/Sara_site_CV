@@ -1,4 +1,4 @@
-<?php require 'connexion.php'; ?>
+<?php require('inc/init.inc.php'); ?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -28,7 +28,7 @@
       <h1>Admin : <?= ($ligne_utilisateur['prenom']); ?></h1>
       <hr>
       <h2>Accueil admin</h2>
-
+      <img src="img/stock.jpg" alt="">
 
 
 

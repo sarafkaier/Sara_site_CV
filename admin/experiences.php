@@ -1,5 +1,6 @@
 <?php
-require 'connexion.php';
+// require 'connexion.php';
+require('inc/init.inc.php.');
 ?>
 
 <?php

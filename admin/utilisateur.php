@@ -1,5 +1,5 @@
 <?php
-require('connexion.php');
+require('inc/init.inc.php');
 
 $resultat = $pdo -> query("SELECT * FROM t_utilisateurs WHERE id_utilisateur = '1'");
 $ligne_utilisateur = $resultat -> fetch(PDO::FETCH_ASSOC);

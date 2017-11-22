@@ -1,7 +1,18 @@
 <?php
-
 // SESSION
 session_start();
+
+// AUTRES INCLUSIONS
+require('fonctions.inc.php');
+
+$hote='localhost';
+$bdd ='site_cv';
+$utilisateur='root';
+$passe='';
+
+$pdo = new PDO('mysql:host=' . $hote . ';dbname=' . $bdd, $utilisateur, $passe);
+// $pdoCv est le nom de la variable de la connexion qui sert partout où l'on doit se servir de cette connexion
+$pdo -> exec('SET NAMES utf8');
 
 // CONNEXION BDD
 // $pdo = new PDO('mysql:host=localhost;dbname=site_cv', 'root', '', array(
@@ -18,12 +29,3 @@ $contenu = ''; // contenu nous permettra ponctuellemnt de stocker du contenu à 
 // CHEMINS
 define('RACINE_SITE', $_SERVER['DOCUMENT_ROOT'] . '/github/Sara_site_CV/');
 define('URL', 'http://localhost/github/Sara_site_CV/');
-
-
-// AUTRES INCLUSIONS
-// require('fonctions.inc.php');
-
-
-
-
-?>

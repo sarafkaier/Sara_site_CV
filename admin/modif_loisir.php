@@ -1,5 +1,5 @@
 <?php
-require 'connexion.php';
+require('inc/init.inc.php.');
 
 // mise à jour d'un loisir
 if (isset($_POST['loisir'])) { // par le nom du premier input
