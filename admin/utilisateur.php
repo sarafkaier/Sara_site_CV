@@ -67,7 +67,7 @@ include('inc/nav.inc.php');
                             <li>Avatar : <?php echo $ligne_utilisateur['avatar'] ;?></li>
                             <li><a href="modif_utilisateur.php?id_utilisateur=<?= $ligne_utilisateur['id_utilisateur']; ?>"><button type="button" class="btn btn-success"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button></a></li>
                         <ul>
-                </div>
+                    </div>
                 </div>
             </div>
         </div>

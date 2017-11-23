@@ -47,7 +47,7 @@ $ligne_utilisateur = $resultat->fetch();
         <h1>Admin : <?= $ligne_utilisateur['prenom']; ?></h1>
         <hr>
         <h2 class="well">Modification d'un utilisateur</h2>
-        <div class="col-md-4">
+        <div class="col-md-4 col-md-offset-4">
             <div class="panel panel-warning">
                 <div class="panel-body">
                     <div class="panel panel-warning">

@@ -11,10 +11,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Admin : <?= ($ligne_utilisateur['pseudo']); ?></title>
+    <title >Admin : <?= ($ligne_utilisateur['pseudo']); ?></title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Concert+One" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style_admin.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -24,13 +28,11 @@
     <![endif]-->
   </head>
   <body>
-      <?php include('inc/nav.inc.php'); ?>
+    <?php include('inc/nav.inc.php'); ?>
       <h1>Admin : <?= ($ligne_utilisateur['prenom']); ?></h1>
       <hr>
-      <h2>Accueil admin</h2>
-      <img src="img/stock.jpg" alt="">
-
-
+      <h2 class="col-xs-12 col-sm-6 col-md-offset-5 col-sm-offset-1">Accueil admin</h2>
+      <img src="img/stock.jpg" alt=""  class="col-xs-12 col-sm-6 col-md-offset-3 col-sm-offset-1">
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
