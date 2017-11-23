@@ -1,8 +1,8 @@
 <footer class="footer">
-      <div class="container">
-        <p class="text-muted"><?= date('Y') ?> - Site CV de Sara</p>
-      </div>
-    </footer>
+  <div class="container">
+    <p class="text-muted"><?= date('Y') ?> - Site CV de Sara</p>
+  </div>
+</footer>
 
 </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

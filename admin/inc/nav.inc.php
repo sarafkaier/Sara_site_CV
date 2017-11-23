@@ -16,7 +16,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="utilisateur.php">Mon profil<span class="sr-only">(current)</span></a></li>
-                <li><a href="#">Lien</a></li>
+
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Parcours<span class="caret"></span></a>
                     <ul class="dropdown-menu">
@@ -32,19 +32,14 @@
                     </ul>
                 </li>
             </ul>
-            <form class="navbar-form navbar-left">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Recherche">
-                </div>
-                <button type="submit" class="btn btn-default">Envoyer</button>
-            </form>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-off" aria-hidden="true"></span><span class="caret"></span></a>
                     <ul class="dropdown-menu">
                       <?php if(userConnecte()) : ?>
-                        <li><a class="<?= ($page =='Connexion') ? 'active' : '' ?>" href="<?= RACINE_SITE ?>connexion.php">Connexion</a></li>
+                        <li><a href="connexion.php?action=deconnexion">Déconnexion</a></li>
                       <?php else : ?>
+                        <li><a class="<?= ($page == 'Connexion') ? 'active' : '' ?>" href="<?= RACINE_SITE ?>connexion.php">Connexion</a></li>
                         <li><a href="connexion.php?action=deconnexion">Déconnexion</a></li>
                       <?php endif; ?>
                     </ul>
