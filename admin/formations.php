@@ -1,5 +1,16 @@
 <?php
 require('inc/init.inc.php.');
+
+if (isset($_SESSION['connexion']) && $_SESSION['connexion'] == 'connecté') {
+
+  $id_utilisateur = $_SESSION['id_utilisateur'];
+  $prenom = $_SESSION['prenom'];
+  $nom = $_SESSION['nom'];
+
+  // echo $_SESSION['connexion'];
+} else { // l'utilisateur n'est pas connecté
+  header('location: authentification.php');
+}
 ?>
 
 <?php
@@ -15,7 +26,7 @@ if (isset($_POST['f_titre'])) { // Si on a posté une nouvelle form.
       $f_dates = addslashes($_POST['f_dates']);
       $f_description = addslashes($_POST['f_description']);
 
-      $pdo -> exec("INSERT INTO t_formations VALUES (NULL, '$f_titre', '$f_soustitre', '$f_dates', '$f_description', '1')"); // mettre $id_utilisateur quand on l'aura dans la variable de session
+      $pdo -> exec("INSERT INTO t_formations VALUES (NULL, '$f_titre', '$f_soustitre', '$f_dates', '$f_description', '$id_utilisateur')"); // mettre $id_utilisateur quand on l'aura dans la variable de session
       header("location: formations.php");
       exit();
     }
@@ -41,10 +52,11 @@ if (isset($_GET['id_formation'])) { // on récupère la comp. par son id dans l'
     <head>
         <meta charset="utf-8">
         <?php
-        $resultat = $pdo -> query("SELECT * FROM t_utilisateurs WHERE id_utilisateur = '1'");
+        $resultat = $pdo -> query("SELECT * FROM t_utilisateurs WHERE id_utilisateur = '$id_utilisateur'");
         $ligne_utilisateur = $resultat -> fetch();
         ?>
         <title>Admin : <?= ($ligne_utilisateur['pseudo']); ?></title>
+        <link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans" rel="stylesheet">
 
         <!-- Bootstrap -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -55,7 +67,7 @@ if (isset($_GET['id_formation'])) { // on récupère la comp. par son id dans l'
     </head>
     <body>
         <?php
-        $resultat = $pdo -> prepare("SELECT * FROM t_formations WHERE utilisateur_id ='1'");
+        $resultat = $pdo -> prepare("SELECT * FROM t_formations WHERE utilisateur_id ='$id_utilisateur'");
         $resultat->execute();
         $nbr_formations = $resultat->rowCount();
 
@@ -82,7 +94,7 @@ if (isset($_GET['id_formation'])) { // on récupère la comp. par son id dans l'
                 <table border="2" class="table table-condensed table-hover">
                     <tr>
                         <th>Titre</th>
-                        <th>Soustitre</th>
+                        <th>Sous-titre</th>
                         <th>Dates</th>
                         <th>Description</th>
                         <th>Suppression</th>
@@ -94,8 +106,8 @@ if (isset($_GET['id_formation'])) { // on récupère la comp. par son id dans l'
                             <td><?= $ligne_formation['f_soustitre'];?></td>
                             <td><?= $ligne_formation['f_dates'];?></td>
                             <td><?= $ligne_formation['f_description'];?></td>
-                            <td><a href="formations.php?id_formation=<?= $ligne_formation['id_formation'];?>"><button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></a></td>
-                            <td><a href="modif_formation.php?id_formation=<?= $ligne_formation['id_formation'];?>"><button type="button" class="btn btn-success"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button></a></td>
+                            <td><a href="formations.php?id_formation=<?= $ligne_formation['id_formation'];?>"><button type="button" class="btn btn-danger col-md-6 col-md-offset-3"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></a></td>
+                            <td><a href="modif_formation.php?id_formation=<?= $ligne_formation['id_formation'];?>"><button type="button" class="btn btn-success col-md-6 col-md-offset-3"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button></a></td>
                     </tr>
                         <?php } ?>
                     </table>
@@ -117,7 +129,7 @@ if (isset($_GET['id_formation'])) { // on récupère la comp. par son id dans l'
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="disabledSelect">Soustitre</label>
+                                    <label for="disabledSelect">Sous-titre</label>
                                     <input type="text" name="f_soustitre" id="f_soustitre" placeholder="Insérer un soustitre" class="form-control">
                                 </div>
 

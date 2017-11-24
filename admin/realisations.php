@@ -1,5 +1,16 @@
 <?php
 require('inc/init.inc.php.');
+
+if (isset($_SESSION['connexion']) && $_SESSION['connexion'] == 'connecté') {
+
+  $id_utilisateur = $_SESSION['id_utilisateur'];
+  $prenom = $_SESSION['prenom'];
+  $nom = $_SESSION['nom'];
+
+  // echo $_SESSION['connexion'];
+} else { // l'utilisateur n'est pas connecté
+  header('location: authentification.php');
+}
 ?>
 
 <?php
@@ -15,7 +26,7 @@ if (isset($_POST['r_titre'])) { // Si on a posté une nouvelle form.
       $r_dates = addslashes($_POST['r_dates']);
       $r_description = addslashes($_POST['r_description']);
 
-      $pdo -> exec("INSERT INTO t_realisations VALUES (NULL, '$r_titre', '$r_soustitre', '$r_dates', '$r_description', '1')"); // mettre $id_utilisateur quand on l'aura dans la variable de session
+      $pdo -> exec("INSERT INTO t_realisations VALUES (NULL, '$r_titre', '$r_soustitre', '$r_dates', '$r_description', '$id_utilisateur')"); // mettre $id_utilisateur quand on l'aura dans la variable de session
       header("location: realisations.php");
       exit();
     }
@@ -41,10 +52,11 @@ if (isset($_GET['id_realisation'])) { // on récupère la comp. par son id dans 
     <head>
         <meta charset="utf-8">
         <?php
-        $resultat = $pdo -> query("SELECT * FROM t_utilisateurs WHERE id_utilisateur = '1'");
+        $resultat = $pdo -> query("SELECT * FROM t_utilisateurs WHERE id_utilisateur = '$id_utilisateur'");
         $ligne_utilisateur = $resultat -> fetch();
         ?>
         <title>Admin : <?= ($ligne_utilisateur['pseudo']); ?></title>
+        <link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans" rel="stylesheet">
 
         <!-- Bootstrap -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -94,8 +106,8 @@ if (isset($_GET['id_realisation'])) { // on récupère la comp. par son id dans 
                             <td><?= $ligne_realisation['r_soustitre'];?></td>
                             <td><?= $ligne_realisation['r_dates'];?></td>
                             <td><?= $ligne_realisation['r_description'];?></td>
-                            <td><a href="realisations.php?id_realisation=<?= $ligne_realisation['id_realisation'];?>"><button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></a></td>
-                            <td><a href="modif_realisation.php?id_realisation=<?= $ligne_realisation['id_realisation'];?>"><button type="button" class="btn btn-success"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button></a></td>
+                            <td><a href="realisations.php?id_realisation=<?= $ligne_realisation['id_realisation'];?>"><button type="button" class="btn btn-danger col-md-4 col-md-offset-4"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></a></td>
+                            <td><a href="modif_realisation.php?id_realisation=<?= $ligne_realisation['id_realisation'];?>"><button type="button" class="btn btn-success col-md-4 col-md-offset-4"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button></a></td>
                     </tr>
                         <?php } ?>
                     </table>

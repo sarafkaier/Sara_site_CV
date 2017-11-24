@@ -1,5 +1,16 @@
 <?php
 require('inc/init.inc.php.');
+
+if (isset($_SESSION['connexion']) && $_SESSION['connexion'] == 'connecté') { // A mettre sur toutes les pages
+
+  $id_utilisateur = $_SESSION['id_utilisateur'];
+  $prenom = $_SESSION['prenom'];
+  $nom = $_SESSION['nom'];
+
+  // echo $_SESSION['connexion'];
+} else { // l'utilisateur n'est pas connecté
+  header('location: authentification.php');
+}
 ?>
 
 <?php
@@ -13,7 +24,7 @@ if (isset($_POST['competence'])) { // Si on a posté une nouvelle comp.
     if (!empty($_POST['competence']) && !empty($_POST['c_niveau'])) { // Si compétence n'est pas vide
         $competence = addslashes($_POST['competence']);
         $c_niveau = addslashes($_POST['c_niveau']);
-        $pdo -> exec("INSERT INTO t_competences VALUES (NULL, '$competence', '$c_niveau', '1')"); // mettre $id_utilisateur quand on l'aura dans la variable de session
+        $pdo -> exec("INSERT INTO t_competences VALUES (NULL, '$competence', '$c_niveau', '$id_utilisateur')"); // mettre $id_utilisateur quand on l'aura dans la variable de session
         header("location: competence.php");
         exit();
 
@@ -42,10 +53,11 @@ if (isset($_GET['id_competence'])) { // on récupère la comp. par son id dans l
 <head>
     <meta charset="utf-8">
     <?php
-    $resultat = $pdo -> query("SELECT * FROM t_utilisateurs WHERE id_utilisateur = '1'");
+    $resultat = $pdo -> query("SELECT * FROM t_utilisateurs WHERE id_utilisateur = '$id_utilisateur'");
     $ligne_utilisateur = $resultat -> fetch();
     ?>
     <title>Admin : <?= ($ligne_utilisateur['pseudo']); ?></title>
+    <link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans" rel="stylesheet">
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -57,7 +69,7 @@ if (isset($_GET['id_competence'])) { // on récupère la comp. par son id dans l
     <?php include('inc/nav.inc.php'); ?>
     <hr>
     <?php
-    $resultat = $pdo -> prepare("SELECT * FROM t_competences WHERE utilisateur_id ='1'");
+    $resultat = $pdo -> prepare("SELECT * FROM t_competences WHERE utilisateur_id ='$id_utilisateur'");
     $resultat->execute();
     $nbr_competences = $resultat->rowCount();
 
@@ -91,8 +103,8 @@ if (isset($_GET['id_competence'])) { // on récupère la comp. par son id dans l
                             <?php while ($ligne_competence = $resultat -> fetch()) { ?>
                                 <td><?= $ligne_competence['competence'];?></td>
                                 <td><?= $ligne_competence['c_niveau'];?></td>
-                                <td><a href="competence.php?id_competence=<?= $ligne_competence['id_competence'];?>"><button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></a></td>
-                                <td><a href="modif_competence.php?id_competence=<?= $ligne_competence['id_competence'];?>"><button type="button" class="btn btn-success"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button></a></td>
+                                <td><a href="competence.php?id_competence=<?= $ligne_competence['id_competence'];?>"><button type="button" class="btn btn-danger col-md-4 col-md-offset-4"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></a></td>
+                                <td><a href="modif_competence.php?id_competence=<?= $ligne_competence['id_competence'];?>"><button type="button" class="btn btn-success col-md-4 col-md-offset-4"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button></a></td>
                             </tr>
                             <?php } ?>
                         </table>

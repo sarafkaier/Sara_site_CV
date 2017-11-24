@@ -1,5 +1,16 @@
 <?php
 require('inc/init.inc.php.');
+
+if (isset($_SESSION['connexion']) && $_SESSION['connexion'] == 'connecté') {
+
+  $id_utilisateur = $_SESSION['id_utilisateur'];
+  $prenom = $_SESSION['prenom'];
+  $nom = $_SESSION['nom'];
+
+  // echo $_SESSION['connexion'];
+} else { // l'utilisateur n'est pas connecté
+  header('location: authentification.php');
+}
 ?>
 
 <?php
@@ -12,7 +23,7 @@ $msg = '';
 if (isset($_POST['loisir'])) { // Si on a posté une nouvelle comp.
     if (!empty($_POST['loisir'])) { // Si compétence n'est pas vide
         $loisir = addslashes($_POST['loisir']);
-        $pdo -> exec("INSERT INTO t_loisirs VALUES (NULL, '$loisir', '1')"); // mettre $id_utilisateur quand on l'aura dans la variable de session
+        $pdo -> exec("INSERT INTO t_loisirs VALUES (NULL, '$loisir', '$id_utilisateur')"); // mettre $id_utilisateur quand on l'aura dans la variable de session
         header("location: loisirs.php");
         exit();
 
@@ -41,10 +52,11 @@ if (isset($_GET['id_loisir'])) { // on récupère la comp. par son id dans l'url
     <head>
         <meta charset="utf-8">
         <?php
-        $resultat = $pdo -> query("SELECT * FROM t_utilisateurs WHERE id_utilisateur = '1'");
+        $resultat = $pdo -> query("SELECT * FROM t_utilisateurs WHERE id_utilisateur = '$id_utilisateur'");
         $ligne_utilisateur = $resultat -> fetch();
         ?>
         <title>Admin : <?= ($ligne_utilisateur['pseudo']); ?></title>
+        <link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans" rel="stylesheet">
 
         <!-- Bootstrap -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -55,7 +67,7 @@ if (isset($_GET['id_loisir'])) { // on récupère la comp. par son id dans l'url
     </head>
     <body>
         <?php
-        $resultat = $pdo -> prepare("SELECT * FROM t_loisirs WHERE utilisateur_id ='1'");
+        $resultat = $pdo -> prepare("SELECT * FROM t_loisirs WHERE utilisateur_id ='$id_utilisateur'");
         $resultat->execute();
         $nbr_loisirs = $resultat->rowCount();
 
@@ -80,7 +92,7 @@ if (isset($_GET['id_loisir'])) { // on récupère la comp. par son id dans l'url
         <div class="row">
             <div class="col-md-8">
                 <table border="2" class="table table-condensed table-hover">
-                    <tr>
+                    <tr class="col-md-offset-10">
                         <th>Loisirs</th>
                         <th>Suppression</th>
                         <th>Modification</th>
@@ -88,8 +100,8 @@ if (isset($_GET['id_loisir'])) { // on récupère la comp. par son id dans l'url
                     <tr>
                         <?php while ($ligne_loisir = $resultat -> fetch()) { ?>
                             <td><?= $ligne_loisir['loisir'];?></td>
-                            <td><a href="loisirs.php?id_loisir=<?= $ligne_loisir['id_loisir'];?>"><button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></a></td>
-                            <td><a href="modif_loisir.php?id_loisir=<?= $ligne_loisir['id_loisir'];?>"><button type="button" class="btn btn-success"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button></a></td>
+                            <td><a href="loisirs.php?id_loisir=<?= $ligne_loisir['id_loisir'];?>"><button type="button" class="btn btn-danger col-md-3 col-md-offset-4"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></a></td>
+                            <td><a href="modif_loisir.php?id_loisir=<?= $ligne_loisir['id_loisir'];?>"><button type="button" class="btn btn-success col-md-3 col-md-offset-4"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button></a></td>
                     </tr>
                         <?php } ?>
                     </table>

@@ -1,6 +1,17 @@
 <?php
 require('inc/init.inc.php.');
 
+if (isset($_SESSION['connexion']) && $_SESSION['connexion'] == 'connecté') {
+
+  $id_utilisateur = $_SESSION['id_utilisateur'];
+  $prenom = $_SESSION['prenom'];
+  $nom = $_SESSION['nom'];
+
+  // echo $_SESSION['connexion'];
+} else { // l'utilisateur n'est pas connecté
+  header('location: authentification.php');
+}
+
 // mise à jour d'une compétence
 if (isset($_POST['e_titre'])) { // par le nom du premier input
     $id_experience = $_POST['id_experience'];
@@ -30,6 +41,7 @@ $ligne_experience = $resultat->fetch();
         $ligne_utilisateur = $resultat -> fetch();
         ?>
         <title>Admin : <?= $ligne_utilisateur['pseudo']; ?></title>
+        <link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans" rel="stylesheet">
         <!-- Bootstrap -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
 

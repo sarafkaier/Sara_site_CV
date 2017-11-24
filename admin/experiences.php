@@ -1,6 +1,17 @@
 <?php
 // require 'connexion.php';
 require('inc/init.inc.php.');
+
+if (isset($_SESSION['connexion']) && $_SESSION['connexion'] == 'connecté') {
+
+  $id_utilisateur = $_SESSION['id_utilisateur'];
+  $prenom = $_SESSION['prenom'];
+  $nom = $_SESSION['nom'];
+
+  // echo $_SESSION['connexion'];
+} else { // l'utilisateur n'est pas connecté
+  header('location: authentification.php');
+}
 ?>
 
 <?php
@@ -16,7 +27,7 @@ if (isset($_POST['e_titre'])) { // Si on a posté une nouvelle form.
       $e_dates = addslashes($_POST['e_dates']);
       $e_description = addslashes($_POST['e_description']);
 
-      $pdo -> exec("INSERT INTO t_experiences VALUES (NULL, '$e_titre', '$e_soustitre', '$e_dates', '$e_description', '1')"); // mettre $id_utilisateur quand on l'aura dans la variable de session
+      $pdo -> exec("INSERT INTO t_experiences VALUES (NULL, '$e_titre', '$e_soustitre', '$e_dates', '$e_description', '$id_utilisateur')"); // mettre $id_utilisateur quand on l'aura dans la variable de session
       header("location: experiences.php");
       exit();
     }
@@ -42,10 +53,11 @@ if (isset($_GET['id_experience'])) { // on récupère la comp. par son id dans l
     <head>
         <meta charset="utf-8">
         <?php
-        $resultat = $pdo -> query("SELECT * FROM t_utilisateurs WHERE id_utilisateur = '1'");
+        $resultat = $pdo -> query("SELECT * FROM t_utilisateurs WHERE id_utilisateur = '$id_utilisateur'");
         $ligne_utilisateur = $resultat -> fetch();
         ?>
         <title>Admin : <?= ($ligne_utilisateur['pseudo']); ?></title>
+        <link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans" rel="stylesheet">
 
         <!-- Bootstrap -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -56,7 +68,7 @@ if (isset($_GET['id_experience'])) { // on récupère la comp. par son id dans l
     </head>
     <body>
         <?php
-        $resultat = $pdo -> prepare("SELECT * FROM t_experiences WHERE utilisateur_id ='1'");
+        $resultat = $pdo -> prepare("SELECT * FROM t_experiences WHERE utilisateur_id ='$id_utilisateur'");
         $resultat->execute();
         $nbr_experience = $resultat->rowCount();
 
@@ -95,8 +107,8 @@ if (isset($_GET['id_experience'])) { // on récupère la comp. par son id dans l
                             <td><?= $ligne_experience['e_soustitre'];?></td>
                             <td><?= $ligne_experience['e_dates'];?></td>
                             <td><?= $ligne_experience['e_description'];?></td>
-                            <td><a href="experiences.php?id_experience=<?= $ligne_experience['id_experience'];?>"><button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></a></td>
-                            <td><a href="modif_experience.php?id_experience=<?= $ligne_experience['id_experience'];?>"><button type="button" class="btn btn-success"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button></a></td>
+                            <td><a href="experiences.php?id_experience=<?= $ligne_experience['id_experience'];?>"><button type="button" class="btn btn-danger col-md-6 col-md-offset-3"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></a></td>
+                            <td><a href="modif_experience.php?id_experience=<?= $ligne_experience['id_experience'];?>"><button type="button" class="btn btn-success col-md-6 col-md-offset-3"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button></a></td>
                     </tr>
                         <?php } ?>
                     </table>

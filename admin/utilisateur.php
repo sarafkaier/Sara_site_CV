@@ -1,7 +1,18 @@
 <?php
 require('inc/init.inc.php');
 
-$resultat = $pdo -> query("SELECT * FROM t_utilisateurs WHERE id_utilisateur = '1'");
+if (isset($_SESSION['connexion']) && $_SESSION['connexion'] == 'connecté') {
+
+  $id_utilisateur = $_SESSION['id_utilisateur'];
+  $prenom = $_SESSION['prenom'];
+  $nom = $_SESSION['nom'];
+
+  // echo $_SESSION['connexion'];
+} else { // l'utilisateur n'est pas connecté
+  header('location: authentification.php');
+}
+
+$resultat = $pdo -> query("SELECT * FROM t_utilisateurs WHERE id_utilisateur = '$id_utilisateur'");
 $ligne_utilisateur = $resultat -> fetch(PDO::FETCH_ASSOC);
 
 // Suppression d'un loisir
@@ -22,10 +33,11 @@ include('inc/nav.inc.php');
   <head>
     <meta charset="utf-8">
     <?php
-    $resultat = $pdo -> query("SELECT * FROM t_utilisateurs WHERE id_utilisateur = '1'");
+    $resultat = $pdo -> query("SELECT * FROM t_utilisateurs WHERE id_utilisateur = '$id_utilisateur'");
     $ligne_utilisateur = $resultat -> fetch();
     ?>
     <title>Admin : <?= ($ligne_utilisateur['pseudo']); ?></title>
+    <link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans" rel="stylesheet">
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -37,8 +49,8 @@ include('inc/nav.inc.php');
   <body>
 
 <div class="container-fluid">
-    <div class="row">
-        <h1 class="col-xs-12 col-sm-6 col-md-offset-4 col-sm-offset-1"><?= $ligne_utilisateur['prenom']?></h1><br>
+    <div class="row well">
+        <h1 class="col-xs-12 col-sm-6 col-md-offset-3 col-sm-offset-1"><?= $ligne_utilisateur['prenom']?></h1><br>
         <!-- <h2>Admin Baba</h2> -->
     </div>
     <div class="row">
@@ -73,5 +85,5 @@ include('inc/nav.inc.php');
         </div>
     </div>
   </body>
-  </html>
-  <?php include('inc/footer.inc.php'); ?>
+</html>
+<?php include('inc/footer.inc.php'); ?>

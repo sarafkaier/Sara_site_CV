@@ -15,10 +15,10 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="utilisateur.php">Mon profil<span class="sr-only">(current)</span></a></li>
+                <li><a class="active" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" href="utilisateur.php">Mon profil<span class="sr-only">(current)</span></a></li>
 
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Parcours<span class="caret"></span></a>
+                    <a class="active" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Parcours<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="experiences.php">Expériences</a></li>
                         <li><a href="realisations.php">Réalisations</a></li>
@@ -37,10 +37,10 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-off" aria-hidden="true"></span><span class="caret"></span></a>
                     <ul class="dropdown-menu">
                       <?php if(userConnecte()) : ?>
-                        <li><a href="connexion.php?action=deconnexion">Déconnexion</a></li>
+                        <li><a href="authentification.php?action=deconnexion">Déconnexion</a></li>
                       <?php else : ?>
-                        <li><a class="<?= ($page == 'Connexion') ? 'active' : '' ?>" href="<?= RACINE_SITE ?>connexion.php">Connexion</a></li>
-                        <li><a href="connexion.php?action=deconnexion">Déconnexion</a></li>
+                        <li><a class="<?= ($page == 'Connexion') ? 'active' : '' ?>" href="<?= RACINE_SITE ?>authentification.php">Connexion</a></li>
+                        <li><a href="authentification.php?action=deconnexion">Déconnexion</a></li>
                       <?php endif; ?>
                     </ul>
                 </li>
