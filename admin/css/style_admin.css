@@ -88,7 +88,9 @@ div{
     color: #fff;
     background-color: #080808;
 }
-
+th{
+  text-align: center;
+}
 body{
   background: url(../img/fond.jpg);
 }

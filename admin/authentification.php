@@ -68,3 +68,4 @@ $page = 'Connexion';
     </div><!-- /.container -->
   </body>
 </html>
+<?php include('inc/footer.inc.php'); ?>
