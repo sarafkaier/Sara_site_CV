@@ -1,6 +1,17 @@
 <?php
 require_once('inc/init.inc.php');
+// pour se déconnecter de l'Admin
+if (isset($_GET['deconnexion'])) {
 
+  $_SESSION['connexion']=''; // on vide les variables de session
+  $_SESSION['id_utilisateur']=''; // on vide les variables de session
+  $_SESSION['prenom']=''; // on vide les variables de session
+  $_SESSION['nom']=''; // on vide les variables de session
+
+  unset($_SESSION['connexion']);
+  session_destroy();
+  header('location: authentification.php');
+}
 if(isset($_POST['connexion'])) {
 
   $pseudo = addslashes($_POST['pseudo']);

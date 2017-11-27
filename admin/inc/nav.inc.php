@@ -36,12 +36,7 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-off" aria-hidden="true"></span><span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                      <?php if(userConnecte()) : ?>
-                        <li><a href="authentification.php?action=deconnexion">Déconnexion</a></li>
-                      <?php else : ?>
-                        <li><a class="<?= ($page == 'Connexion') ? 'active' : '' ?>" href="<?= RACINE_SITE ?>authentification.php">Connexion</a></li>
-                        <li><a href="authentification.php?action=deconnexion">Déconnexion</a></li>
-                      <?php endif; ?>
+                        <li><a href="authentification.php?deconnexion=oui">Déconnexion</a></li>                    
                     </ul>
                 </li>
             </ul>

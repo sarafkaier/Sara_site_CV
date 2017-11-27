@@ -91,6 +91,9 @@ div{
 th{
   text-align: center;
 }
+td{
+  text-align: center;
+}
 body{
   background: url(../img/fond.jpg);
 }

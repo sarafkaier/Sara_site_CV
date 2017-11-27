@@ -10,6 +10,8 @@ if (isset($_SESSION['connexion']) && $_SESSION['connexion'] == 'connecté') { //
 } else { // l'utilisateur n'est pas connecté
   header('location: authentification.php');
 }
+
+
 ?>
 
 <!DOCTYPE html>

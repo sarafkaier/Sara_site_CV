@@ -18,7 +18,6 @@ $msg = '';
 
 // gestion des contenus de la BDD compétences
 
-
 // insertion d'une compétence
 if (isset($_POST['competence'])) { // Si on a posté une nouvelle comp.
     if (!empty($_POST['competence']) && !empty($_POST['c_niveau'])) { // Si compétence n'est pas vide
