@@ -1,6 +1,7 @@
 <?php
 require_once('inc/init.inc.php');
-// pour se déconnecter de l'Admin
+
+// Traitement pour la déconnexion
 if (isset($_GET['deconnexion'])) {
 
   $_SESSION['connexion']=''; // on vide les variables de session
@@ -12,6 +13,8 @@ if (isset($_GET['deconnexion'])) {
   session_destroy();
   header('location: authentification.php');
 }
+
+// Traitement pour la connexion
 if(isset($_POST['connexion'])) {
 
   $pseudo = addslashes($_POST['pseudo']);
@@ -38,7 +41,7 @@ if(isset($_POST['connexion'])) {
 $page = 'Connexion';
 ?>
 
-<nav class="navbar navbar-default couleur"></nav>
+<nav class="navbar navbar-default couleur"><a class="lead" href="../toto.html"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Site CV</a></nav>
 
 <!-- Contenu HTML -->
 <!DOCTYPE html>

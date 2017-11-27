@@ -11,7 +11,6 @@ if (isset($_SESSION['connexion']) && $_SESSION['connexion'] == 'connecté') { //
   header('location: authentification.php');
 }
 
-
 ?>
 
 <!DOCTYPE html>
