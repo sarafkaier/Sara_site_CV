@@ -46,7 +46,7 @@ if (isset($_SESSION['connexion']) && $_SESSION['connexion'] == 'connecté') { //
       <h1>Admin : <?= ($ligne_utilisateur['prenom']); ?></h1>
       <hr>
       <h2 class="col-xs-12 col-sm-6 col-md-offset-5 col-sm-offset-1">Accueil admin</h2>
-      <img src="img/stock.jpg" alt=""  class="col-xs-12 col-sm-6 col-md-offset-3 col-sm-offset-1">
+      <img src="img/stock.jpg" alt="" class="col-xs-12 col-sm-6 col-md-offset-3 col-sm-offset-1">
   </body>
 </html>
 <?php include('inc/footer.inc.php'); ?>

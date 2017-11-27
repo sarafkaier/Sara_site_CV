@@ -1,0 +1,49 @@
+body {
+  background-color: #F7F7F8;
+  font-family: 'Prompt', sans-serif;
+}
+
+.menu ol li {
+  text-decoration: none;
+  list-style-type : none;
+  font-size: 1.7em;
+  display:inline;
+  margin-right:3%;
+  font-family: 'Anton', sans-serif;
+}
+
+.menu ol li a {
+  text-decoration: none;
+  color:#2A2927;
+}
+
+#home {
+  font-size: 2em;
+}
+
+#comp:hover {color:#B9BBDF;}
+
+#exp:hover {color:#B9BBDF;}
+
+#FOR:hover {color:#B9BBDF;}
+
+#AP:hover {color:#B9BBDF;}
+
+#CONT:hover {color:#B9BBDF;}
+
+h1 {
+  font-size: 50px;
+  margin-bottom:0px;
+  font-family: 'Anton', sans-serif;
+}
+
+h2 {
+  font-family: 'Overpass Mono', monospace;
+  font-size:15px;
+}
+
+#corps {
+  text-align:center;
+   margin-top: 50vh;
+  transform: translateY(-50%);
+}
