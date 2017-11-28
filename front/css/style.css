@@ -63,7 +63,7 @@ display:block !important;
 
 #hero-mobile {
   display: none;
-  background: url("../img/galaxy.jpg") no-repeat center bottom/cover;
+  /*background: url("../img/galaxy.jpg") no-repeat center bottom/cover;*/
   height: 320px;
 }
 
