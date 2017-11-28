@@ -1,28 +1,106 @@
-<head>
-  <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Overpass+Mono" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Prompt:300" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
-  <script type="text/javascript" src="js/main.js"></script>
-  <title>Site CV - Sara</title>
-</head>
+<!DOCTYPE html>
+<html class="animated fadeIn">
+  <head>
+    <meta charset="UTF-8">
+    <title>Site CV - Sara</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans" rel="stylesheet">
 
-<body>
-  <nav class="menu">
-     <ol>
-       <li><a id="home" href="#">S<span style="color:#F5E1DA">F</span></></a></li>
-       <li><a id="AP"href="#">A PROPOS</a></li>
-       <li><a id="comp" href="#">COMPETENCES</a></li>
-       <li><a id="exp" href="#">EXPERIENCES</a></li>
-       <li><a id="FOR" href="#">FORMATIONS</a></li>
-       <li><a id="FOR" href="#">REALISATIONS</a></li>
-       <li><a id="FOR" href="#">LOISIRS</a></li>
-       <li><a id="CONT" href="#">CONTACT</a></li>
-     </ol>
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+    <link rel='stylesheet prefetch' href='http://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css'>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top navbar-static"><!--navbar-static => la nav reste toujours visible même si on scroll très bas-->
+        <div class="navbar-header">
+            <a class="navbar-brand" href="contact.html">
+                <img src="#" alt="" title="">
+            </a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href=""></a></li>
+                <li><a href="http://www" target="_blank">Formation</a></li>
+<!--test DROPDOWN -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Compétences<span class="caret"></span></a>
+
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">One more separated link</a></li>
+                    </ul>
+                </li>
+                <li><a href="http://www" target="_blank">Formation</a></li>
+<!--test DROPDOWN -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Compétences<span class="caret"></span></a>
+
+                    <ul class="dropdown-menu">
+                        <li><a href="">Compétences</a></li>
+                            <li><a href="">Expérience pro</a></li>
+                            <li><a href="cv.pdf">Télécharger mon CV</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="">Summary of experience</a></li>
+                            <li><a href="" target="_blank">Professional record</a></li>
+                            <li><a href="resumem.pdf" target="_blank">Download my resume</a></li>
+                    </ul>
+                </li>
+<!--fin test DROPDOWN -->
+                <li><a href="">Contact</a></li>
+            </ul>
+      </div>
     </nav>
 
-  <div id="corps">
-  <h1>Sarah <span style="color:#F5E1DA"> FKAIER</span></h1>
-  <h2 id="defile">A LA RECHERCHE D'UN STAGE DANS LE DOMAINE DU WEB</h2>
+  <div id='hero'>
+    <div class='layer-bg layer' data-depth='0.10' data-type='parallax'></div>
+    <div class='layer-1 layer' data-depth='0.20' data-type='parallax'></div>
+    <div class='layer-2 layer' data-depth='0.50' data-type='parallax'></div>
+    <div class='layer-3 layer' data-depth='0.80' data-type='parallax'></div>
+    <div class='layer-overlay layer' data-depth='0.85' data-type='parallax'></div>
+    <div class='layer-4 layer' data-depth='1.00' data-type='parallax'></div>
+</div>
+<div id='hero-mobile'></div>
+<div id='content'>
+  <div class='container'>
+    <div class='row'>
+      <div class='col-sm-6'>
+        <h1>Sara FKAIER</h1>
+        <h2>Recherche un stage dans le domaine du web.</h2>
+      </div>
+    </div>
+    <section class='first-section'>
+      <div class='row'>
+        <div class='col-sm-6'>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Copyright (c) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Copyright Holder All Rights Reserved.</p>
+        </div>
+        <div class='col-sm-6'>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+      </div>
+      <a href="../admin/authentification.php"><span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span></a>
+    </section>
   </div>
-</body>
+</div>
+<script src="js/index.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
