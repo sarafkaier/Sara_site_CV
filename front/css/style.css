@@ -1,3 +1,4 @@
+/****************************HAUT DE PAGE**************************************/
 body {
   padding: 0;
   margin: 0;
@@ -41,6 +42,7 @@ display:block !important;
   color: #9d9d9d;
 }
 
+/*****************************DESSIN ET PARALLAX*************************************/
 #hero {
   height: 800px;
   overflow: hidden;
@@ -49,6 +51,7 @@ display:block !important;
 
 #content {
   background-color: #130d0a;
+
 }
 
 .layer {
@@ -76,20 +79,11 @@ display:block !important;
   text-align: center;
 }
 
-h1 {
-  line-height: 120%;
-  margin-bottom: 30px;
-}
-
-p {
-  color: #ede0d5;
-  font-size: 18px;
-  line-height: 150%;
-}
 
 #hero, .layer {
   min-height: 800px;
 }
+
 
 /*.layer-bg {
   background-image: url("../img/galaxy.jpg");
@@ -105,7 +99,7 @@ p {
 }
 
 /*.layer-3 {
-  background-image: url("../img/ilu_man.png");
+  background-image: url("../img/ilu_.png");
   background-position: right bottom;
 }*/
 
@@ -117,6 +111,37 @@ p {
   background-image: url("../img/ilu_overlay.png");
 }
 
+/*********************************ICONES***************************************/
+.fa-code{
+  color: #FFAF00;
+}
+
+.fa-book{
+  color: #840404;
+}
+
+.fa-pencil-square{
+  color: #303481;
+}
+/**********************************SECTION******************************************/
+h1 {
+  line-height: 120%;
+  margin-bottom: 30px;
+  color: #E3F8FF;
+}
+
+h3{
+  text-align: center;
+  margin-top: 75px;
+  color: #E3F8FF;
+}
+
+p {
+  color: #E3F8FF;
+  font-size: 18px;
+  line-height: 150%;
+}
+/*******************************RESPONSIVE*********************************************/
 @media only screen and (max-width: 768px) {
   #hero {
     display: none;
@@ -125,4 +150,73 @@ p {
   #hero-mobile {
     display: block;
   }
+}
+/********************************ECRITURE QUI DEFILE********************************************/
+.blinking-cursor {
+    font-weight: 500;
+    margin-left: 4px;
+    font-size: 20px;
+    color: white !important;
+    -webkit-animation: 1s blink step-end infinite;
+    -moz-animation: 1s blink step-end infinite;
+    -ms-animation: 1s blink step-end infinite;
+    -o-animation: 1s blink step-end infinite;
+    animation: 1s blink step-end infinite;
+  }
+
+@keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
+
+@-moz-keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
+
+@-webkit-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
+
+@-ms-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
+
+@-o-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
+#holder{
+    color: #E3F8FF;
+}
+/****************************FOOTER************************************/
+footer{
+  background:linear-gradient(#130d0a, #363333);
+  text-align: center;
+}
+
+.text-muted{
+  margin-top: 33px;
 }

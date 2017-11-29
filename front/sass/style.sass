@@ -1,0 +1,223 @@
+*
+	box-sizing: border-box
+
+$red: #FF206E
+
+body
+	min-height: 100vh
+	font-family: 'Raleway', sans-serif
+	display: flex
+	justify-content: center
+	align-items: center
+	background: linear-gradient(-45deg, $red, lighten(blue, 25%))	
+
+.overlay
+	width: 100%
+	height: 100vh
+	position: fixed
+	top: 0
+	left: 0
+	background: rgba(black, 0.35)
+	z-index: 100
+	opacity: 0
+	pointer-events: none
+	cursor: pointer
+	transition: 0.15s ease-in-out
+	&.active
+		opacity: 1
+		pointer-events: inherit
+
+a.modal-btn
+	display: inline-block
+	padding: 20px 40px
+	background: $red
+	color: white
+	text-decoration: none
+	font-size: 25px
+	font-weight: bold
+	transition: 0.15s ease-in-out
+	&:hover
+		background: white
+		color: $red
+		box-shadow: 0px 0px 25px 1px rgba(black, 0.5)
+	
+.modal
+	width: calc(100% - 40px)
+	max-width: 800px
+	height: calc(100vh - 115px)
+	max-height: 600px
+	box-shadow: 0px 0px 10px 5px rgba(black, 0.35)
+	position: fixed
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+	display: flex
+	flex-direction: column
+	opacity: 0
+	pointer-events: none
+	background: white
+	transition: 0.15s ease-in-out
+	z-index: 500
+	&.active
+		opacity: 1
+		pointer-events: inherit
+	.close
+		widtH: 45px
+		height: 45px
+		position: absolute
+		top: -10px
+		left: -10px
+		transform: translate(-100%, -100%)
+		cursor: pointer
+		transition: 0.15s ease-in-out
+		@media (max-width: 940px)
+			left: 0
+			transform: translate(-0%, -100%)
+		span
+			display: block
+			widtH: 45px
+			height: 5px
+			background: $red
+			position: absolute
+			top: 50%
+			left: 50%
+			box-shadow: 0px 0px 5px 1px black
+			&:first-child
+				transform: translate(-50%, -50%) rotate(45deg)
+			&:last-child
+				transform: translate(-50%, -50%) rotate(-45deg)
+	.wrapper
+		width: 100%
+		height: 100%
+		display: flex
+		position: relative
+		&:after
+			content: '\f234'
+			font-family: FontAwesome
+			width: 50%
+			height: 100%
+			position: absolute
+			left: 0
+			font-size: 450px
+			overflow: hidden
+			display: flex
+			justify-content: center
+			align-items: center
+			transition: 0.15s ease-in-out
+			background: rgba($red, 0.35)
+			color: rgba(black, 0.35)
+			@media (max-width: 640px)
+				width: 0%
+		&:before
+			content: '\f090'
+			font-family: FontAwesome
+			width: 50%
+			height: 100%
+			position: absolute
+			right: 0
+			font-size: 500px
+			overflow: hidden
+			display: flex
+			justify-content: center
+			align-items: center
+			background: rgba(blue, 0.35)
+			transition: 0.15s ease-in-out
+			color: rgba(black, 0.35)
+			@media (max-width: 640px)
+				width: 100%
+		&.switch
+			@media (max-width: 640px)
+				&:after
+					width: 100%
+				&:before
+					width: 0%
+			.content
+				transform: translate(100%, 0)
+				@media (max-width: 640px)
+					width: 100%
+					transform: translate(0%, 0)
+				.inner
+					transform: translate(-50%, 0)
+		.content
+			width: 50%
+			height: 100%
+			background: white
+			position: relative
+			overflow: hidden
+			transition: 0.2s cubic-bezier(0.42, 0, 0.02, 1.21)
+			z-index: 100
+			@media (max-width: 640px)
+				width: 100%
+				background: rgba(white, 0.8)
+			.inner
+				width: 200%
+				height: 100%
+				position: absolute
+				transition: 0.35s cubic-bezier(0.42, 0, 0.02, 1.21)
+				top: 0
+				left: 0
+				display: flex
+				.side
+					width: 50%
+					height: 100%
+					overflow: auto
+					padding: 20px
+					display: flex
+					justify-content: center
+					align-items: center
+					@media (max-widtH: 640px)
+						align-items: flex-start
+					form
+						.field
+							margin: 10px 0
+							label
+								font-size: 25px
+							input[type='submit']
+								font-family: 'Raleway', sans-serif
+								font-size: 25px
+								padding: 20px 40px
+								border: none
+								background: $red
+								color: white
+								transition: 0.15s ease-in-out
+								cursor: pointer
+								&:hover
+									background: white
+									color: $red
+									box-shadow: 0px 0px 25px 1px rgba(black, 0.5)
+							input[type='text'], input[type='password'], input[type='email']
+								font-family: 'Raleway', sans-serif
+								padding: 0px 0
+								width: 100%
+								font-size: 35px	
+								outline: 0
+								border: none
+								background: none
+								border-bottom: 2px solid #ccc
+								transition: 0.15s ease-in-out
+								&:focus
+									border-bottom: 2px solid $red
+									box-shadow: 0px 7px 25px 1px rgba(black, 0.15)
+	.options
+		display: flex
+		a
+			widtH: 100%
+			padding: 20px
+			font-size: 25px
+			text-align: center
+			color: black
+			text-decoration: none
+			transition: 0.15s ease-in-out
+			font-weight: bold
+			display: flex
+			justify-content: center
+			align-items: center
+			background: white
+			&:hover
+				color: $red
+			&.active
+				box-shadow: 2px 2px 25px 1px rgba(black, 0.35)
+				z-index: 100
+				background: $red
+				color: white
+				
