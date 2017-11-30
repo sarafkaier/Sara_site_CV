@@ -1,3 +1,4 @@
+// Effet parallax
 (function() {
   window.addEventListener('scroll', function(event) {
     var depth, i, layer, layers, len, movement, topDistance, translate3d;

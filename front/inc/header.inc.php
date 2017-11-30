@@ -20,7 +20,7 @@
   <body>
     <nav class="navbar navbar-inverse navbar-fixed-top navbar-static"><!--navbar-static => la nav reste toujours visible même si on scroll très bas-->
         <div class="navbar-header">
-            <a class="navbar-brand" href="contact.html">
+            <a class="navbar-brand" href="">
                 <img src="#" alt="" title="">
             </a>
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -32,38 +32,12 @@
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li class="active"><a href=""></a></li>
-                <li><a href="http://www" target="_blank">Formation</a></li>
-<!--test DROPDOWN -->
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Compétences<span class="caret"></span></a>
-
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">One more separated link</a></li>
-                    </ul>
-                </li>
-                <li><a href="http://www" target="_blank">Formation</a></li>
-<!--test DROPDOWN -->
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Compétences<span class="caret"></span></a>
-
-                    <ul class="dropdown-menu">
-                        <li><a href="">Compétences</a></li>
-                            <li><a href="">Expérience pro</a></li>
-                            <li><a href="cv.pdf">Télécharger mon CV</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="">Summary of experience</a></li>
-                            <li><a href="" target="_blank">Professional record</a></li>
-                            <li><a href="resumem.pdf" target="_blank">Download my resume</a></li>
-                    </ul>
-                </li>
-<!--fin test DROPDOWN -->
-                <li><a href="">Contact</a></li>
+                <li><a href="index.php">Accueil</a></li>
+                <li><a href="">Formation</a></li>
+                <li><a href="">Expériences</a></li>
+                <li><a href="">Compétences</a></li>
+                <li><a href="">Réalisations</a></li>
+                <li><a href="contact.php">Contact</a></li>
             </ul>
       </div>
     </nav>
