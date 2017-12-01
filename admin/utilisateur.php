@@ -48,10 +48,9 @@ include('inc/nav.inc.php');
   </head>
   <body>
 
-<div class="container-fluid">
+  <div class="container-fluid">
     <div class="row well">
         <h1 class="col-xs-12 col-sm-6 col-md-offset-3 col-sm-offset-1"><?= $ligne_utilisateur['prenom']?></h1><br>
-        <!-- <h2>Admin Baba</h2> -->
     </div>
     <div class="row">
         <div class="col-xs-12 col-sm-6 col-md-offset-4 col-md-4 col-sm-offset-1">
@@ -60,7 +59,6 @@ include('inc/nav.inc.php');
                 <div class="panel-heading">
                     <p >Profil de l'utilisateur</p>
                 </div>
-                <div class="container-fluid">
 
                 <div class="panel-body">
                     <ul class="list-unstyled">

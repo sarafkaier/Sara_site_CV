@@ -34,13 +34,6 @@
 	  </div>
 
 	  <div class="rightcontact">
-      <div class="form-group">
-			<p>Ville <span></span></p>
-			<span class="icon-case"><i class="fa fa-building-o"></i></span>
-				<input type="text" name="ville" id="ville" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Ville' doit être renseigné."/>
-        <div class="validation"></div>
-			</div>
-
 			<div class="form-group">
 			<p>Numéro de téléphone <span>*</span></p>
 			<span class="icon-case"><i class="fa fa-phone"></i></span>
@@ -56,7 +49,7 @@
 			</div>
 	</div>
 	</div>
-<button type="submit" class="bouton-contact">Send</button>
+<button type="submit" class="bouton-contact">Envoyer</button>
 </form>
 
 </body>

@@ -56,6 +56,10 @@ if (isset($_GET['id_realisation'])) { // on récupère la comp. par son id dans 
         $ligne_utilisateur = $resultat -> fetch();
         ?>
         <title>Admin : <?= ($ligne_utilisateur['pseudo']); ?></title>
+
+        <!--CKEditor-->
+        <script src="https://cdn.ckeditor.com/4.7.3/basic/ckeditor.js"></script>
+
         <link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans" rel="stylesheet">
 
         <!-- Bootstrap -->
@@ -64,6 +68,7 @@ if (isset($_GET['id_realisation'])) { // on récupère la comp. par son id dans 
         <link rel="stylesheet" href="css/style_admin.css">
 
         <link href="https://fonts.googleapis.com/css?family=Concert+One" rel="stylesheet">
+
     </head>
     <body>
         <?php
@@ -140,8 +145,9 @@ if (isset($_GET['id_realisation'])) { // on récupère la comp. par son id dans 
 
                                 <div class="form-group">
                                     <label for="disabledSelect">Description</label>
-                                    <textarea name="r_description" id="r_description" class="form-control" placeholder="Insérer une description"></textarea>
+                                    <textarea name="r_description" id="editor1" class="form-control" placeholder="Insérer une description"></textarea>
                                 </div>
+                                <!-- <script>CKEDITOR.replace('editor1')</script> -->
 
                                 <input type="submit" class="btn btn-primary" value="Insérez">
 
