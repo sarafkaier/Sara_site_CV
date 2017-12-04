@@ -152,6 +152,7 @@ p {
     display: block;
   }
 }
+
 /********************************ECRITURE QUI DEFILE********************************************/
 .blinking-cursor {
     font-weight: 500;
@@ -211,6 +212,62 @@ p {
 }
 #holder{
     color: #E3F8FF;
+}
+/**************************RESEAU SOCIAUX*********************************/
+.social {
+  position: absolute;
+  /*width: 100%;*/
+  top: 50%;
+  text-align: center;
+  transform: translateY(-50%);
+}
+
+.social .link {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  width: 134px;
+  height: 134px;
+  border-radius: 50%;
+  border: 2px dashed white;
+  background-clip: content-box;
+  padding: 10px;
+  transition: .5s;
+  color: #D7D0BE;
+  margin-left: 15px;
+  margin-right: 15px;
+  font-size: 70px;
+}
+
+.social .link span {
+  display: block;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.social .link:hover {
+  padding: 20px;
+  color: white;
+  margin-left: -5px;
+  transform: translateX(10px) rotate(360deg);
+}
+
+.social .link.google-plus {
+  background-color: tomato;
+  color: white;
+}
+
+.social .link.github {
+  background-color: #130d0a;
+  color: white;
+}
+
+.social .link.linkdin {
+  background-color: #00ACEE;
+  color: white;
 }
 /****************************FOOTER************************************/
 footer{

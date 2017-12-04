@@ -54,4 +54,4 @@
 
 </body>
 </html>
-<?php include 'inc/footer.inc.php'; ?>
+<?php require('inc/footer.inc.php'); ?>

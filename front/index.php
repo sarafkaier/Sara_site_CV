@@ -35,6 +35,10 @@
       </div>
     </section>
   </div>
+  <div class="social">
+    <a href="https://www.linkedin.com/feed/" class="link linkdin" target="_blank"><span class="fa fa-linkedin-square"></span></a>
+    <a href="https://github.com/sarafkaier" class="link github" target="_blank"><span class="fa fa-github"></span></a>
+    <a href="https://plus.google.com/+OndřejBárta-Otaku" class="link google-plus" target="_blank"><span class="fa fa-google-plus-square"></span></a>
+  </div>
 </div>
-
 <?php include 'inc/footer.inc.php'; ?>

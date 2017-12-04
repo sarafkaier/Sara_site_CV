@@ -33,10 +33,8 @@
             <ul class="nav navbar-nav">
                 <li class="active"><a href=""></a></li>
                 <li><a href="index.php">Accueil</a></li>
-                <li><a href="">Formation</a></li>
-                <li><a href="">Expériences</a></li>
-                <li><a href="">Compétences</a></li>
-                <li><a href="">Réalisations</a></li>
+                <li><a href="">Formation & Expériences</a></li>
+                <li><a href="">Compétences & Réalisations</a></li>
                 <li><a href="contact.php">Contact</a></li>
             </ul>
       </div>
