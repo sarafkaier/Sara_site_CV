@@ -1,7 +1,7 @@
 body {
   margin: auto;
-  background-color:#E2EFF1;
-  background-image: url("../img/ilu_overlay.png");
+  background-color:white;
+  /*background-image: url("../img/ilu_overlay.png");*/
   font-family: 'Bubblegum Sans', cursive;
 }
 

@@ -2,7 +2,7 @@
 body {
   padding: 0;
   margin: 0;
-  background-color:#E2EFF1;
+  background-color:white;
   font-family: 'Bubblegum Sans', cursive;
   color: #F1F1F1;
 }
@@ -153,6 +153,12 @@ p {
   }
 }
 
+@media screen and (max-width:768px) {
+    .social{
+        display: none;
+    }
+}
+
 /********************************ECRITURE QUI DEFILE********************************************/
 .blinking-cursor {
     font-weight: 500;
@@ -213,30 +219,29 @@ p {
 #holder{
     color: #E3F8FF;
 }
-/**************************RESEAU SOCIAUX*********************************/
+/**************************RESEAUX SOCIAUX*********************************/
 .social {
   position: absolute;
-  /*width: 100%;*/
+  width: 100%;
   top: 50%;
   text-align: center;
   transform: translateY(-50%);
 }
 
 .social .link {
-  display: inline-block;
-  vertical-align: middle;
-  position: relative;
-  width: 134px;
-  height: 134px;
-  border-radius: 50%;
-  border: 2px dashed white;
-  background-clip: content-box;
-  padding: 10px;
-  transition: .5s;
-  color: #D7D0BE;
-  margin-left: 15px;
-  margin-right: 15px;
-  font-size: 70px;
+vertical-align: middle;
+position: relative;
+width: 88px;
+height: 91px;
+border-radius: 50%;
+border: 2px dashed white;
+background-clip: content-box;
+padding: 7px;
+transition: .5s;
+/*margin-left: 15px;*/
+/*margin-right: 15px;*/
+font-size: 55px;
+display: flex;
 }
 
 .social .link span {

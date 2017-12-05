@@ -1,0 +1,209 @@
+/** {margin: 0; padding: 0; outline: none;}*/
+
+body {
+	/*background-image: url("../img/ilu_overlay.png");*/
+  background: white;
+  font-family: 'Bubblegum Sans', cursive;
+	color:#130d0a;
+}
+h1{
+  text-align: center;
+  color: #130d0a;
+}
+h2 {
+	font-size: 2.7em;
+  font-weight: normal;
+	padding: 10px 0 16px 0;
+  margin: 0 0 30px;
+	text-align:center;
+	color:#FFAF00;
+  background:#000;
+	border-radius:2px;
+	border: 1px solid #FFAF00;
+}
+/**************************COMPETENCE*********************************/
+h2.plataformas {
+  border: 1px solid #81BDA4;
+  color: #81BDA4;
+}
+
+h2.programas {
+  border: 1px solid #F6AA93;
+  color:#F6AA93;
+}
+
+.container {
+	width: 90%;
+  padding:5%;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.col {
+	width: 23%;
+  margin: 0 5%;
+  position: relative;
+  float: left;
+  font-size: 12px;
+  line-height: 2em;
+  padding: 5% 0;
+}
+/*.col { width:101%; }*/
+.skill {
+	list-style:none;
+	padding-top:30px;
+  margin-left: -38px;
+}
+
+.skill li {
+	margin-bottom:70px;
+	background:#030303;
+	height:6px;
+	border-radius:3px;
+	border-left:1px solid #111;
+	border-top:1px solid #111;
+	border-right:1px solid #333;
+	border-bottom:1px solid #333;
+}
+
+.skill li em {
+	position:relative;
+  font-style: normal;
+  font-size: 14px;
+  text-align: center;
+  color:#111;
+	top:-28px;
+}
+
+.blueline {
+	height: 3px;
+	margin: 2px 0;
+	background: #FFAF00;
+	position: absolute;
+}
+.greenline {
+	height: 3px;
+	margin: 2px 0;
+	background: #81BDA4;
+	position: absolute;
+}
+.redline {
+	height: 3px;
+	margin: 2px 0;
+	background: #F6AA93;
+	position: absolute;
+}
+
+.titulo      { opacity:1;  animation:titulo 5s ease-out;     }
+
+/*front*/
+.html        { width:80%;  animation:html 2s ease-out;       }
+.css         { width:75%;  animation:css 2s ease-out;        }
+.javascript  { width:20%;  animation:javascript 2s ease-out; }
+.jquery      { width:20%;  animation:jquery 2s ease-out;     }
+
+/*back*/
+.php         { width:50%;  animation:php 2s ease-out;        }
+.silex       { width:20%;  animation:silex 2s ease-out;        }
+.laravel     { width:10%;  animation:laravel 2s ease-out;        }
+
+/*plateforme*/
+.photoshop   { width:30%;  animation:photoshop 2s ease-out;  }
+.bootstrap   { width:70%;  animation:bootstrap 2s ease-out;   }
+.wordpress   { width:50%;  animation:wordpress 2s ease-out;      }
+
+
+@keyframes titulo      { 0% { opacity:0; } 100% { opacity:1; }  }
+
+/*front*/
+@keyframes html        { 0% { width:0px; } 100% { width:80%; }  }
+@keyframes css         { 0% { width:0px; } 100% { width:75%; }  }
+@keyframes javascript  { 0% { width:0px; } 100% { width:20%; }  }
+@keyframes jquery      { 0% { width:0px; } 100% { width:20%; }  }
+
+/*back*/
+@keyframes php         { 0% { width:0px; } 100% { width:50%; }  }
+@keyframes silex       { 0% { width:0px; } 100% { width:20%; }  }
+@keyframes laravel     { 0% { width:0px; } 100% { width:10%; }  }
+
+/*plateforme*/
+@keyframes photoshop   { 0% { width:0px; } 100% { width:30%; }  }
+@keyframes bootstrap   { 0% { width:0px; } 100% { width:70%; }  }
+@keyframes wordpress   { 0% { width:0px; } 100% { width:50%; }  }
+
+/*media queries*/
+@media (max-width: 1200px){
+  h2 {font-size:2.2em;}
+}
+@media (max-width: 980px){
+  h2 {font-size:1.8em;}
+}
+@media (max-width: 767px){
+  h2 {font-size:1.4em;}
+}
+@media (max-width: 580px){
+  h2 {font-size:1.1em; padding:10px 0;}
+}
+@media (max-width: 480px){
+  h2 {font-size:2.2em; padding: 10px 0 15px 0;}
+  .col {width: 90%;}
+}
+/*************************REALISATION**************************************/
+section.awSlider .carousel{
+  display:table;
+  z-index:2;
+  -moz-box-shadow: 0 0 4px #444;
+	-webkit-box-shadow: 0 0 4px #444;
+	box-shadow: 0 0 15px rgba(1,1,1,.5);
+}
+
+section.awSlider{
+  margin:30px auto;
+  padding:30px;
+  position:relative;
+  display:table;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+section.awSlider:hover > img{
+  -ms-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  opacity:1;
+}
+
+section.awSlider img{
+   pointer-events: none;
+}
+
+section.awSlider > img{
+  position:absolute;
+  top:30px;
+  z-index:1;
+  transition:all .3s;
+  filter: blur(1.8vw);
+  -webkit-filter: blur(2vw);
+  -moz-filter: blur(2vw);
+  -o-filter: blur(2vw);
+  -ms-filter: blur(2vw);
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  opacity:.5;
+}
+.carousel-inner{
+  height: 500px;
+}
+/*****************************FOOTER*****************************************/
+.container {
+  width: 90%;
+  padding: 1%;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-top: 100px;
+}
