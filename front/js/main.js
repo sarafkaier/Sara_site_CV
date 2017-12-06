@@ -1,3 +1,4 @@
+// Ecriture qui défile
 $(document).ready(function() {
 
  // typing animation

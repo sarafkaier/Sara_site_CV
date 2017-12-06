@@ -72,7 +72,7 @@ if (isset($_GET['id_formation'])) { // on récupère la comp. par son id dans l'
         $nbr_formations = $resultat->rowCount();
 
         // $ligne_competence = $resultat -> fetch();
-?>
+        ?>
 <?php include('inc/nav.inc.php'); ?>
 <div class="container">
     <div class="page-header">

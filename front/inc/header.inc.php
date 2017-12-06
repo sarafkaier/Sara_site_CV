@@ -19,23 +19,23 @@
   </head>
   <body>
     <nav class="navbar navbar-inverse navbar-fixed-top navbar-static"><!--navbar-static => la nav reste toujours visible même si on scroll très bas-->
-        <div class="navbar-header">
-            <a class="navbar-brand" href="">
-                <img src="#" alt="" title="">
-            </a>
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-        </div>
-        <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href=""></a></li>
-                <li><a href="index.php">Accueil</a></li>
-                <li><a href="">Formation & Expériences</a></li>
-                <li><a href="competence_realisation.php">Compétences & Réalisations</a></li>
-                <li><a href="contact.php">Contact</a></li>
-            </ul>
+      <div class="navbar-header">
+        <a class="navbar-brand" href="">
+          <img src="#" alt="" title="">
+        </a>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href=""></a></li>
+          <li><a href="index.php">Accueil</a></li>
+          <li><a href="">Formation & Expériences</a></li>
+          <li><a href="competence_realisation.php">Compétences & Réalisations</a></li>
+          <li><a href="contact.php">Contact</a></li>
+        </ul>
       </div>
     </nav>

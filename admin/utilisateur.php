@@ -62,19 +62,19 @@ include('inc/nav.inc.php');
 
                 <div class="panel-body">
                     <ul class="list-unstyled">
-                            <li>Prénom : <?php echo $ligne_utilisateur['prenom'] ;?></li>
-                            <li>Nom : <?php echo $ligne_utilisateur['nom'] ;?></li>
-                            <li>Email : <?php echo $ligne_utilisateur['email'] ;?></li>
-                            <li>Téléphone : <?php echo $ligne_utilisateur['telephone'] ;?></li>
-                            <li>Pseudo : <?php echo $ligne_utilisateur['pseudo'] ;?></li>
-                            <li>Age : <?php echo $ligne_utilisateur['age'] ;?></li>
-                            <li>Date de naissance : <?php echo $ligne_utilisateur['date_naissance'] ;?></li>
-                            <li>Civilité : <?php echo $ligne_utilisateur['sexe'] ;?></li>
-                            <li>Adresse : <?php echo $ligne_utilisateur['adresse'] ;?></li>
-                            <li>Code postal : <?php echo $ligne_utilisateur['code_postal'] ;?></li>
-                            <li>Ville : <?php echo $ligne_utilisateur['ville'] ;?></li>
-                            <li>Pays : <?php echo $ligne_utilisateur['pays'] ;?></li>
-                            <li>Avatar : <?php echo $ligne_utilisateur['avatar'] ;?></li>
+                            <li>Prénom :            <?= $ligne_utilisateur['prenom'] ;?></li>
+                            <li>Nom :               <?= $ligne_utilisateur['nom'] ;?></li>
+                            <li>Email :             <?= $ligne_utilisateur['email'] ;?></li>
+                            <li>Téléphone :         <?= $ligne_utilisateur['telephone'] ;?></li>
+                            <li>Pseudo :            <?= $ligne_utilisateur['pseudo'] ;?></li>
+                            <li>Age :               <?= $ligne_utilisateur['age'] ;?></li>
+                            <li>Date de naissance : <?= $ligne_utilisateur['date_naissance'] ;?></li>
+                            <li>Civilité :          <?= $ligne_utilisateur['sexe'] ;?></li>
+                            <li>Adresse :           <?= $ligne_utilisateur['adresse'] ;?></li>
+                            <li>Code postal :       <?= $ligne_utilisateur['code_postal'] ;?></li>
+                            <li>Ville :             <?= $ligne_utilisateur['ville'] ;?></li>
+                            <li>Pays :              <?= $ligne_utilisateur['pays'] ;?></li>
+                            <li>Avatar :            <?= $ligne_utilisateur['avatar'] ;?></li>
                             <li><a href="modif_utilisateur.php?id_utilisateur=<?= $ligne_utilisateur['id_utilisateur']; ?>"><button type="button" class="btn btn-success"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button></a></li>
                         <ul>
                     </div>

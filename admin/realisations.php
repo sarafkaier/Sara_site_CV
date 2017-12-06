@@ -49,115 +49,115 @@ if (isset($_GET['id_realisation'])) { // on récupère la comp. par son id dans 
 
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="utf-8">
-        <?php
-        $resultat = $pdo -> query("SELECT * FROM t_utilisateurs WHERE id_utilisateur = '$id_utilisateur'");
-        $ligne_utilisateur = $resultat -> fetch();
-        ?>
-        <title>Admin : <?= ($ligne_utilisateur['pseudo']); ?></title>
+<head>
+  <meta charset="utf-8">
+  <?php
+  $resultat = $pdo -> query("SELECT * FROM t_utilisateurs WHERE id_utilisateur = '$id_utilisateur'");
+  $ligne_utilisateur = $resultat -> fetch();
+  ?>
+  <title>Admin : <?= ($ligne_utilisateur['pseudo']); ?></title>
 
-        <!--CKEditor-->
-        <script src="https://cdn.ckeditor.com/4.7.3/basic/ckeditor.js"></script>
+  <!--CKEditor-->
+  <script src="https://cdn.ckeditor.com/4.7.3/basic/ckeditor.js"></script>
 
-        <link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans" rel="stylesheet">
 
-        <!-- Bootstrap -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
 
-        <link rel="stylesheet" href="css/style_admin.css">
+  <link rel="stylesheet" href="css/style_admin.css">
 
-        <link href="https://fonts.googleapis.com/css?family=Concert+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Concert+One" rel="stylesheet">
 
-    </head>
-    <body>
-        <?php
-        $resultat = $pdo -> prepare("SELECT * FROM t_realisations WHERE utilisateur_id ='1'");
-        $resultat->execute();
-        $nbr_realisation = $resultat->rowCount();
+</head>
+<body>
+  <?php
+  $resultat = $pdo -> prepare("SELECT * FROM t_realisations WHERE utilisateur_id ='1'");
+  $resultat->execute();
+  $nbr_realisation = $resultat->rowCount();
 
-        // $ligne_competence = $resultat -> fetch();
-?>
-<?php include('inc/nav.inc.php'); ?>
-<div class="container">
+  // $ligne_competence = $resultat -> fetch();
+  ?>
+  <?php include('inc/nav.inc.php'); ?>
+  <div class="container">
     <div class="page-header">
-        <h1>Admin : <?= ($ligne_utilisateur['prenom']); ?></h1>
+      <h1>Admin : <?= ($ligne_utilisateur['prenom']); ?></h1>
     </div>
     <!-- Fil d'ariane -->
     <ol class="breadcrumb">
-        <li><a href="index.php">Accueil</a></li>
-        <li><a href="#">Parcours</a></li>
-        <li class="active">Réalisations</li>
+      <li><a href="index.php">Accueil</a></li>
+      <li><a href="#">Parcours</a></li>
+      <li class="active">Réalisations</li>
     </ol>
     <div class="row">
+      <div class="col-md-8">
+        <h2>Les réalisations :</h2>
+        <h4 class="well">J'ai <?= $nbr_realisation;?> realisation<?= ($nbr_realisation>1)?'s':''?></h4>
+      </div>
+      <div class="row">
         <div class="col-md-8">
-            <h2>Les réalisations :</h2>
-            <h4 class="well">J'ai <?= $nbr_realisation;?> realisation<?= ($nbr_realisation>1)?'s':''?></h4>
+          <table border="2" class="table table-condensed table-hover">
+            <tr>
+              <th>Titre</th>
+              <th>Soustitre</th>
+              <th>Dates</th>
+              <th>Description</th>
+              <th>Suppression</th>
+              <th>Modification</th>
+            </tr>
+            <tr>
+              <?php while ($ligne_realisation = $resultat -> fetch()) { ?>
+                <td><?= $ligne_realisation['r_titre'];?></td>
+                <td><?= $ligne_realisation['r_soustitre'];?></td>
+                <td><?= $ligne_realisation['r_dates'];?></td>
+                <td><?= $ligne_realisation['r_description'];?></td>
+                <td><a href="realisations.php?id_realisation=<?= $ligne_realisation['id_realisation'];?>"><button type="button" class="btn btn-danger col-md-4 col-md-offset-4"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></a></td>
+                <td><a href="modif_realisation.php?id_realisation=<?= $ligne_realisation['id_realisation'];?>"><button type="button" class="btn btn-success col-md-4 col-md-offset-4"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button></a></td>
+              </tr>
+            <?php } ?>
+          </table>
         </div>
-        <div class="row">
-            <div class="col-md-8">
-                <table border="2" class="table table-condensed table-hover">
-                    <tr>
-                        <th>Titre</th>
-                        <th>Soustitre</th>
-                        <th>Dates</th>
-                        <th>Description</th>
-                        <th>Suppression</th>
-                        <th>Modification</th>
-                    </tr>
-                    <tr>
-                        <?php while ($ligne_realisation = $resultat -> fetch()) { ?>
-                            <td><?= $ligne_realisation['r_titre'];?></td>
-                            <td><?= $ligne_realisation['r_soustitre'];?></td>
-                            <td><?= $ligne_realisation['r_dates'];?></td>
-                            <td><?= $ligne_realisation['r_description'];?></td>
-                            <td><a href="realisations.php?id_realisation=<?= $ligne_realisation['id_realisation'];?>"><button type="button" class="btn btn-danger col-md-4 col-md-offset-4"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></a></td>
-                            <td><a href="modif_realisation.php?id_realisation=<?= $ligne_realisation['id_realisation'];?>"><button type="button" class="btn btn-success col-md-4 col-md-offset-4"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button></a></td>
-                    </tr>
-                        <?php } ?>
-                    </table>
-            </div>
         <div class="col-md-4">
-            <div class="panel panel-info">
-                <div class="panel-body">
-                    <div class="panel panel-info">
-                        <div class="panel-heading">
-                            <div>Insertion d'une réalisation :</div>
-                        </div>
-                    </div>
-                        <form action="realisations.php" method="post">
-                            <fieldset>
-                                <?= $msg; ?>
-                                <div class="form-group">
-                                    <label for="disabledSelect">Titre</label>
-                                    <input type="text" name="r_titre" id="r_titre" placeholder="Insérer un titre" class="form-control">
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="disabledSelect">Soustitre</label>
-                                    <input type="text" name="r_soustitre" id="r_soustitre" placeholder="Insérer un soustitre" class="form-control">
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="disabledSelect">Dates</label>
-                                    <input type="text" name="r_dates" id="r_dates" placeholder="Insérer une date" class="form-control">
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="disabledSelect">Description</label>
-                                    <textarea name="r_description" id="editor1" class="form-control" placeholder="Insérer une description"></textarea>
-                                </div>
-                                <!-- <script>CKEDITOR.replace('editor1')</script> -->
-
-                                <input type="submit" class="btn btn-primary" value="Insérez">
-
-                            </fieldset>
-                        </form>
-                    </div>
+          <div class="panel panel-info">
+            <div class="panel-body">
+              <div class="panel panel-info">
+                <div class="panel-heading">
+                  <div>Insertion d'une réalisation :</div>
                 </div>
+              </div>
+              <form action="realisations.php" method="post">
+                <fieldset>
+                  <?= $msg; ?>
+                  <div class="form-group">
+                    <label for="disabledSelect">Titre</label>
+                    <input type="text" name="r_titre" id="r_titre" placeholder="Insérer un titre" class="form-control">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="disabledSelect">Soustitre</label>
+                    <input type="text" name="r_soustitre" id="r_soustitre" placeholder="Insérer un soustitre" class="form-control">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="disabledSelect">Dates</label>
+                    <input type="text" name="r_dates" id="r_dates" placeholder="Insérer une date" class="form-control">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="disabledSelect">Description</label>
+                    <textarea name="r_description" id="editor1" class="form-control" placeholder="Insérer une description"></textarea>
+                  </div>
+                  <!-- <script>CKEDITOR.replace('editor1')</script> -->
+
+                  <input type="submit" class="btn btn-primary" value="Insérez">
+
+                </fieldset>
+              </form>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
-<hr>
+  </div>
+  <hr>
 <?php include('inc/footer.inc.php'); ?>

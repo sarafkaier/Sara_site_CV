@@ -84,4 +84,4 @@ $ligne_competence = $resultat->fetch();
     </div>
 </body>
 </html>
-  <?php include('inc/footer.inc.php'); ?>
+<?php include('inc/footer.inc.php'); ?>
