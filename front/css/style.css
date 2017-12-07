@@ -130,6 +130,7 @@ h1 {
   line-height: 120%;
   margin-bottom: 30px;
   color: black;
+  font-size: 50px;
 }
 
 h3{
@@ -160,7 +161,7 @@ p {
   }*/
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1268px) {
     .social{
         display: none;
     }
@@ -225,6 +226,7 @@ p {
 }
 #holder{
     color: black;
+    font-size: 43px;
 }
 /**************************RESEAUX SOCIAUX*********************************/
 .social {
