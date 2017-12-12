@@ -132,6 +132,14 @@ h1 {
   color: black;
   font-size: 50px;
 }
+.bg-clip{
+  background: url("https://66.media.tumblr.com/3820a997449e2097999a3e4e219577b6/tumblr_nfivzidHVP1raievko1_500.gif");
+  background-clip: content-box;
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /*transform: rotate(-4deg);*/
+}
 
 h3{
   text-align: center;

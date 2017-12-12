@@ -1,8 +1,8 @@
-<?php include 'inc/header.inc.php'; ?>
 <?php
+include 'inc/header.inc.php';
 require('Contact.class.php');
 
-// on vérifir que le formulaire a été posté
+// on vérifie que le formulaire a été posté
 if (!empty($_POST)) {
   // on éclate le $_POST en tableau qui permet d'accéder directement au champs par des variables
   extract($_POST);
@@ -41,17 +41,18 @@ $success = 'Message envoyé !';
 
 	<h1>Contactez moi</h1>
 	<div class="info"><p><i class="fa fa-smile-o fa-5x"  aria-hidden="true"></i></p></a></div>
-
+  
 	<form action="contact.php" method="post">
-		<h2>Un projet ? Mon profil vous intéresse ? N'hésitez pas à me contacter !</h2>
 
+    <h2>Un projet ? Mon profil vous intéresse ? N'hésitez pas à me contacter !</h2>
 		<div class="contentform">
 			<div id="sendmessage"> Votre message a bien été envoyé ! Merci </div>
 
 			<div class="leftcontact">
 				<div class="form-group">
+          <p class="php"><?php if (isset($erreurnom)) echo $erreurnom; ?></p>
 					<p>Nom<span>*</span></p>
-					<span class="icon-case"><i class="fa fa-male"></i><?php if (isset($erreurnom)) echo $erreurnom; ?></span>
+					<span class="icon-case"><i class="fa fa-male"></i></span>
 					<input type="text" name="nom" id="nom" value="<?php if(isset($nom)) echo $nom; ?>"/>
 					<div class="validation"></div>
 				</div>
@@ -64,8 +65,9 @@ $success = 'Message envoyé !';
 				</div>
 
 				<div class="form-group">
+          <p class="php"><?php if (isset($erreuremail)) echo $erreuremail; ?></p>
 					<p>E-mail <span>*</span></p>
-					<span class="icon-case"><i class="fa fa-envelope-o"></i><?php if (isset($erreuremail)) echo $erreuremail; ?></span>
+					<span class="icon-case"><i class="fa fa-envelope-o"></i></span>
 					<input type="email" id="email" name="email" value="<?php if (isset($email)) echo $email; ?>"/>
 					<div class="validation"></div>
 				</div>
@@ -73,15 +75,17 @@ $success = 'Message envoyé !';
 
 			<div class="rightcontact">
 				<div class="form-group">
+          <p class="php"><?php if (isset($erreursujet)) echo $erreursujet; ?></p>
 					<p>Sujet <span>*</span></p>
-					<span class="icon-case"><i class="fa fa-commenting-o"></i><?php if (isset($erreursujet)) echo $erreursujet; ?></span>
+					<span class="icon-case"><i class="fa fa-commenting-o"></i></span>
 					<input type="text" id="sujet" name="sujet" value="<?php if (isset($sujet)) echo $sujet; ?>"/>
 					<div class="validation"></div>
 				</div>
 
 				<div class="form-group">
+          <p class="php"><?php if (isset($erreurmessage)) echo $erreurmessage; ?></p>
 					<p>Message <span>*</span></p>
-					<span class="icon-case"><i class="fa fa-comments-o"></i><?php if (isset($erreurmessage)) echo $erreurmessage; ?></span>
+					<span class="icon-case"><i class="fa fa-comments-o"></i></span>
 					<textarea name="message" rows="14" data-rule="required"><?php if (isset($message)) echo $message; ?></textarea>
 					<div class="validation"></div>
 				</div>

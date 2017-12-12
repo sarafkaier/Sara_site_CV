@@ -14,6 +14,11 @@ body {
   margin-top:2px
 }
 
+.php{
+  font-size: 15px;
+  color: #FF5C5C;
+}
+
 .info i {
   color:#6C5B7B;
 }

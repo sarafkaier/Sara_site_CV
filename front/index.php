@@ -9,7 +9,7 @@
     <div class='layer-4 layer' data-depth='1.00' data-type='parallax'></div>
     <div class='row'>
       <div class='col-sm-12 col-xs-12 texte'>
-        <h1>Sara FKAIER</h1>
+        <h1 class="bg-clip">Sara FKAIER</h1>
         <h2><span id="holder"></span><span class="blinking-cursor">|</span></h2>
       </div>
     </div>
