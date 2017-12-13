@@ -38,44 +38,50 @@
 
   <h1>Réalisations :</h1>
   <section class="awSlider">
-    <div  class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target=".carousel" data-slide-to="0" class="active"></li>
-        <li data-target=".carousel" data-slide-to="1"></li>
-        <li data-target=".carousel" data-slide-to="2"></li>
-        <li data-target=".carousel" data-slide-to="3"></li>
-      </ol>
 
-      <!-- Wrapper for slides -->
-      <div class="carousel-inner col-md-12" role="listbox">
-        <div class="item active">
-          <img src="http://www.adobewordpress.com/wp-content/uploads/2014/02/wallpaper-thumb-941.jpg">
-          <div class="carousel-caption">Mon premier site en HTML/CSS</div>
+    <div class="container">
+      <div class="row" id="work">
+        <div class="col-md-12  work-item">
+          <div class="itemInfo fontJosefin">
+            <p>titre:<br><span class="fontLora">Site CV</span></p>
+            <p>story:<br><span class="fontLora">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vulputate aliquet sollicitudin.</span></p>
+            <p>tools:<br><span class="fontLora">lorem, ipsum, dolor</span></p>
+          </div>
+          <div class="item">
+            <img src="img/01.png" class="pcIcon img-fluid mx-auto d-block">
+            <p class="fontJosefin projectTitle text-center mx-auto">project:<br><span class="fontLora">Site CV</span></p>
+            <a class="link" href="#"><i class="fa fa-link fa-2x" aria-hidden="true"></i></a>
+          </div>
         </div>
-        <div class="item">
-          <img src="http://www.adobewordpress.com/wp-content/uploads/2014/02/wallpaper-thumb-101.jpg">
-          <div class="carousel-caption">Annonceo</div>
-        </div>
-        <div class="item">
-          <img src="http://www.adobewordpress.com/wp-content/uploads/2014/02/wallpaper-thumb-1051.jpg">
-          <div class="carousel-caption">Site e-commerce</div>
-        </div>
-        <div class="item">
-          <img src="http://www.adobewordpress.com/wp-content/uploads/2013/07/wallpaper-thumb-74.jpg">
-          <div class="carousel-caption">Site de production</div>
+
+        <div class="col-md-12 work-item">
+          <div class="itemInfo fontJosefin">
+            <p>titre:<br><span class="fontLora">Site Annonceo</span></p>
+            <p>story:<br><span class="fontLora">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vulputate aliquet sollicitudin.</span></p>
+            <p>tools:<br><span class="fontLora">lorem, ipsum, dolor</span></p>
+          </div>
+          <div class="item">
+            <img src="img/02.jpg" class="pcIcon img-fluid mx-auto d-block">
+            <p class="fontJosefin projectTitle text-center mx-auto">project:<br><span class="fontLora">Site Annonceo</span></p>
+            <a class="link" href="#"><i class="fa fa-link fa-2x" aria-hidden="true"></i></a>
+          </div>
         </div>
       </div>
 
-      <!-- Controls -->
-      <a class="left carousel-control" href=".carousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Geri</span>
-      </a>
-      <a class="right carousel-control" href=".carousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">İleri</span>
-      </a>
+      <div class="row justify-content-center">
+        <div class="col-md-12  work-item">
+          <div class="itemInfo fontJosefin">
+            <p>titre:<br><span class="fontLora">Site HTML / CSS</span></p>
+            <p>story:<br><span class="fontLora">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vulputate aliquet sollicitudin.</span></p>
+            <p>tools:<br><span class="fontLora">lorem, ipsum, dolor</span></p>
+          </div>
+          <div class="item">
+            <img src="img/03.png" class="pcIcon img-fluid mx-auto d-block">
+            <p class="fontJosefin projectTitle text-center mx-auto">project:<br><span class="fontLora">Site HTML / CSS</span></p>
+            <a class="link" href="#"><i class="fa fa-link fa-2x" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
