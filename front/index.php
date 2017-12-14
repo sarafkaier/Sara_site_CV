@@ -13,6 +13,7 @@
         <h2><span id="holder"></span><span class="blinking-cursor">|</span></h2>
       </div>
     </div>
+    <div class="bg_anim"></div>
   </div>
   <!-- <div id='hero-mobile'></div> -->
   <div id='content'>

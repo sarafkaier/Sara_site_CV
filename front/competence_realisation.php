@@ -1,7 +1,7 @@
 <?php require 'inc/header.inc.php'; ?>
 
   <link rel="stylesheet" href="css/competence_realisation.css">
-
+  <div class="bg_anim"></div>
   <div class="container">
     <h1>Compétences :</h1>
     <div class="col">
@@ -41,7 +41,7 @@
 
     <div class="container">
       <div class="row" id="work">
-        <div class="col-md-12  work-item">
+        <div class="col-md-6 work-item">
           <div class="itemInfo fontJosefin">
             <p>titre:<br><span class="fontLora">Site CV</span></p>
             <p>story:<br><span class="fontLora">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vulputate aliquet sollicitudin.</span></p>
@@ -49,12 +49,12 @@
           </div>
           <div class="item">
             <img src="img/01.png" class="pcIcon img-fluid mx-auto d-block">
-            <p class="fontJosefin projectTitle text-center mx-auto">project:<br><span class="fontLora">Site CV</span></p>
+            <p class="fontJosefin projectTitle text-center mx-auto">projet:<br><span class="fontLora">Site CV</span></p>
             <a class="link" href="#"><i class="fa fa-link fa-2x" aria-hidden="true"></i></a>
           </div>
         </div>
 
-        <div class="col-md-12 work-item">
+        <div class="col-md-6 work-item">
           <div class="itemInfo fontJosefin">
             <p>titre:<br><span class="fontLora">Site Annonceo</span></p>
             <p>story:<br><span class="fontLora">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vulputate aliquet sollicitudin.</span></p>
@@ -62,14 +62,14 @@
           </div>
           <div class="item">
             <img src="img/02.jpg" class="pcIcon img-fluid mx-auto d-block">
-            <p class="fontJosefin projectTitle text-center mx-auto">project:<br><span class="fontLora">Site Annonceo</span></p>
+            <p class="fontJosefin projectTitle text-center mx-auto">projet:<br><span class="fontLora">Site Annonceo</span></p>
             <a class="link" href="#"><i class="fa fa-link fa-2x" aria-hidden="true"></i></a>
           </div>
         </div>
       </div>
 
       <div class="row justify-content-center">
-        <div class="col-md-12  work-item">
+        <div class="col-md-6 col-md-offset-3 work-item">
           <div class="itemInfo fontJosefin">
             <p>titre:<br><span class="fontLora">Site HTML / CSS</span></p>
             <p>story:<br><span class="fontLora">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vulputate aliquet sollicitudin.</span></p>
@@ -77,7 +77,7 @@
           </div>
           <div class="item">
             <img src="img/03.png" class="pcIcon img-fluid mx-auto d-block">
-            <p class="fontJosefin projectTitle text-center mx-auto">project:<br><span class="fontLora">Site HTML / CSS</span></p>
+            <p class="fontJosefin projectTitle text-center mx-auto">projet:<br><span class="fontLora">Site HTML / CSS</span></p>
             <a class="link" href="#"><i class="fa fa-link fa-2x" aria-hidden="true"></i></a>
           </div>
         </div>

@@ -8,6 +8,15 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
 
+    <script type="text/javascript">
+    $(document).snowfall();
+
+  $(window).resize(() => {
+    $(document).snowfall('clear');
+    $(document).snowfall();
+  });
+    </script>
+
     <footer>
       <div class="container">
         <p class="text-muted"> <i class="fa fa-copyright" aria-hidden="true"></i> <?= date('Y') ?> - Site CV de Sara</p>
