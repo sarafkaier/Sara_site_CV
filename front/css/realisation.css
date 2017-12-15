@@ -1,0 +1,108 @@
+/*************************REALISATION**************************************/
+body {
+	background-image: url("../img/ilu_overlay.png");
+  /* background: white; */
+  font-family: 'Bubblegum Sans', cursive;
+	color:#130d0a;
+}
+h1{
+  text-align: center;
+  color: #130d0a;
+  margin-top: 67px;
+}
+p{
+  color: black;
+}
+.bg_anim {
+    mix-blend-mode: unset;
+    background-position: center;
+    background-image: url(https://i.imgur.com/j5mHDaA.gif);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    top: 0;
+    background-size: cover;
+    z-index: -1;
+  }
+.work-item {
+  margin-top: 50px;
+  padding: 0;
+  position: relative;
+  /* box-shadow: -6px 6px 10px #4d4d4d; */
+  /* background: rgba(255, 255, 255, 0.8); */
+}
+
+.itemInfo {
+  position: absolute;
+  width: 40%;
+  padding: 10px 0 0 10px;
+  line-height: 120%;
+}
+
+.item {
+  width: 45%;
+  height: 100%;
+  padding-top: 30px;
+  background: #333;
+  position: relative;
+  left: 0;
+  -webkit-transition: all 0.7s ease-out;
+  -moz-transition: all 0.7s ease-out;
+  -ms-transition: all 0.7s ease-out;
+  -o-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out;
+}
+
+
+.work-item:hover .item { /*portfolio item movement and opacity change*/
+  left: 55%;
+  /*background: -webkit-linear-gradient(rgba(115,192,214,0.3),rgba(186,143,212,0.3));
+  background: -o-linear-gradient(rgba(115,192,214,0.3),rgba(186,143,212,0.3));
+  background: -moz-linear-gradient(rgba(115,192,214,0.3),rgba(186,143,212,0.3));
+  background: linear-gradient(rgba(115,192,214,0.3), rgba(186,143,212,0.3));*/
+}
+
+.pcIcon {
+  width: 100%;
+  height: auto;
+}
+
+.projectTitle {
+  color: #fff;
+  width: 100%;
+  line-height: 32px;
+  font-size: 21px;
+  letter-spacing: 0.5px;
+  margin-bottom: 0;
+  padding-bottom: 10px;
+}
+
+.projectTitle .fontLora {
+  font-size: 18px;
+}
+
+.link {
+  position: absolute;
+  top: 45%;
+  right: 45%;
+  opacity: 0;
+  -webkit-transition: all 0.7s ease-out;
+  -moz-transition: all 0.7s ease-out;
+  -ms-transition: all 0.7s ease-out;
+  -o-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out;
+}
+
+.work-item:hover .link {
+  opacity: 1;
+}
+
+/*****************************FOOTER*****************************************/
+.container {
+  width: 90%;
+  padding: 1%;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-top: 57  px;
+}

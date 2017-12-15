@@ -1,6 +1,6 @@
 <?php
 include 'inc/header.inc.php';
-require('Contact.class.php');
+require('inc/Contact.class.php');
 
 // on vérifie que le formulaire a été posté
 if (!empty($_POST)) {
@@ -38,10 +38,10 @@ $success = 'Message envoyé !';
 ?>
 
 	<link rel="stylesheet" href="css/contact.css">
-
+  <div class="bg_anim"></div>
 	<h1>Contactez moi</h1>
 	<div class="info"><p><i class="fa fa-smile-o fa-5x"  aria-hidden="true"></i></p></a></div>
-  
+
 	<form action="contact.php" method="post">
 
     <h2>Un projet ? Mon profil vous intéresse ? N'hésitez pas à me contacter !</h2>
