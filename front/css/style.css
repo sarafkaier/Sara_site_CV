@@ -2,14 +2,14 @@
 body {
   padding: 0;
   margin: 0;
-  background-color:white;
+  background-color:#D8DFE2;
   font-family: 'Bubblegum Sans', cursive;
   color: #F1F1F1;
 }
-/*.navbar{
+/* .navbar{
   background: rgba(388,356,334,-2.5);
   border: none;
-}*/
+} */
 .navbar-brand {
   padding-top: 0px;
   padding-bottom: 0px;
@@ -66,20 +66,6 @@ display:block !important;
   z-index: -1;
 }
 
-.bg_anim {
-    mix-blend-mode: unset;
-    background-position: center;
-    background-image: url(https://i.imgur.com/j5mHDaA.gif);
-    
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    /* background-color: red; */
-    top: 0;
-    background-size: cover;
-    z-index: -1;
-  }
-
 .first-section {
   padding: 50px 0 20px 0;
 }
@@ -114,7 +100,6 @@ display:block !important;
 }*/
 
 .layer-4 {
-  z-index: 2;
   background-image: url("../img/ilu_01.png");
 }
 
@@ -141,14 +126,6 @@ h1 {
   color: black;
   font-size: 50px;
 }
-.bg-clip{
-  background: url("https://66.media.tumblr.com/3820a997449e2097999a3e4e219577b6/tumblr_nfivzidHVP1raievko1_500.gif");
-  background-clip: content-box;
-  position: relative;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  /*transform: rotate(-4deg);*/
-}
 
 h3{
   text-align: center;
@@ -172,16 +149,15 @@ p {
     /*display: none;*/
     display: block;
   }
-
   /*#hero-mobile {
     display: block;
   }*/
 }
 
-@media screen and (max-width:1268px) {
-    .social{
-        display: none;
-    }
+@media (max-width: 480px){
+  .social{
+    display: none;
+  }
 }
 
 /********************************ECRITURE QUI DEFILE********************************************/
@@ -301,6 +277,52 @@ display: flex;
   background-color: #00ACEE;
   color: white;
 }
+/**************************EFFET NEIGE************************************/
+#snow {
+  background-color: transparent;
+  background-image: url(http://wp.agens.no/smakebit/wp-content/themes/smakebiten/img/snow1.png), url(http://wp.agens.no/smakebit/wp-content/themes/smakebiten/img/snow2.png);
+  -webkit-animation: snow 20s linear infinite;
+  -moz-animation: snow 20s linear infinite;
+  -ms-animation: snow 20s linear infinite;
+  animation: snow 20s linear infinite;
+	z-index: 999;
+	right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+	margin-top: 0;
+	pointer-events: none;
+	position: absolute;
+}
+
+/*Keyframes*/
+
+@keyframes snow {
+    0% { background-position: 0px 0px, 0px 0px, 0px 0px }
+
+    100% { background-position: 500px 1000px, 400px 400px, 300px 300px }
+}
+
+@-moz-keyframes snow {
+    0% { background-position: 0px 0px, 0px 0px, 0px 0px }
+
+    100% { background-position: 500px 1000px, 400px 400px, 300px 300px }
+}
+
+@-webkit-keyframes snow {
+    0% { background-position: 0px 0px, 0px 0px, 0px 0px }
+
+    100% {
+        background-position: 500px 1000px, 400px 400px, 300px 300px;
+    }
+}
+
+@-ms-keyframes snow {
+    0% { background-position: 0px 0px, 0px 0px, 0px 0px }
+
+    100% { background-position: 500px 1000px, 400px 400px, 300px 300px }
+}
+
 /****************************FOOTER************************************/
 footer{
   background:linear-gradient(#130d0a, #363333);

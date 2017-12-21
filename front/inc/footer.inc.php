@@ -18,7 +18,7 @@
     </script>
 
     <footer>
-      <div class="container">
+      <div class="container-fluid">
         <p class="text-muted"> <i class="fa fa-copyright" aria-hidden="true"></i> <?= date('Y') ?> - Site CV de Sara</p>
         <a href="../admin/authentification.php"><i class="fa fa-lock" aria-hidden="true"></i></a>
       </div>

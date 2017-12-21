@@ -38,7 +38,7 @@ $success = 'Message envoyé !';
 ?>
 
 	<link rel="stylesheet" href="css/contact.css">
-  <div class="bg_anim"></div>
+  <div id="snow"></div>
 	<h1>Contactez moi</h1>
 	<div class="info"><p><i class="fa fa-smile-o fa-5x"  aria-hidden="true"></i></p></a></div>
 
