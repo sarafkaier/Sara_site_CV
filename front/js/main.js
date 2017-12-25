@@ -7,7 +7,7 @@ $(document).ready(function() {
         var contentArray = content.split(""),
             current = 0,
             elem = this;
-        setInterval(function() {
+            setInterval(function() {
             if(current < contentArray.length) {
                 elem.text(elem.text() + contentArray[current++]);
             }
@@ -19,3 +19,10 @@ $(document).ready(function() {
  // input text for typing animation
   $("#holder").writeText("Recherche un stage dans le domaine du web.");
 })
+
+$(document).snowfall();
+
+$(window).resize(() => {
+    $(document).snowfall('clear');
+    $(document).snowfall();
+});

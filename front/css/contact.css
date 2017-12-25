@@ -1,31 +1,37 @@
 body {
   margin: auto;
-  background-color:white;
-  /*background-image: url("../img/ilu_overlay.png");*/
+  background-color: #D8DFE2;
+  background-image: url("../img/ilu_overlay.png");
   font-family: 'Bubblegum Sans', cursive;
 }
 
 .info p {
   text-align:center;
-  color: #999;
+  color: black;
   text-transform:none;
   font-weight:600;
   font-size:15px;
   margin-top:2px
 }
 
+.php{
+  font-size: 15px;
+  color: #FF5C5C;
+}
+
 .info i {
-  color:#F6AA93;
+  color:#525252;
 }
 form h2 {
   font-size: 18px;
-  background: #F6AA93 none repeat scroll 0% 0%;
+  background: #525252 none repeat scroll 0% 0%;
   color: rgb(255, 255, 255);
   padding: 22px 25px;
   border-radius: 5px 5px 0px 0px;
   margin: auto;
   text-shadow: none;
-  text-align:left
+  text-align:left;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
 }
 
 form {
@@ -33,8 +39,9 @@ form {
   max-width:700px;
   width:100%;
   margin: 1% auto;
-  background-color: #FFFFFF;
+  /* background-color: #FFFFFF; */
   overflow: hidden;
+  box-shadow: 11px 11px 4px rgba(0, 0, 0, 0.2);
 }
 
 p span {
@@ -63,6 +70,7 @@ input {
   height: 40px;
   float: left;
   padding: 0px 15px;
+  color: black;
 }
 
 a {
@@ -77,6 +85,7 @@ textarea {
   height: 130px;
   float: left;
   padding: 0px 15px;
+  color: black;
 }
 
 .form-group {
@@ -96,7 +105,7 @@ textarea {
 }
 
 i {
-  color:#555;
+  color:black;
 }
 
 .contentform {
@@ -104,7 +113,7 @@ i {
 }
 
 .bouton-contact{
-  background-color: #81BDA4;
+  background-color: #355C7D;
   color: #FFF;
   text-align: center;
   width: 100%;
@@ -114,6 +123,9 @@ i {
   cursor: pointer;
   margin-top: 40px;
   font-size: 18px;
+}
+.bouton-contact:hover{
+  background: #1B3C68;
 }
 
 .leftcontact {
@@ -151,13 +163,58 @@ i {
   border: 1px solid #B3DC82;
   padding: 13px 40px 13px 18px;
   border-radius: 3px;
-  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.03);
 }
 
 #sendmessage.show,.show  {
   display:block;
 }
 
-.container{
-  margin-top: 148px;
+.container-fluid{
+  margin-top: 8%;
+}
+
+/**************************EFFET NEIGE************************************/
+#snow {
+    background-color: transparent;
+    background-image: url(http://wp.agens.no/smakebit/wp-content/themes/smakebiten/img/snow1.png), url(http://wp.agens.no/smakebit/wp-content/themes/smakebiten/img/snow2.png);
+    -webkit-animation: snow 20s linear infinite;
+    -moz-animation: snow 20s linear infinite;
+    -ms-animation: snow 20s linear infinite;
+    animation: snow 20s linear infinite;
+	z-index: 999;
+	right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+	margin-top: 0;
+	pointer-events: none;
+	position: absolute;
+}
+
+/*Keyframes*/
+
+@keyframes snow {
+    0% { background-position: 0px 0px, 0px 0px, 0px 0px }
+
+    100% { background-position: 500px 1000px, 400px 400px, 300px 300px }
+}
+
+@-moz-keyframes snow {
+    0% { background-position: 0px 0px, 0px 0px, 0px 0px }
+
+    100% { background-position: 500px 1000px, 400px 400px, 300px 300px }
+}
+
+@-webkit-keyframes snow {
+    0% { background-position: 0px 0px, 0px 0px, 0px 0px }
+
+    100% {
+        background-position: 500px 1000px, 400px 400px, 300px 300px;
+    }
+}
+
+@-ms-keyframes snow {
+    0% { background-position: 0px 0px, 0px 0px, 0px 0px }
+
+    100% { background-position: 500px 1000px, 400px 400px, 300px 300px }
 }
