@@ -41,7 +41,7 @@ if(isset($_POST['connexion'])) {
 $page = 'Connexion';
 ?>
 
-<nav class="navbar navbar-default couleur"><a class="lead" href="../front/index.php"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Site CV</a></nav>
+<nav class="navbar navbar-default couleur"><a class="lead" href="../index.php"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Site CV</a></nav>
 
 <!-- Contenu HTML -->
 <!DOCTYPE html>

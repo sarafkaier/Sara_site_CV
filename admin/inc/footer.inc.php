@@ -1,6 +1,6 @@
 <footer class="footer">
   <div class="container">
-    <p class="text-muted"><?= date('Y') ?> - Site CV de Sara</p>
+    <p class="text-muted"><?= date('Y') ?> - Site CV Sara</p>
   </div>
 </footer>
 
