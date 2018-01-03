@@ -1,4 +1,11 @@
-<?php include 'inc/header.inc.php'; ?>
+<?php include 'inc/header.inc.php';
+include 'inc/init.inc.php';
+
+// Connexion à la table titre_cv
+$resultat = $bdd -> query("SELECT * FROM t_titre_cv");
+$ligne_accroche = $resultat -> fetch();
+
+?>
 
   <body id="page-top">
 
@@ -47,10 +54,10 @@
           <div class="subheading mb-5 text-md-center"><span id="holder"></span><span class="blinking-cursor">|</span>
             <!-- <a href="mailto:sarahfkaier@hotmail.fr">sarahfkaier@hotmail.fr</a> -->
           </div>
-          <p class="mb-5 presentation">Développeuse et intégratrice web junior, je me passionne pour le développement back-end. Je suis capable d'utiliser différentes technologies comme HTML5 & CSS3, JavaScript, PHP, MySQL de même que d'utiliser des CMS comme Wordpress. Mon but est d'associer design et technologie, afin de créer des sites internet attractifs. Vous trouverez ci-dessous mon CV papier à télécharger.</p>
+          <p class="mb-5 presentation"><?= $ligne_accroche['accroche']; ?></p>
           <ul class="list-inline list-social-icons mb-0">
             <li class="list-inline-item">
-              <a href="#">
+              <a href="https://www.facebook.com/">
                 <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
@@ -66,7 +73,7 @@
               </a>
             </li>
             <li class="list-inline-item">
-              <a href="#">
+              <a href="https://www.linkedin.com/feed/">
                 <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
@@ -74,7 +81,7 @@
               </a>
             </li>
             <li class="list-inline-item">
-              <a href="#">
+              <a href="https://github.com/sarafkaier">
                 <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-github fa-stack-1x fa-inverse"></i>
@@ -82,7 +89,7 @@
               </a>
             </li>
           </ul><br>
-          <a target="_blank" href="#" class="inter-section-button offset-md-5">Télécharger mon CV</a>
+          <a href="CV_sara_fkaier.pdf" target="_blank" class="inter-section-button offset-md-5">Télécharger mon CV</a>
         </div>
       </section>
 
@@ -190,9 +197,9 @@
           <picture>
             <div class="rotationImg">
               <!-- <h3>Image en HTML/CSS</h3> -->
+              <a href="http://sarafkaier.fr/"><img src="img/01.png" class="img-fluid image" alt=""></a>
               <a href=""><img src="img/image.jpg" class="img-fluid image" alt=""></a>
-              <a href=""><img src="img/image.jpg" class="img-fluid image" alt=""></a>
-              <a href=""><img src="img/image.jpg" class="img-fluid image" alt=""></a>
+              <a href=""><img src="img/02.jpg" class="img-fluid image" alt=""></a>
             </div>
           </picture>
         </div>
@@ -290,5 +297,5 @@
         </div>
       </section>
     </div>
-    
+
 <?php include 'inc/footer.inc.php'; ?>

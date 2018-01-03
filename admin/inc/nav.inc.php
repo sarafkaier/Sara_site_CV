@@ -20,6 +20,7 @@
                 <li class="dropdown">
                     <a class="active" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Parcours<span class="caret"></span></a>
                     <ul class="dropdown-menu">
+                        <li><a href="accroche.php">Accroche</a></li>
                         <li><a href="experiences.php">Expériences</a></li>
                         <li><a href="realisations.php">Réalisations</a></li>
                         <li><a href="formations.php">Formations</a></li>
