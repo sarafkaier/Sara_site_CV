@@ -5,6 +5,21 @@ include 'inc/init.inc.php';
 $resultat = $bdd -> query("SELECT * FROM t_titre_cv");
 $ligne_accroche = $resultat -> fetch();
 
+// Connexion à la table t_utilisateurs
+$resultat = $bdd -> query("SELECT * FROM t_utilisateurs");
+$ligne_utilisateur = $resultat -> fetch();
+
+// Connexion à la table t_formations
+$ligne_formation = '';
+$formation = '';
+
+$formation = $bdd -> query("SELECT * FROM t_formations");
+$ligne_formation = $formation -> fetchAll(PDO::FETCH_ASSOC);
+
+// Connexion à la table t_competences
+$resultat = $bdd -> prepare("SELECT * FROM t_competences");
+$resultat->execute();
+
 ?>
 
   <body id="page-top">
@@ -48,8 +63,8 @@ $ligne_accroche = $resultat -> fetch();
 
       <section class="resume-section p-3 p-lg-5 d-flex d-column" id="accueil">
         <div class="my-auto">
-          <h1 class="mb-0">Sara
-            <span class="text-primary">Fkaier</span>
+          <h1 class="mb-3"><?= $ligne_utilisateur['prenom']; ?>
+            <span class="text-primary"><?= $ligne_utilisateur['nom']; ?></span>
           </h1>
           <div class="subheading mb-5 text-md-center"><span id="holder"></span><span class="blinking-cursor">|</span>
             <!-- <a href="mailto:sarahfkaier@hotmail.fr">sarahfkaier@hotmail.fr</a> -->
@@ -93,51 +108,31 @@ $ligne_accroche = $resultat -> fetch();
         </div>
       </section>
 
-
       <section class="resume-section p-3 p-lg-5 d-flex flex-column fond" id="formations">
         <div class="my-auto">
-          <h2 class="mb-5">Formations</h2>
+          <h2 class="mb-3">Formations</h2>
+          <?php
+          for($i=0; $i<count($ligne_formation); $i++){?>
 
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
-              <h3 class="mb-0">LepoleS</h3>
-              <div class="subheading mb-3">Certification Intégratrice - Développeuse web</div>
+              <h3 class="mb-0"><?= $ligne_formation[$i]['f_titre']; ?></h3>
+              <div class="subheading mb-3"><?= $ligne_formation[$i]['f_soustitre']; ?></div>
               <!-- <p>GPA: 3.23</p> -->
             </div>
             <div class="resume-date text-md-right">
-              <span class="text-primary">Juin 2017 - Avril 2018</span>
+              <span class="text-primary"><?= $ligne_formation[$i]['f_dates']; ?></span>
             </div>
           </div>
 
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Akor Alternance</h3>
-              <div class="subheading mb-3">BTS Ressources Humaines</div>
-              <!-- <p>GPA: 3.56</p> -->
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">Septembre 2016 - Mai 2017</span>
-            </div>
-          </div>
-
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Lycée Saint-Exupéry</h3>
-              <div class="subheading mb-3">Bac STG</div>
-               <!-- <p>GPA: 3.23</p> -->
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">Septembre 2009 - juin 2012</span>
-            </div>
-          </div>
-
+          <?php } ?>
         </div>
       </section>
 
 
       <section class="resume-section p-3 p-lg-5 d-flex flex-column " id="competences">
         <div class="my-auto">
-          <h2 class="mb-5">Compétences</h2>
+          <h2 class="mb-3">Compétences</h2>
 
           <div class="subheading mb-3">Languages de programmation &amp; outils</div>
           <ul class="list-inline list-icons">
@@ -174,26 +169,21 @@ $ligne_accroche = $resultat -> fetch();
           </ul>
 
           <div class="subheading mb-3">Savoir-faire</div>
+          <?php
+          while ($ligne_competence = $resultat -> fetch()) {?>
           <ul class="fa-ul mb-0">
             <li>
               <i class="fa-li fa fa-check"></i>
-              Mobile-First, Design Responsive</li>
-            <li>
-              <i class="fa-li fa fa-check"></i>
-              Test du code &amp; Débuguage</li>
-            <li>
-              <i class="fa-li fa fa-check"></i>
-              Capacité d'adaptation &amp; réactivité</li>
-            <li>
-              <i class="fa-li fa fa-check"></i>
-              Intégrer une équipe</li>
+              <?= $ligne_competence['savoir_faire']; ?>
+            </li>
           </ul>
+          <?php } ?>
         </div>
       </section>
 
       <section class="resume-section p-3 p-lg-5 d-flex flex-column fond" id="realisations">
         <div class="my-auto">
-          <h2 class="mb-5">Mes réalisations</h2>
+          <h2 class="mb-3">Mes réalisations</h2>
           <picture>
             <div class="rotationImg">
               <!-- <h3>Image en HTML/CSS</h3> -->
@@ -206,24 +196,24 @@ $ligne_accroche = $resultat -> fetch();
       </section>
       <section class="resume-section p-3 p-lg-5 d-flex flex-column " id="loisirs">
         <div class="my-auto">
-          <h2 class="mb-5">Mes loisirs</h2>
+          <h2 class="mb-3">Mes loisirs</h2>
             <div class="container">
               <div class="row justify-content-md-center">
                 <div class="col-md-auto">
                   <img class="img-fluid rounded-circle mx-auto img-thumbnail" src="img/code.png" alt="">
-                  <p class="text-md-left">Coder, me mettre à jour<br> et toujours apprendre<br> de nouvelles choses.</p>
+                  <p class="text-md-center">Coder, me mettre à jour<br> et toujours apprendre<br> de nouvelles choses.</p>
                 </div>
                 <div class="col-md-auto">
                   <img class="img-fluid rounded-circle mx-auto img-thumbnail" src="img/logo-livre.gif" alt="">
-                  <p class="text-md-left">La lecture est à l'esprit<br> ce que les aliments<br> sont au corps.</p>
+                  <p class="text-md-center">La lecture est à l'esprit<br> ce que les aliments<br> sont au corps.</p>
                 </div>
                 <div class="col-md-auto">
                   <img class="img-fluid rounded-circle mx-auto img-thumbnail" src="img/dessin.jpg" alt="">
-                  <p class="text-md-left">Prendre un crayon,<br> une feuille et dessiner<br> ce que je vois.</p>
+                  <p class="text-md-center">Prendre un crayon,<br> une feuille et dessiner<br> ce que je vois.</p>
                 </div>
                 <div class="col-md-auto">
                   <img class="img-fluid rounded-circle mx-auto img-thumbnail" src="img/voyage.png" alt="">
-                  <p class="text-md-left">Le voyage est sans nul doute<br> l'une des expériences<br> les plus enrichissantes qu'il<br> nous est donné de vivre.</p>
+                  <p class="text-md-center">Le voyage est sans nul doute<br> l'une des expériences<br> les plus enrichissantes qu'il<br> nous est donné de vivre.</p>
                 </div>
               </div>
             </div>
@@ -232,7 +222,7 @@ $ligne_accroche = $resultat -> fetch();
 
       <section class="resume-section p-3 p-lg-5 d-flex flex-column fond" id="contact">
         <div class="my-auto">
-          <h2 class="mb-5">Contactez moi</h2>
+          <h2 class="mb-3">Contactez moi</h2>
 
           <div class="info"><p><i class="fa fa-smile-o fa-5x"  aria-hidden="true"></i></p></a></div>
 

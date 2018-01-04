@@ -20,10 +20,11 @@ $msg = '';
 
 // insertion d'une compétence
 if (isset($_POST['competence'])) { // Si on a posté une nouvelle comp.
-    if (!empty($_POST['competence']) && !empty($_POST['c_niveau'])) { // Si compétence n'est pas vide
+    if (!empty($_POST['competence']) && !empty($_POST['c_niveau']) && !empty($_POST['savoir_faire'])) { // Si compétence n'est pas vide
         $competence = addslashes($_POST['competence']);
         $c_niveau = addslashes($_POST['c_niveau']);
-        $pdo -> exec("INSERT INTO t_competences VALUES (NULL, '$competence', '$c_niveau', '$id_utilisateur')"); // mettre $id_utilisateur quand on l'aura dans la variable de session
+        $savoir_faire = addslashes($_POST['savoir_faire']);
+        $pdo -> exec("INSERT INTO t_competences VALUES (NULL, '$competence', '$c_niveau', '$savoir_faire', '$id_utilisateur')"); // mettre $id_utilisateur quand on l'aura dans la variable de session
         header("location: competence.php");
         exit();
 
@@ -95,6 +96,7 @@ if (isset($_GET['id_competence'])) { // on récupère la comp. par son id dans l
             <tr>
               <th>Compétences</th>
               <th>Niveau en %</th>
+              <th>Savoir-faire</th>
               <th>Suppression</th>
               <th>Modification</th>
             </tr>
@@ -102,6 +104,7 @@ if (isset($_GET['id_competence'])) { // on récupère la comp. par son id dans l
               <?php while ($ligne_competence = $resultat -> fetch()) { ?>
                 <td><?= $ligne_competence['competence'];?></td>
                 <td><?= $ligne_competence['c_niveau'];?></td>
+                <td><?= $ligne_competence['savoir_faire'];?></td>
                 <td><a href="competence.php?id_competence=<?= $ligne_competence['id_competence'];?>"><button type="button" class="btn btn-danger col-md-4 col-md-offset-4"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></a></td>
                 <td><a href="modif_competence.php?id_competence=<?= $ligne_competence['id_competence'];?>"><button type="button" class="btn btn-success col-md-4 col-md-offset-4"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button></a></td>
               </tr>
@@ -127,6 +130,11 @@ if (isset($_GET['id_competence'])) { // on récupère la comp. par son id dans l
                   <div class="form-group">
                     <label for="disabledSelect">Niveau</label>
                     <input type="text" name="c_niveau" id="c_niveau" placeholder="Insérer le niveau"  class="form-control">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="disabledSelect">Savoir-faire</label>
+                    <input type="text" name="savoir_faire" id="savoir_faire" placeholder="Insérer le savoir-faire"  class="form-control">
                   </div>
 
                   <input type="submit" class="btn btn-primary" value="Insérez">

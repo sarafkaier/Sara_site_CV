@@ -19,6 +19,7 @@ $pdo -> exec('SET NAMES utf8');
 $msg = ''; // permet de communiquer avec les utilisateur
 $page = ''; // contiendra le nom de la page en cours de visite (menu surbrillance + title de la page)
 $contenu = ''; // contenu nous permettra ponctuellemnt de stocker du contenu à afficher.
+
 // CHEMINS
 define('RACINE_SITE', $_SERVER['DOCUMENT_ROOT'] . '/github/Sara_site_CV/');
 define('URL', 'http://localhost/github/Sara_site_CV/');

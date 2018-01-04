@@ -117,7 +117,7 @@ if (isset($_GET['id_loisir'])) { // on récupère la comp. par son id dans l'url
                   <?= $msg; ?>
                   <div class="form-group">
                     <label for="disabledSelect">Loisir</label>
-                    <input type="text" name="loisir" id="loisir" placeholder="Insérer un loisir" class="form-control">
+                    <textarea name="loisir" id="loisir" placeholder="Insérer un loisir" class="form-control" rows="8" cols="80"></textarea>
                   </div>
                   <input type="submit" class="btn btn-primary" value="Insérez">
                 </fieldset>

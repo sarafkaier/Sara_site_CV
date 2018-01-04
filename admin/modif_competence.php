@@ -16,9 +16,10 @@ if (isset($_SESSION['connexion']) && $_SESSION['connexion'] == 'connecté') {
 if (isset($_POST['competence'])) { // par le nom du premier input
     $competence = addslashes($_POST['competence']);
     $c_niveau = addslashes($_POST['c_niveau']);
+    $savoir_faire = addslashes($_POST['savoir_faire']);
     $id_competence = $_POST['id_competence'];
 
-    $pdo -> exec("UPDATE t_competences SET competence = '$competence', c_niveau ='$c_niveau' WHERE id_competence = '$id_competence'");
+    $pdo -> exec("UPDATE t_competences SET competence = '$competence', c_niveau ='$c_niveau', savoir_faire ='$savoir_faire' WHERE id_competence = '$id_competence'");
     header('location: competence.php');
     exit();
 }
@@ -69,6 +70,11 @@ $ligne_competence = $resultat->fetch();
                         <div class="form-group">
                           <label for="competence">Niveau en % :</label><br>
                           <input type="number" name="c_niveau" value="<?= $ligne_competence['c_niveau']; ?>"><br><br>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="savoir_faire">Savoir-faire :</label><br>
+                          <input type="text" name="savoir_faire" value="<?= $ligne_competence['savoir_faire']; ?>"><br><br>
                         </div>
 
                         <div class="form-group">
