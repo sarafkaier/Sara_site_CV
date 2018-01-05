@@ -134,7 +134,7 @@ if (isset($_GET['id_titre_cv'])) { // on récupère la comp. par son id dans l'u
                     <textarea name="accroche" id="editor4" class="form-control" placeholder="Insérer une accroche"></textarea>
                   </div>
 
-                  <!-- <script>CKEDITOR.replace('editor4')</script> -->
+                  <script>CKEDITOR.replace('editor4')</script>
 
                   <div class="form-group">
                     <label for="disabledSelect">Logo</label>
