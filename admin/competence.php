@@ -1,5 +1,5 @@
 <?php
-require('inc/init.inc.php.');
+require('inc/init.inc.php');
 
 if (isset($_SESSION['connexion']) && $_SESSION['connexion'] == 'connecté') { // A mettre sur toutes les pages
 

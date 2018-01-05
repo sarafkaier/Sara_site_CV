@@ -29,7 +29,7 @@ $resultat->execute();
       <a class="navbar-brand js-scroll-trigger" href="#page-top">
         <span class="d-block d-lg-none">SF</span>
         <span class="d-none d-lg-block">
-          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/ordi.jpg" alt="">
+          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/ordi.jpg" alt="image d'un ordinateur">
         </span>
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -129,7 +129,6 @@ $resultat->execute();
         </div>
       </section>
 
-
       <section class="resume-section p-3 p-lg-5 d-flex flex-column " id="competences">
         <div class="my-auto">
           <h2 class="mb-3">Compétences</h2>
@@ -187,9 +186,9 @@ $resultat->execute();
           <picture>
             <div class="rotationImg">
               <!-- <h3>Image en HTML/CSS</h3> -->
-              <a href="http://sarafkaier.fr/"><img src="img/01.png" class="img-fluid image" alt=""></a>
+              <a href="http://sarafkaier.fr/"><img src="img/01.png" class="img-fluid image" alt="image de mon site CV"></a>
               <a href=""><img src="img/image.jpg" class="img-fluid image" alt=""></a>
-              <a href=""><img src="img/02.jpg" class="img-fluid image" alt=""></a>
+              <a href=""><img src="img/02.jpg" class="img-fluid image" alt="image du site annonceo"></a>
             </div>
           </picture>
         </div>
@@ -200,19 +199,19 @@ $resultat->execute();
             <div class="container">
               <div class="row justify-content-md-center">
                 <div class="col-md-auto">
-                  <img class="img-fluid rounded-circle mx-auto img-thumbnail" src="img/code.png" alt="">
+                  <img class="img-fluid rounded-circle mx-auto img-thumbnail" src="img/code.png" alt="logo code">
                   <p class="text-md-center">Coder, me mettre à jour<br> et toujours apprendre<br> de nouvelles choses.</p>
                 </div>
                 <div class="col-md-auto">
-                  <img class="img-fluid rounded-circle mx-auto img-thumbnail" src="img/logo-livre.gif" alt="">
+                  <img class="img-fluid rounded-circle mx-auto img-thumbnail" src="img/logo-livre.gif" alt="image d'un livre">
                   <p class="text-md-center">La lecture est à l'esprit<br> ce que les aliments<br> sont au corps.</p>
                 </div>
                 <div class="col-md-auto">
-                  <img class="img-fluid rounded-circle mx-auto img-thumbnail" src="img/dessin.jpg" alt="">
+                  <img class="img-fluid rounded-circle mx-auto img-thumbnail" src="img/dessin.jpg" alt="image d'un crayon et d'un pinceau">
                   <p class="text-md-center">Prendre un crayon,<br> une feuille et dessiner<br> ce que je vois.</p>
                 </div>
                 <div class="col-md-auto">
-                  <img class="img-fluid rounded-circle mx-auto img-thumbnail" src="img/voyage.png" alt="">
+                  <img class="img-fluid rounded-circle mx-auto img-thumbnail" src="img/voyage.png" alt="image d'un avion">
                   <p class="text-md-center">Le voyage est sans nul doute<br> l'une des expériences<br> les plus enrichissantes qu'il<br> nous est donné de vivre.</p>
                 </div>
               </div>
@@ -288,4 +287,4 @@ $resultat->execute();
       </section>
     </div>
 
-<?php include 'inc/footer.inc.php'; ?>
+<?php include 'inc/footer.inc.php';
