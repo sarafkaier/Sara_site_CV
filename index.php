@@ -104,7 +104,7 @@ $resultat->execute();
                         </a>
                     </li>
                 </ul><br>
-                <a href="CV_sara_fkaier.pdf" target="_blank" class="inter-section-button offset-md-5">Télécharger mon CV</a>
+                <a href="CV_sara_fkaier.pdf" target="_blank" class="inter-section-button offset-md-5">Téléchargez mon CV</a>
             </div>
         </section>
 
@@ -271,7 +271,7 @@ $resultat->execute();
                             </div>
                         </div>
                     </div>
-                    <button type="submit" class="bouton-contact">Envoyer</button>
+                    <button type="submit" class="bouton-contact">Envoyez</button>
                 </form>
                 <div class="resume-item d-flex flex-column flex-md-row mb-0">
                     <div class="resume-content mx-auto">
