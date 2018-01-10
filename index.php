@@ -185,8 +185,8 @@ $resultat->execute();
                     <div class="rotationImg">
                         <!-- <h3>Image en HTML/CSS</h3> -->
                         <a href="http://sarafkaier.fr/"><img src="img/01.png" class="img-fluid image" alt="image de mon site CV"></a>
-                        <a href=""><img src="img/image.jpg" class="img-fluid image" alt=""></a>
-                        <a href=""><img src="img/02.jpg" class="img-fluid image" alt="image du site annonceo"></a>
+                        <a href="http://generaction-solidaire.fr/" target="_blank"><img src="img/generaction.png" class="img-fluid image" alt=""></a>
+                        <a href="" target="_blank"><img src="img/02.jpg" class="img-fluid image" alt="image du site annonceo"></a>
                     </div>
                 </picture>
             </div>
