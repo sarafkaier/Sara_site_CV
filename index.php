@@ -88,7 +88,7 @@ $resultat->execute();
                         </a>
                     </li>
                     <li class="list-inline-item">
-                        <a href="https://www.linkedin.com/feed/" target="_blank">
+                        <a href="https://www.linkedin.com/in/sara-fkaier-9069a7146/" target="_blank">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
@@ -277,7 +277,7 @@ $resultat->execute();
                     <div class="resume-content mx-auto">
                         <p class="mb-0 tel"><i class="fa fa-phone-square"> 06 67 77 01 57</i></p>
                     </div>
-                    <div class="resume-date mx-auto">
+                    <div class="resume-date mx-auto ">
                         <p class="tel"><i class="fa fa-envelope"> sarahfkaier@hotmail.fr</i></p>
                     </div>
                 </div>
