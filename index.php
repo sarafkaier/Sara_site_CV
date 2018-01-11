@@ -69,7 +69,7 @@ $resultat->execute();
                 <div class="subheading mb-5 text-md-center"><span id="holder"></span><span class="blinking-cursor">|</span>
                     <!-- <a href="mailto:sarahfkaier@hotmail.fr">sarahfkaier@hotmail.fr</a> -->
                 </div>
-                <p class="presentation text-md-center"><?= $ligne_accroche['accroche']; ?></p><br><br>
+                <p class="presentation text-md-center">Développeuse et intégratrice web junior, je me passionne pour le développement back-end.<br> Je suis capable d'utiliser différentes technologies comme HTML5 & CSS3, JavaScript, PHP, MySQL de même que d'utiliser des CMS comme WordPress.<br> Mon but est d'associer design et technologie, afin de créer des sites internet attractifs. Vous trouverez ci-dessous mon CV papier à télécharger.</p><br><br>
                 <ul class="list-inline list-social-icons mb-0">
                     <li class="list-inline-item">
                         <a href="https://www.facebook.com/" target="_blank">

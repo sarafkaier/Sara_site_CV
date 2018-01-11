@@ -1,4 +1,4 @@
-Passionnée de numérique, je suis actuellement en formation d'intégrateur / développeur web, je suis à la recherche d’un stage d'une durée de 2 mois à partir de février. Ma formation de 10 mois m'a formé à la création de site web et au développement web et mobile. J'ai mis en pratique mes connaissances avec la réalisation de mon site CV (http://sarafkaier.fr/) et un projet client en cours de réalisation avec WordPress.
+Passionnée de numérique, je suis actuellement en formation d'intégrateur / développeur web, je suis à la recherche d’un stage d'une durée de 2 mois à partir de février. Ma formation de 10 mois m'a formé à la création de site web et au développement web et mobile. J'ai mis en pratique mes connaissances avec la réalisation de mon site CV (http://sarafkaier.fr/) et un projet client en cours de réalisation.
 Voici les principales missions qui peuvent m'être confiées : 
 - Concevoir des sites en responsive avec ou sans framework CSS (boostrap)
 - Administrer des bases de données SGBDR avec MySQL, exploiter ces bases et manipuler les données en utilisant SQL ou PDO
@@ -7,7 +7,7 @@ Voici les principales missions qui peuvent m'être confiées :
 - Assurer la mise en ligne d'un site client quelque soit la solution d'hébergement retenue
 - Travailler en équipe de manière efficace en utilisant les outils de versionning (GITHUB) 
 
-Je suis très intéressée par les missions du poste, je pense être  personne qu'il vous faut.  
+Je suis très intéressée par votre offre de stage et je pense être la personne qu’il vous faut. 
 Je suis joignable au : 06 67 77 01 57 
 Cordialement, 
 
