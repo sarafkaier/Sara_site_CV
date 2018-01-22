@@ -67,3 +67,7 @@ td{
 body{
   background: url(../img/fond.jpg);
 }
+.list-group-item.active>.badge, .nav-pills>.active>a>.badge {
+    color: #4D4545;
+    background-color: #fff;
+}

@@ -48,7 +48,7 @@ if(isset($_GET['id_commentaire'])) { // on récupère le loisir. par son id dans
   <div class="container">
     <div class="row">
       <?php while($ligne_commentaires = $sql->fetch()) : ?>
-          <div style="margin:30px 0px;padding:40px 0px; background: #F5F5F5;border-radius: 20px;border: 2px solid #B30753;">
+          <div style="margin:30px 0px;padding:40px 0px; background: #F5F5F5;border-radius: 20px;border: 2px solid #FFCDCD;">
               <div class="col-md-4">
                 <ul class="list-group">
                   <li class="list-group-item">
@@ -61,7 +61,7 @@ if(isset($_GET['id_commentaire'])) { // on récupère le loisir. par son id dans
                       <?= '<b>Sujet : </b><span class="badge">' . $ligne_commentaires['sujet'] . '</span>'  ?>
                   </li>
                   <li class="list-group-item">
-                      <?= '<b>Message : </b><span class="badge col-md-4">' . $ligne_commentaires['message'] . '</span>'  ?>
+                      <?= '<b>Message : </b><span class="badge">' . $ligne_commentaires['message'] . '</span>'  ?>
                   </li>
                   <li class="list-group-item">
                       <?= '<b>Email : </b><span class="badge">' . $ligne_commentaires['email'] . '</span>'  ?>
@@ -77,7 +77,7 @@ if(isset($_GET['id_commentaire'])) { // on récupère le loisir. par son id dans
             <div class="row">
                 <div class="col-md-4 ">
                     <ul class="list-group">
-                        <li class="list-group-item active msg" style="box-sizing:border-box;">
+                        <li class="list-group-item active msg" style="box-sizing:border-box; background:#FFCDCD; border: 2px solid #FFCDCD; color:white;">
                             <?= '<i>Message de :</i><b> ' . $ligne_commentaires['nom'] . '</b><br><br><span class="badge">' .  $ligne_commentaires['message'] .'</span> <br>' ?>
                         </li>
                     </ul>
