@@ -113,7 +113,7 @@ $resultat->execute();
                 <h2 class="mb-3">Formations</h2>
                 <?php for ($i = 0; $i < count($ligne_formation); $i++) { ?>
 
-                    <div class="resume-item d-flex flex-column flex-md-row mb-5">
+                    <div class="resume-item d-flex flex-column flex-md-row mb-5 titre">
                         <div class="resume-content mr-auto">
                             <h3 class="mb-0"><?= $ligne_formation[$i]['f_titre']; ?></h3>
                             <div class="subheading mb-3"><?= $ligne_formation[$i]['f_soustitre']; ?></div>
@@ -132,7 +132,7 @@ $resultat->execute();
             <div class="my-auto">
                 <h2 class="mb-3">Compétences</h2>
 
-                <div class="subheading mb-3">Languages de programmation &amp; outils</div>
+                <div class="subheading mb-3 titre">Languages de programmation &amp; outils</div>
                 <ul class="list-inline list-icons">
                     <li class="list-inline-item">
                         <i class="devicons devicons-html5"><span>HTML5<br>80%</span></i>
@@ -166,7 +166,7 @@ $resultat->execute();
                     </li>
                 </ul>
 
-                <div class="subheading mb-3">Savoir-faire</div>
+                <div class="subheading mb-3 titre">Savoir-faire</div>
                 <?php while ($ligne_competence = $resultat->fetch()) { ?>
                     <ul class="fa-ul mb-0">
                         <li>
@@ -182,7 +182,7 @@ $resultat->execute();
             <div class="my-auto">
                 <h2 class="mb-3">Mes réalisations</h2>
                 <picture>
-                    <div class="rotationImg">
+                    <div class="rotationImg titre">
                         <!-- <h3>Image en HTML/CSS</h3> -->
                         <a href="http://sarafkaier.fr/"><img src="img/01.png" class="img-fluid image" alt="image de mon site CV"></a>
                         <a href="http://generaction-solidaire.fr/" target="_blank"><img src="img/generaction.png" class="img-fluid image" alt=""></a>
@@ -194,7 +194,7 @@ $resultat->execute();
         <section class="resume-section p-3 p-lg-5 d-flex flex-column " id="loisirs">
             <div class="my-auto">
                 <h2 class="mb-3">Mes loisirs</h2>
-                <div class="container">
+                <div class="container titre">
                     <div class="row justify-content-md-center">
                         <div class="col-md-auto">
                             <img class="img-fluid rounded-circle mx-auto img-thumbnail" src="img/code.png" alt="logo code">
@@ -221,13 +221,13 @@ $resultat->execute();
             <div class="my-auto">
                 <h2 class="mb-3">Contactez moi</h2>
 
-                <div class="info"><p><i class="fa fa-smile-o fa-5x"  aria-hidden="true"></i></p></a></div>
+                <div class="info titre"><p><i class="fa fa-smile-o fa-5x"  aria-hidden="true"></i></p></a></div>
 
                 <form action="index.php" method="post">
 
                     <h3 class="contact">Un projet ? Mon profil vous intéresse ? N'hésitez pas à me contacter !</h3>
                     <!-- BONUS EMAIL -->
-                    
+
                     <!-- FIN BONUS EMAIL -->
                     <div class="contentform">
                         <div id="sendmessage"> Votre message a bien été envoyé ! Merci </div>

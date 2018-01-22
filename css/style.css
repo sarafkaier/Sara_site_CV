@@ -132,6 +132,7 @@ p {
   text-decoration: none;
   color: white!important;
 }
+
 /************************IMAGE************************************/
 .imageFond{
 	background: #000 url(../img/fond.jpg) no-repeat;
@@ -178,6 +179,7 @@ img[src="img/toureiffel.jpg"] {
   height: 150px;
   width: 150px;
 }
+
 /*******************************INFOBULLE*****************************/
 i:hover,i:focus{
   box-shadow:0 1px 0 rgba(255,255,255,.4);
@@ -202,6 +204,12 @@ i:hover span, i:focus span{
   transform:scale(1) rotate(0);
   opacity:1;
 }
+
+/**********************************TITRE***************************************/
+.titre {
+    margin-top: 4rem!important;
+}
+
 /*****************************FORMULAIRE*************************************/
 form h3 {
   font-size: 18px;
