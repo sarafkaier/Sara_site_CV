@@ -366,6 +366,13 @@ i {
   margin-top: 8%;
 }
 
+/**********************************RESPONSIVE************************************/
+@media (min-width: 768px){
+  section.resume-section {
+      min-height: 91vh;
+  }
+}
+
 /*******************************BAS DE PAGE*********************************/
 footer{
   background:linear-gradient(#130d0a, #363333);

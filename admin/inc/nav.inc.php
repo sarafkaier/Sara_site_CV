@@ -26,6 +26,7 @@
                         <li><a href="formations.php">Formations</a></li>
                         <li><a href="competence.php">Compétences</a></li>
                         <li><a href="loisirs.php">Loisirs</a></li>
+                        <li><a href="commentaire.php">Commentaires</a></li>
                         <li role="separator" class="divider"></li>
                         <li><a href="#">Liens</a></li>
                     </ul>
