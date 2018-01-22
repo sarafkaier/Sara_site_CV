@@ -226,6 +226,9 @@ $resultat->execute();
                 <form action="index.php" method="post">
 
                     <h3 class="contact">Un projet ? Mon profil vous intéresse ? N'hésitez pas à me contacter !</h3>
+                    <!-- BONUS EMAIL -->
+                    
+                    <!-- FIN BONUS EMAIL -->
                     <div class="contentform">
                         <div id="sendmessage"> Votre message a bien été envoyé ! Merci </div>
                         <div class="leftcontact">
