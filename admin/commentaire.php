@@ -48,7 +48,7 @@ if(isset($_GET['id_commentaire'])) { // on récupère le loisir. par son id dans
   <div class="container">
     <div class="row">
       <?php while($ligne_commentaires = $sql->fetch()) : ?>
-          <div style="margin:30px 0px;padding:40px 0px; background: #F5F5F5;border-radius: 20px;border: 2px solid #FFCDCD;">
+          <div style="margin:30px 110px;padding:40px 0px; background: #F5F5F5;border-radius: 20px;border: 2px solid #FFCDCD;">
               <div class="col-md-4">
                 <ul class="list-group">
                   <li class="list-group-item">
