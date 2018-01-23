@@ -123,7 +123,6 @@ $resultat->execute();
                             <span class="text-primary"><?= $ligne_formation[$i]['f_dates']; ?></span>
                         </div>
                     </div>
-
                 <?php } ?>
             </div>
         </section>
