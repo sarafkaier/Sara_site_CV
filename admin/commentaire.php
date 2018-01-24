@@ -39,7 +39,7 @@ if(isset($_GET['id_commentaire'])) { // on récupère le loisir. par son id dans
 <body>
   <?php include('inc/nav.inc.php'); ?>
   <div class="panel panel-default">
-    <div class="panel-heading">Vous avez <?=  $nbr_commentaires ?> messages</div>
+    <div class="panel-heading text-center">Vous avez <?=  $nbr_commentaires ?> messages</div>
   </div>
   <div class="container">
     <div class="row">
