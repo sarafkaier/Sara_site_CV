@@ -228,7 +228,7 @@ $success = 'Message envoyé !';
                 <form action="index.php" method="post">
 
                     <h3 class="contact">Un projet ? Mon profil vous intéresse ? N'hésitez pas à me contacter !</h3>
-                    <div class="alert alert-success" role="alert"><?php if(isset($valid)) echo $valid; ?></div>
+                    <div class="alert" role="alert"><?php if(isset($valid)) echo $valid; ?></div>
                     <div class="contentform">
                         <div id="sendmessage"></div>
                         <div class="leftcontact">
