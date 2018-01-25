@@ -192,7 +192,7 @@ $resultat->execute();
         </section>
         <section class="resume-section p-3 p-lg-5 d-flex flex-column " id="loisirs">
             <div class="my-auto">
-                <h2 class="mb-3">Mes loisirs</h2>
+                <h2 class="mb-3 text">Mes loisirs</h2>
                 <div class="container titre">
                     <div class="row justify-content-md-center">
                         <div class="col-md-auto">
@@ -218,7 +218,7 @@ $resultat->execute();
 
         <section class="resume-section p-3 p-lg-5 d-flex flex-column fond" id="contact">
             <div class="my-auto">
-                <h2 class="mb-3">Contactez moi</h2>
+                <h2 class="mb-3 text-md-center">Contactez moi</h2>
 
                 <div class="info titre"><p><i class="fa fa-smile-o fa-5x"  aria-hidden="true"></i></p></a></div>
 
