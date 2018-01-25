@@ -20,6 +20,9 @@ $ligne_formation = $formation->fetchAll(PDO::FETCH_ASSOC);
 // Connexion à la table t_competences
 $resultat = $bdd->prepare("SELECT * FROM t_competences");
 $resultat->execute();
+
+// on créé une variable de succès
+$success = 'Message envoyé !';
 ?>
 
 <body id="page-top">
@@ -225,11 +228,9 @@ $resultat->execute();
                 <form action="index.php" method="post">
 
                     <h3 class="contact">Un projet ? Mon profil vous intéresse ? N'hésitez pas à me contacter !</h3>
-                    <!-- BONUS EMAIL -->
-
-                    <!-- FIN BONUS EMAIL -->
+                    <div class="alert alert-success" role="alert"><?php if(isset($valid)) echo $valid; ?></div>
                     <div class="contentform">
-                        <div id="sendmessage"> Votre message a bien été envoyé ! Merci </div>
+                        <div id="sendmessage"></div>
                         <div class="leftcontact">
                             <div class="form-group">
                                 <p class="php"><?php if (isset($erreurnom)) echo $erreurnom; ?></p>

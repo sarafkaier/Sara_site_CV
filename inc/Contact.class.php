@@ -41,7 +41,7 @@ class Contact {
         $req->closeCursor();
     }
     // Bonus - envoi d'un email
-   public function sendEmail($sujet, $email, $message) {
+    public function sendEmail($sujet, $email, $message) {
        $this->to = 'sara.fkaier@lepoles.com';
        $this->email = strip_tags($email);
        $this->sujet = strip_tags($sujet);

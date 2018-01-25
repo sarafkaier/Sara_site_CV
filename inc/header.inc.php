@@ -1,22 +1,27 @@
 <?php
 require('Contact.class.php');
-// on vérifie que le formulaire a été posté
+// on vérifir que le formulaire a été posté
 if (!empty($_POST)) {
-    // on éclate le $_POST en tableau qui permet d'accéder directement au champs par des variables
-    extract($_POST);
-    // on effectue une validation des données du formulaire et on vérifie la validité de l'email
-    $valid = (empty($nom) || empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL) || empty($sujet) || empty($message)) ? false : true; // écriture ternaire pour if / else
-    $erreurnom = (empty($nom)) ? 'Indiquez votre nom' : null;
-    $erreuremail = (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) ? 'Entrez un email valide' : null;
-    $erreursujet = (empty($sujet)) ? 'Indiquez un sujet' : null;
-    $erreurmessage = (empty($message)) ? 'Parlez donc !!' : null;
-    // si tous les champs correctement renseignés
-    if ($valid) {
-        // on crée un nouvel objet (ou une instance) de la class Contact.class.php
-        $contact = new Contact();
-        // on utilise la méthode insertContact pour insérez en BDD
-        $contact->insertContact($nom, $email, $sujet, $message);
-    }
+  // on éclate le $_POST en tableau qui permet d'accéder directement au champs par des variables
+  extract($_POST);
+
+  // on effectue une validation des données du formulaire et on vérifie la validité de l'email
+  $valid = (empty($nom) || empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL) || empty($sujet) || empty($message)) ? false : true; // écriture ternaire pour if / else
+
+  $erreurnom = (empty($nom)) ? 'Indiquez votre nom' : null;
+  $erreuremail = (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) ? 'Entrez un email valide' : null;
+  $erreursujet = (empty($sujet)) ? 'Indiquez un sujet' : null;
+  $erreurmessage = (empty($message)) ? 'Parlez donc !!' : null;
+
+  $valid = ($valid) ? 'Votre message à bien été envoyé !' : null;
+
+  // si tous les champs correctement renseignés
+  if ($valid) {
+    // on crée un nouvel objet (ou une instance) de la class Contact.class.php
+    $contact = new Contact();
+    // on utilise la méthode insertContact pour insérez en BDD
+    $contact->insertContact($nom, $email, $sujet, $message);
+  }
 }
 // on utilise la méthode sendMail de la classe Contact.class.php
 //$contact->sendEmail($sujet, $email, $message);
