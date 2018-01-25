@@ -275,14 +275,6 @@ $resultat->execute();
                     </div>
                     <button type="submit" class="bouton-contact">Envoyez</button>
                 </form>
-                <div class="resume-item d-flex flex-column flex-md-row mb-0">
-                    <div class="resume-content mx-auto">
-                        <p class="mb-0 tel"><i class="fa fa-phone-square"> 06 67 77 01 57</i></p>
-                    </div>
-                    <div class="resume-date mx-auto">
-                        <p class="tel"><i class="fa fa-envelope"> sarahfkaier@hotmail.fr</i></p>
-                    </div>
-                </div>
             </div>
         </section>
     </div>
