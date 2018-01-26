@@ -11,9 +11,6 @@ $resultat = $bdd->query("SELECT * FROM t_utilisateurs");
 $ligne_utilisateur = $resultat->fetch();
 
 // Connexion à la table t_formations
-$ligne_formation = '';
-$formation = '';
-
 $formation = $bdd->query("SELECT * FROM t_formations");
 $ligne_formation = $formation->fetchAll(PDO::FETCH_ASSOC);
 

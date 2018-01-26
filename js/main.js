@@ -20,9 +20,9 @@ $(document).ready(function() {
   $("#holder").writeText("Recherche un stage dans le domaine du web.");
 })
 
-$(document).snowfall();
-
-$(window).resize(() => {
-    $(document).snowfall('clear');
-    $(document).snowfall();
-});
+// $(document).snowfall();
+//
+// $(window).resize(() => {
+//     $(document).snowfall('clear');
+//     $(document).snowfall();
+// });

@@ -15,7 +15,7 @@ if (!empty($_POST)) {
 
   $valid = ($valid) ? 'Votre message à bien été envoyé !' : null;
 
-  // si tous les champs correctement renseignés
+  // si tous les champs sont correctement renseignés
   if ($valid) {
     // on crée un nouvel objet (ou une instance) de la class Contact.class.php
     $contact = new Contact();
