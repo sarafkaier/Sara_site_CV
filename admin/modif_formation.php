@@ -18,7 +18,6 @@ if (isset($_POST['f_titre'])) { // par le nom du premier input
     $titre = addslashes($_POST['f_titre']);
     $soustitre = addslashes($_POST['f_soustitre']);
     $dates = addslashes($_POST['f_dates']);
-    $description = addslashes($_POST['f_description']);
 
     $pdo -> exec("UPDATE t_formations SET f_titre = '$titre', f_soustitre ='$soustitre', f_dates ='$dates', f_description ='$description' WHERE id_formation = '$id_formation'"); // SQL OK
     header('location: formations.php');
@@ -76,11 +75,6 @@ $ligne_formation = $resultat->fetch();
                           <div class="form-group">
                             <label for="f_dates">Dates :</label><br>
                             <input type="text" name="f_dates" value="<?= $ligne_formation['f_dates']; ?>"><br><br>
-                          </div>
-
-                          <div class="form-group">
-                            <label for="f_description">Description :</label><br>
-                            <input type="text" name="f_description" value="<?= $ligne_formation['f_description']; ?>"><br><br>
                           </div>
 
                           <input hidden name="id_formation" value="<?= $ligne_formation['id_formation']; ?>">
