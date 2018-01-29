@@ -16,7 +16,6 @@ if (isset($_SESSION['connexion']) && $_SESSION['connexion'] == 'connecté') {
 if (isset($_POST['titre_cv'])) { // par le nom du premier input
     $titre_cv = addslashes($_POST['titre_cv']);
     $accroche = addslashes($_POST['accroche']);
-    $logo = addslashes($_POST['logo']);
     $id_titre_cv = $_POST['id_titre_cv'];
 
     $pdo -> exec("UPDATE t_titre_cv SET titre_cv = '$titre_cv', accroche ='$accroche', logo ='$logo' WHERE id_titre_cv = '$id_titre_cv'");
@@ -70,11 +69,6 @@ $ligne_accroche = $resultat->fetch();
                         <div class="form-group">
                           <label for="accroche">Accroche :</label><br>
                           <input type="text" name="accroche" value="<?= $ligne_accroche['accroche']; ?>"><br><br>
-                        </div>
-
-                        <div class="form-group">
-                          <label for="logo">Logo :</label><br>
-                          <input type="text" name="logo" value="<?= $ligne_accroche['logo']; ?>"><br><br>
                         </div>
 
                         <div class="form-group">

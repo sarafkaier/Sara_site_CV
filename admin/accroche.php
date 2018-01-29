@@ -24,7 +24,6 @@ if (isset($_POST['t_titre_cv'])) { // Si on a posté une nouvelle form.
     if ($_POST['t_titre_cv']!='' && $_POST['accroche']!='' && $_POST['logo']!='') {
       $t_titre_cv = addslashes($_POST['t_titre_cv']);
       $accroche = addslashes($_POST['accroche']);
-      $logo = addslashes($_POST['logo']);
 
       $pdo -> exec("INSERT INTO t_titre_cv VALUES (NULL, '$t_titre_cv', '$accroche', '$logo', '$id_utilisateur')"); // mettre $id_utilisateur quand on l'aura dans la variable de session
       header("location: accroche.php");
@@ -98,7 +97,6 @@ if (isset($_GET['id_titre_cv'])) { // on récupère la comp. par son id dans l'u
             <tr>
               <th>Titre du CV</th>
               <th>Accroche</th>
-              <th>Logo</th>
               <th>Suppression</th>
               <th>Modification</th>
             </tr>
@@ -106,7 +104,6 @@ if (isset($_GET['id_titre_cv'])) { // on récupère la comp. par son id dans l'u
               <?php while ($ligne_accroche = $resultat -> fetch()) { ?>
                 <td><?= $ligne_accroche['titre_cv'];?></td>
                 <td><?= $ligne_accroche['accroche'];?></td>
-                <td><?= $ligne_accroche['logo'];?></td>
                 <td><a href="accroche.php?id_titre_cv=<?= $ligne_accroche['id_titre_cv'];?>"><button type="button" class="btn btn-danger col-md-6 col-md-offset-3"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></a></td>
                 <td><a href="modif_accroche.php?id_titre_cv=<?= $ligne_accroche['id_titre_cv'];?>"><button type="button" class="btn btn-success col-md-6 col-md-offset-3"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button></a></td>
               </tr>
