@@ -58,6 +58,9 @@ if (isset($_GET['id_formation'])) { // on récupère la comp. par son id dans l'
         <title>Admin : <?= ($ligne_utilisateur['pseudo']); ?></title>
         <link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans" rel="stylesheet">
 
+        <!--CKEditor-->
+        <script src="https://cdn.ckeditor.com/4.7.3/basic/ckeditor.js"></script>
+
         <!-- Bootstrap -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -85,17 +88,18 @@ if (isset($_GET['id_formation'])) { // on récupère la comp. par son id dans l'
         <li class="active">Formations</li>
     </ol>
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-10">
             <h2>Les formations :</h2>
             <h4 class="well">J'ai <?= $nbr_formations;?> formation<?= ($nbr_formations>1)?'s':''?></h4>
         </div>
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-10">
                 <table border="2" class="table table-condensed table-hover">
                     <tr>
                         <th>Titre</th>
                         <th>Sous-titre</th>
                         <th>Dates</th>
+                        <th>Description</th>
                         <th>Suppression</th>
                         <th>Modification</th>
                     </tr>
@@ -104,13 +108,14 @@ if (isset($_GET['id_formation'])) { // on récupère la comp. par son id dans l'
                             <td><?= $ligne_formation['f_titre'];?></td>
                             <td><?= $ligne_formation['f_soustitre'];?></td>
                             <td><?= $ligne_formation['f_dates'];?></td>
+                            <td><?= $ligne_formation['f_description'];?></td>
                             <td><a href="formations.php?id_formation=<?= $ligne_formation['id_formation'];?>"><button type="button" class="btn btn-danger col-md-6 col-md-offset-3"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></a></td>
                             <td><a href="modif_formation.php?id_formation=<?= $ligne_formation['id_formation'];?>"><button type="button" class="btn btn-success col-md-6 col-md-offset-3"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button></a></td>
                     </tr>
                         <?php } ?>
                     </table>
             </div>
-        <div class="col-md-4">
+        <div class="col-md-10">
             <div class="panel panel-info">
                 <div class="panel-body">
                     <div class="panel panel-info">
@@ -138,8 +143,9 @@ if (isset($_GET['id_formation'])) { // on récupère la comp. par son id dans l'
 
                                 <div class="form-group">
                                     <label for="disabledSelect">Description</label>
-                                    <textarea name="f_description" id="f_description" class="form-control" placeholder="Insérer une description"></textarea>
+                                    <textarea name="f_description" id="editor1" class="form-control" placeholder="Insérer une description"></textarea>
                                 </div>
+                                <script>CKEDITOR.replace('editor1')</script>
 
                                 <input type="submit" class="btn btn-primary" value="Insérez">
 

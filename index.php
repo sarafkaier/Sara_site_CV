@@ -69,7 +69,7 @@ $success = 'Message envoyé !';
                 <div class="subheading mb-5 text-md-center"><span id="holder"></span><span class="blinking-cursor">|</span>
                     <!-- <a href="mailto:sarahfkaier@hotmail.fr">sarahfkaier@hotmail.fr</a> -->
                 </div>
-                <p class="presentation text-md-center"><?= $ligne_accroche['accroche'] ?></p><br><br>
+                <p class="presentation text-md-center">><?= $ligne_accroche['accroche'] ?></p><br><br>
                 <ul class="list-inline list-social-icons mb-0">
                     <li class="list-inline-item">
                         <a href="https://www.facebook.com/" target="_blank">
@@ -117,6 +117,7 @@ $success = 'Message envoyé !';
                         <div class="resume-content mr-auto">
                             <h3 class="mb-0"><?= $ligne_formation[$i]['f_titre']; ?></h3>
                             <div class="subheading mb-3"><?= $ligne_formation[$i]['f_soustitre']; ?></div>
+                            <div class="subheading mb-2"><?= $ligne_formation[$i]['f_description']; ?></div>
                             <!-- <p>GPA: 3.23</p> -->
                         </div>
                         <div class="resume-date text-md-right">
