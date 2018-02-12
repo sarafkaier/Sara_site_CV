@@ -104,7 +104,7 @@ if (isset($_GET['id_titre_cv'])) { // on récupère la comp. par son id dans l'u
               <?php while ($ligne_accroche = $resultat -> fetch()) { ?>
                 <td><?= $ligne_accroche['titre_cv'];?></td>
                 <td><?= $ligne_accroche['accroche'];?></td>
-                <td><a href="accroche.php?id_titre_cv=<?= $ligne_accroche['id_titre_cv'];?>"><button type="button" class="btn btn-danger col-md-6 col-md-offset-3"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></a></td>
+                <td><a href="accroche.php?id_titre_cv=<?= $ligne_accroche['id_titre_cv'];?>"><button type="button" class="btn btn-danger col-md-6 col-md-offset-3" onclick="return confirm('Etes vous sûre de vouloir supprimer cette valeur ?');"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></a></td>
                 <td><a href="modif_accroche.php?id_titre_cv=<?= $ligne_accroche['id_titre_cv'];?>"><button type="button" class="btn btn-success col-md-6 col-md-offset-3"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button></a></td>
               </tr>
             <?php } ?>

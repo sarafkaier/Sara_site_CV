@@ -62,7 +62,7 @@ if(isset($_GET['id_commentaire'])) { // on récupère le loisir. par son id dans
                   <li class="list-group-item">
                       <?= '<b>Email : </b><span class="badge">' . $ligne_commentaires['email'] . '</span>'  ?>
                   </li>
-                  <a id="supr-comment" href="commentaire.php?id_commentaire=<?= $ligne_commentaires['id_commentaire']; ?>">
+                  <a id="supr-comment" href="commentaire.php?id_commentaire=<?= $ligne_commentaires['id_commentaire']; ?>" onclick="return confirm('Etes vous sûre de vouloir supprimer cette valeur ?');">
                     <li class="list-group-item list-group-item-danger text-center hoover-comment">
                       <b>Supprimer le message</b>
                     </li>
