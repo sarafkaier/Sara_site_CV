@@ -17,7 +17,7 @@ $(document).ready(function() {
  })(jQuery);
 
  // input text for typing animation
-  $("#holder").writeText("Recherche un stage dans le domaine du web.");
+  $("#holder").writeText("Recherche une alternance dans le domaine du web.");
 })
 
 // $(document).snowfall();
