@@ -1,18 +1,14 @@
 <?php
 require('inc/init.inc.php');
-
 if (isset($_SESSION['connexion']) && $_SESSION['connexion'] == 'connecté') { // A mettre sur toutes les pages
-
   $id_utilisateur = $_SESSION['id_utilisateur'];
   $prenom = $_SESSION['prenom'];
   $nom = $_SESSION['nom'];
-
   // echo $_SESSION['connexion'];
 } else { // l'utilisateur n'est pas connecté
   header('location: authentification.php');
 }
-
-$sql = $pdo->query("SELECT * FROM t_commentaires ORDER BY id_commentaire DESC");
+$sql = $pdo->prepare("SELECT * FROM t_commentaires ORDER BY id_commentaire DESC");
 $nbr_commentaires = $sql->rowCount();
 if(isset($_GET['id_commentaire'])) { // on récupère le loisir. par son id dans l'url
     $efface = $_GET['id_commentaire']; //  je mets cela dans une variable
