@@ -80,6 +80,6 @@ $page = 'Connexion';
       </form>
     </div>
   </div><!-- /.container -->
+  <?php include('inc/footer.inc.php'); ?>
 </body>
 </html>
-<?php include('inc/footer.inc.php'); ?>

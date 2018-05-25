@@ -32,7 +32,7 @@ class Contact {
       $req = $bdd->prepare('INSERT INTO t_commentaires (nom, email, sujet, message) VALUES (:nom, :email, :sujet, :message)');
 
       $req->execute([
-        ':nom'	    => $this->nom, //on attribue à la variable co_nom la valeur de l'objet en cours d'instanciation, le nom de l'auteur du message qui vient d'^tre posté
+        ':nom'	    => $this->nom, //on attribue à la variable co_nom la valeur de l'objet en cours d'instanciation, le nom de l'auteur du message qui vient d'être posté
         ':email'	  => $this->email,
         ':sujet'	  => $this->sujet,
         ':message'	=> $this->message]);
@@ -41,7 +41,7 @@ class Contact {
         $req->closeCursor();
     }
     // Bonus - envoi d'un email
-   public function sendEmail($sujet, $email, $message) {
+    public function sendEmail($sujet, $email, $message) {
        $this->to = 'sara.fkaier@lepoles.com';
        $this->email = strip_tags($email);
        $this->sujet = strip_tags($sujet);

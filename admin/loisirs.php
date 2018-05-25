@@ -98,7 +98,7 @@ if (isset($_GET['id_loisir'])) { // on récupère la comp. par son id dans l'url
             <tr>
               <?php while ($ligne_loisir = $resultat -> fetch()) { ?>
                 <td><?= $ligne_loisir['loisir'];?></td>
-                <td><a href="loisirs.php?id_loisir=<?= $ligne_loisir['id_loisir'];?>"><button type="button" class="btn btn-danger col-md-3 col-md-offset-4"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></a></td>
+                <td><a href="loisirs.php?id_loisir=<?= $ligne_loisir['id_loisir'];?>"><button type="button" class="btn btn-danger col-md-3 col-md-offset-4" onclick="return confirm('Etes vous sûre de vouloir supprimer cette valeur ?');"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></a></td>
                 <td><a href="modif_loisir.php?id_loisir=<?= $ligne_loisir['id_loisir'];?>"><button type="button" class="btn btn-success col-md-3 col-md-offset-4"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button></a></td>
               </tr>
             <?php } ?>

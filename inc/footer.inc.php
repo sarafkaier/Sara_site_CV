@@ -1,7 +1,7 @@
 <footer>
   <div class="container">
     <p><i class="fa fa-copyright" aria-hidden="true"></i> <?= date('Y') ?> - Site CV Sara</p>
-    <a href="admin/authentification.php"><i class="fa fa-lock" aria-hidden="true"></i></a>
+    <a href="admin/authentification.php" target="_blank"><i class="fa fa-lock" aria-hidden="true"></i></a>
   </div>
 </footer>
 

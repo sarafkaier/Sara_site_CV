@@ -11,15 +11,15 @@ $resultat = $bdd->query("SELECT * FROM t_utilisateurs");
 $ligne_utilisateur = $resultat->fetch();
 
 // Connexion à la table t_formations
-$ligne_formation = '';
-$formation = '';
-
 $formation = $bdd->query("SELECT * FROM t_formations");
 $ligne_formation = $formation->fetchAll(PDO::FETCH_ASSOC);
 
 // Connexion à la table t_competences
 $resultat = $bdd->prepare("SELECT * FROM t_competences");
 $resultat->execute();
+
+// on créé une variable de succès
+$success = 'Message envoyé !';
 ?>
 
 <body id="page-top">
@@ -69,7 +69,7 @@ $resultat->execute();
                 <div class="subheading mb-5 text-md-center"><span id="holder"></span><span class="blinking-cursor">|</span>
                     <!-- <a href="mailto:sarahfkaier@hotmail.fr">sarahfkaier@hotmail.fr</a> -->
                 </div>
-                <p class="presentation text-md-center">Développeuse et intégratrice web junior, je me passionne pour le développement back-end.<br> Je suis capable d'utiliser différentes technologies comme HTML5 & CSS3, JavaScript, PHP, MySQL de même que d'utiliser des CMS comme WordPress.<br> Mon but est d'associer design et technologie, afin de créer des sites internet attractifs. Vous trouverez ci-dessous mon CV papier à télécharger.</p><br><br>
+                <p class="presentation text-md-center">Développeuse et intégratrice web junior, je me passionne pour le développement back-end. Je suis capable d'utiliser différentes technologies comme HTML5 & CSS3, JavaScript, PHP, MySQL de même que d'utiliser des CMS comme Wordpress. Mon but est d'associer design et technologie, afin de créer des sites internet attractifs. Vous trouverez ci-dessous mon CV papier à télécharger.</p><br><br>
                 <ul class="list-inline list-social-icons mb-0">
                     <li class="list-inline-item">
                         <a href="https://www.facebook.com/" target="_blank">
@@ -117,13 +117,13 @@ $resultat->execute();
                         <div class="resume-content mr-auto">
                             <h3 class="mb-0"><?= $ligne_formation[$i]['f_titre']; ?></h3>
                             <div class="subheading mb-3"><?= $ligne_formation[$i]['f_soustitre']; ?></div>
+                            <div class="subheading mb-2"><?= $ligne_formation[$i]['f_description']; ?></div>
                             <!-- <p>GPA: 3.23</p> -->
                         </div>
                         <div class="resume-date text-md-right">
                             <span class="text-primary"><?= $ligne_formation[$i]['f_dates']; ?></span>
                         </div>
                     </div>
-
                 <?php } ?>
             </div>
         </section>
@@ -186,14 +186,14 @@ $resultat->execute();
                         <!-- <h3>Image en HTML/CSS</h3> -->
                         <a href="http://sarafkaier.fr/"><img src="img/01.png" class="img-fluid image" alt="image de mon site CV"></a>
                         <a href="http://generaction-solidaire.fr/" target="_blank"><img src="img/generaction.png" class="img-fluid image" alt=""></a>
-                        <a href="" target="_blank"><img src="img/02.jpg" class="img-fluid image" alt="image du site annonceo"></a>
+                        <a href="#" target="_blank"><img src="img/02.jpg" class="img-fluid image" alt="image du site annonceo"></a>
                     </div>
                 </picture>
             </div>
         </section>
         <section class="resume-section p-3 p-lg-5 d-flex flex-column " id="loisirs">
             <div class="my-auto">
-                <h2 class="mb-3">Mes loisirs</h2>
+                <h2 class="mb-3 text">Mes loisirs</h2>
                 <div class="container titre">
                     <div class="row justify-content-md-center">
                         <div class="col-md-auto">
@@ -219,18 +219,16 @@ $resultat->execute();
 
         <section class="resume-section p-3 p-lg-5 d-flex flex-column fond" id="contact">
             <div class="my-auto">
-                <h2 class="mb-3">Contactez moi</h2>
+                <h2 class="mb-3 text-md-center">Contactez moi</h2>
 
                 <div class="info titre"><p><i class="fa fa-smile-o fa-5x"  aria-hidden="true"></i></p></a></div>
 
                 <form action="index.php" method="post">
 
                     <h3 class="contact">Un projet ? Mon profil vous intéresse ? N'hésitez pas à me contacter !</h3>
-                    <!-- BONUS EMAIL -->
-
-                    <!-- FIN BONUS EMAIL -->
+                    <div class="alert" role="alert"><?php if(isset($valid)) echo $valid; ?></div>
                     <div class="contentform">
-                        <div id="sendmessage"> Votre message a bien été envoyé ! Merci </div>
+                        <div id="sendmessage"></div>
                         <div class="leftcontact">
                             <div class="form-group">
                                 <p class="php"><?php if (isset($erreurnom)) echo $erreurnom; ?></p>
@@ -276,14 +274,6 @@ $resultat->execute();
                     </div>
                     <button type="submit" class="bouton-contact">Envoyez</button>
                 </form>
-                <div class="resume-item d-flex flex-column flex-md-row mb-0">
-                    <div class="resume-content mx-auto">
-                        <p class="mb-0 tel"><i class="fa fa-phone-square"> 06 67 77 01 57</i></p>
-                    </div>
-                    <div class="resume-date mx-auto">
-                        <p class="tel"><i class="fa fa-envelope"> sarahfkaier@hotmail.fr</i></p>
-                    </div>
-                </div>
             </div>
         </section>
     </div>

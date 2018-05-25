@@ -111,7 +111,7 @@ if (isset($_GET['id_realisation'])) { // on récupère la comp. par son id dans 
                 <td><?= $ligne_realisation['r_soustitre'];?></td>
                 <td><?= $ligne_realisation['r_dates'];?></td>
                 <td><?= $ligne_realisation['r_description'];?></td>
-                <td><a href="realisations.php?id_realisation=<?= $ligne_realisation['id_realisation'];?>"><button type="button" class="btn btn-danger col-md-4 col-md-offset-4"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></a></td>
+                <td><a href="realisations.php?id_realisation=<?= $ligne_realisation['id_realisation'];?>"><button type="button" class="btn btn-danger col-md-4 col-md-offset-4" onclick="return confirm('Etes vous sûre de vouloir supprimer cette valeur ?');"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></a></td>
                 <td><a href="modif_realisation.php?id_realisation=<?= $ligne_realisation['id_realisation'];?>"><button type="button" class="btn btn-success col-md-4 col-md-offset-4"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button></a></td>
               </tr>
             <?php } ?>

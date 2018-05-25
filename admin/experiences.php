@@ -107,7 +107,7 @@ if (isset($_GET['id_experience'])) { // on récupère la comp. par son id dans l
                 <td><?= $ligne_experience['e_soustitre'];?></td>
                 <td><?= $ligne_experience['e_dates'];?></td>
                 <td><?= $ligne_experience['e_description'];?></td>
-                <td><a href="experiences.php?id_experience=<?= $ligne_experience['id_experience'];?>"><button type="button" class="btn btn-danger col-md-6 col-md-offset-3"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></a></td>
+                <td><a href="experiences.php?id_experience=<?= $ligne_experience['id_experience'];?>"><button type="button" class="btn btn-danger col-md-6 col-md-offset-3" onclick="return confirm('Etes vous sûre de vouloir supprimer cette valeur ?');"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></a></td>
                 <td><a href="modif_experience.php?id_experience=<?= $ligne_experience['id_experience'];?>"><button type="button" class="btn btn-success col-md-6 col-md-offset-3"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button></a></td>
               </tr>
             <?php } ?>

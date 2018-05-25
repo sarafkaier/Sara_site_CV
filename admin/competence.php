@@ -35,7 +35,6 @@ if (isset($_POST['competence'])) { // Si on a posté une nouvelle comp.
 
 } // ferme le if(isset) du form
 
-
 // Suppression d'une compétence
 if (isset($_GET['id_competence'])) { // on récupère la comp. par son id dans l'url
     $efface =  $_GET['id_competence'];
@@ -105,7 +104,7 @@ if (isset($_GET['id_competence'])) { // on récupère la comp. par son id dans l
                 <td><?= $ligne_competence['competence'];?></td>
                 <td><?= $ligne_competence['c_niveau'];?></td>
                 <td><?= $ligne_competence['savoir_faire'];?></td>
-                <td><a href="competence.php?id_competence=<?= $ligne_competence['id_competence'];?>"><button type="button" class="btn btn-danger col-md-4 col-md-offset-4"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></a></td>
+                <td><a href="competence.php?id_competence=<?= $ligne_competence['id_competence'];?>"><button type="button" class="btn btn-danger col-md-4 col-md-offset-4" onclick="return confirm('Etes vous sûre de vouloir supprimer cette valeur ?');"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></a></td>
                 <td><a href="modif_competence.php?id_competence=<?= $ligne_competence['id_competence'];?>"><button type="button" class="btn btn-success col-md-4 col-md-offset-4"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button></a></td>
               </tr>
             <?php } ?>
