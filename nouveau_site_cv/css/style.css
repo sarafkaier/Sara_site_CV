@@ -5,3 +5,42 @@
 .taille{
   font-size: 38px;
 }
+
+.ecart{
+  margin-top: 20px;
+}
+
+.row-ecart{
+  margin-bottom: -44px;
+}
+
+.contenu {
+    width: 100%;
+    background-color: #EEE;
+    border-radius: 5px;
+}
+
+.skills {
+    text-align: right;
+    padding-right: 20px;
+    line-height: 40px;
+    color: white;
+    border-radius: 5px;
+}
+
+.html {
+  width: 90%;
+  background-image: linear-gradient(90deg, #156520 0%, #4CAF50 100%);
+}
+.css {
+  width: 80%;
+  background-image: linear-gradient(90deg, #015683 0%, #2196F3 100%);
+}
+.js {
+  width: 65%;
+  background-image: linear-gradient(90deg, #840306 0%, #F44336 100%);
+}
+.php {
+  width: 60%;
+  background-image: linear-gradient(90deg, #101010 0%, #606060 100%);
+}
