@@ -8,7 +8,7 @@
 }
 
 .ecart{
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .row-ecart{
@@ -43,7 +43,11 @@
   background-image: linear-gradient(90deg, #f3d7ca 0%, #f5eee6 100%);
 }
 .sql {
-  width: 40%;
+  width: 50%;
+  background-image: linear-gradient(90deg, #f3d7ca 0%, #f5eee6 100%);
+}
+.wp {
+  width: 45%;
   background-image: linear-gradient(90deg, #f3d7ca 0%, #f5eee6 100%);
 }
 .js {
@@ -54,7 +58,5 @@
   width: 35%;
   background-image: linear-gradient(90deg, #f3d7ca 0%, #f5eee6 100%);
 }
-.wp {
-  width: 30%;
-  background-image: linear-gradient(90deg, #f3d7ca 0%, #f5eee6 100%);
-}
+
+/*************************EXPERIENCE & FORMATIONS*********************************/
