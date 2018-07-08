@@ -1,3 +1,4 @@
+/**************************ACCUEIL***********************************/
 .titre{
   font-size: 55px;
 }
@@ -14,6 +15,7 @@
   margin-bottom: -44px;
 }
 
+/**************************COMPETENCES******************************/
 .contenu {
     width: 100%;
     background-color: #EEE;
@@ -24,23 +26,35 @@
     text-align: right;
     padding-right: 20px;
     line-height: 40px;
-    color: white;
+    color: grey;
     border-radius: 5px;
 }
 
 .html {
-  width: 90%;
-  background-image: linear-gradient(90deg, #156520 0%, #4CAF50 100%);
+  width: 80%;
+  background-image: linear-gradient(90deg, #f3d7ca 0%, #f5eee6 100%);
 }
 .css {
-  width: 80%;
-  background-image: linear-gradient(90deg, #015683 0%, #2196F3 100%);
-}
-.js {
-  width: 65%;
-  background-image: linear-gradient(90deg, #840306 0%, #F44336 100%);
+  width: 70%;
+  background-image: linear-gradient(90deg, #f3d7ca 0%, #f5eee6 100%);
 }
 .php {
-  width: 60%;
-  background-image: linear-gradient(90deg, #101010 0%, #606060 100%);
+  width: 50%;
+  background-image: linear-gradient(90deg, #f3d7ca 0%, #f5eee6 100%);
+}
+.sql {
+  width: 40%;
+  background-image: linear-gradient(90deg, #f3d7ca 0%, #f5eee6 100%);
+}
+.js {
+  width: 35%;
+  background-image: linear-gradient(90deg, #f3d7ca 0%, #f5eee6 100%);
+}
+.jq {
+  width: 35%;
+  background-image: linear-gradient(90deg, #f3d7ca 0%, #f5eee6 100%);
+}
+.wp {
+  width: 30%;
+  background-image: linear-gradient(90deg, #f3d7ca 0%, #f5eee6 100%);
 }
