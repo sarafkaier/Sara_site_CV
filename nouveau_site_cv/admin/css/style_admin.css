@@ -1,0 +1,73 @@
+@charset "UTF-8";
+/*CSS Document admin sara*/
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #222222;
+  text-align: center;
+}
+
+.well{
+  text-align: center;
+  background: #FBF7F7;
+}
+.breadcrumb{
+  background: #FBF7F7;
+}
+
+h1{
+  font-family: 'Bubblegum Sans', cursive;
+}
+h2{
+  font-family: 'Bubblegum Sans', cursive;
+}
+h4{
+  font-family: 'Bubblegum Sans', cursive;
+}
+p{
+  font-family: 'Bubblegum Sans', cursive;
+}
+li{
+  font-family: 'Bubblegum Sans', cursive;
+}
+a{
+  font-family: 'Bubblegum Sans', cursive;
+}
+th{
+  font-family: 'Bubblegum Sans', cursive;
+}
+td{
+  font-family: 'Bubblegum Sans', cursive;
+}
+div{
+  font-family: 'Bubblegum Sans', cursive;
+}
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
+    color: #fff;
+    background-color: #080808;
+}
+th{
+  text-align: center;
+}
+td{
+  text-align: center;
+}
+body{
+  background: url(../img/fond.jpg);
+}
+.list-group-item.active>.badge, .nav-pills>.active>a>.badge {
+    color: #4D4545;
+    background-color: #fff;
+}

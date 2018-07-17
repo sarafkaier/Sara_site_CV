@@ -1,32 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-
-  <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Sara Fkaier - Site CV</title>
-
-    <!-- Mon style CSS -->
-    <link rel="stylesheet" href="css/style.css">
-
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom fonts for this template -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-
-    <!-- Custom styles for this template -->
-    <link href="css/agency.min.css" rel="stylesheet">
-
-  </head>
+<?php
+include 'inc/header.inc.php';
+include 'inc/init.inc.php';
+?>
 
   <body id="page-top">
 
@@ -40,19 +15,19 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav text-uppercase ml-auto">
-            <li class="nav-item">
+            <li class="nav-item navi">
               <a class="nav-link js-scroll-trigger" href="#services">Compétences</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item navi">
               <a class="nav-link js-scroll-trigger" href="#portfolio">Réalisations</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item navi">
               <a class="nav-link js-scroll-trigger" href="#about">Expériences & formations</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item navi">
               <a class="nav-link js-scroll-trigger" href="#team">Loisirs</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item navi">
               <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
             </li>
           </ul>
@@ -68,7 +43,7 @@
           <div class="titre">Sara Fkaier</div>
           <div class="text-uppercase taille">Développeuse / intégratrice <br> web junior</div>
           <div class="ecart"></div>
-          <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Téléchargez mon CV</a>
+          <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" id="cv" href="CV_sara_fkaier.pdf" target="_blank">Téléchargez mon CV</a>
         </div>
       </div>
     </header>
@@ -138,7 +113,7 @@
                   <i class="fa fa-plus-circle fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="img/portfolio/site_cv.png" alt="">
+              <img class="img-fluid" src="img/portfolio/site_cv.jpg" alt="image site cv">
             </a>
             <div class="portfolio-caption">
               <h4>Mon site CV</h4>
@@ -152,7 +127,7 @@
                   <i class="fa fa-plus-circle fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="img/portfolio/generaction.png" alt="">
+              <img class="img-fluid" src="img/portfolio/generaction.jpg" alt="image site génér'action solidaire">
             </a>
             <div class="portfolio-caption">
               <h4>Génér'action solidaire</h4>
@@ -166,7 +141,7 @@
                   <i class="fa fa-plus-circle fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="img/portfolio/e_commerce.jpg" alt="">
+              <img class="img-fluid" src="img/portfolio/e_commerce.jpg" alt="image projet e-commerce">
             </a>
             <div class="portfolio-caption">
               <h4>Site E-commerce</h4>
@@ -191,7 +166,7 @@
             <ul class="timeline">
               <li>
                 <div class="timeline-image">
-                  <img class="rounded-circle img-fluid" src="img/about/5.jpg" alt="">
+                  <img class="rounded-circle img-fluid" src="img/about/5.jpg" alt="logo webforce3">
                 </div>
                 <div class="timeline-panel">
                   <div class="timeline-heading">
@@ -206,7 +181,7 @@
               </li>
               <li class="timeline-inverted">
                 <div class="timeline-image">
-                  <img class="rounded-circle img-fluid fond" src="img/about/6.png" alt="">
+                  <img class="rounded-circle img-fluid fond" src="img/about/6.png" alt="logo diplôme">
                 </div>
                 <div class="timeline-panel">
                   <div class="timeline-heading">
@@ -220,7 +195,7 @@
               </li>
               <li>
                 <div class="timeline-image">
-                  <img class="rounded-circle img-fluid" src="img/about/3.jpg" alt="">
+                  <img class="rounded-circle img-fluid" src="img/about/3.jpg" alt="image d'un ordinateur">
                 </div>
                 <div class="timeline-panel">
                   <div class="timeline-heading">
@@ -235,7 +210,7 @@
               </li>
               <li class="timeline-inverted">
                 <div class="timeline-image">
-                  <img class="rounded-circle img-fluid" src="img/about/7.jpg" alt="">
+                  <img class="rounded-circle img-fluid" src="img/about/7.jpg" alt="logo solidarité">
                 </div>
                 <div class="timeline-panel">
                   <div class="timeline-heading">
@@ -265,21 +240,21 @@
         <div class="row">
           <div class="col-sm-4">
             <div class="team-member">
-              <img class="mx-auto rounded-circle" src="img/team/1.jpg" alt="">
+              <img class="mx-auto rounded-circle" src="img/team/1.jpg" alt="image livre">
               <h4></h4>
               <p class="text-md-center">La lecture est à l'esprit<br> ce que les aliments<br> sont au corps.</p>
             </div>
           </div>
           <div class="col-sm-4">
             <div class="team-member">
-              <img class="mx-auto rounded-circle" src="img/team/2.jpg" alt="">
+              <img class="mx-auto rounded-circle" src="img/team/2.jpg" alt="image crayon">
               <h4></h4>
               <p class="text-md-center">Prendre un crayon,<br> une feuille et dessiner<br> ce que je vois.</p>
             </div>
           </div>
           <div class="col-sm-4">
             <div class="team-member">
-              <img class="mx-auto rounded-circle" src="img/team/3.jpg" alt="">
+              <img class="mx-auto rounded-circle" src="img/team/3.jpg" alt="image carte pour voyager et jumelles">
               <h4></h4>
               <p class="text-md-center">Le voyage est sans nul doute<br> l'une des expériences<br> les plus enrichissantes qu'il<br> nous est donné de vivre.</p>
             </div>
@@ -303,7 +278,7 @@
               <a href="https://www.facebook.com/" target="_blank">
                 <i class="fa fa-facebook fa-3x logo"></i>
               </a>
-              <a href="https://www.instagram.com/lepolesidf/?hl=fr" target="_blank">
+              <a href="https://plus.google.com/u/0/discover" target="_blank">
                 <i class="fa fa-google-plus fa-3x logo"></i>
               </a>
             </div>
@@ -317,21 +292,34 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Contactez-moi</h2>
+            <h2 class="section-heading text-uppercase ecart_titre">Contactez-moi</h2>
             <h3 class="section-subheading text-muted">Si mon profil vous intéresse n'hésitez pas à me contacter !</h3>
+            <!-- <div class="alert" role="alert"><?php if(isset($valid)) echo $valid; ?></div> -->
           </div>
         </div>
         <div class="row">
           <div class="col-lg-12">
-            <form action="" class="formulario">
-              <input type="text" class="formulario_input">
+            <form action="index.php" class="formulario" method="post">
+
+              <p class="formulaire"><?php if (isset($erreurnom)) echo $erreurnom; ?></p>
+              <input type="text" class="formulario_input" name="nom" value="<?php if (isset($nom)) echo $nom; ?>">
               <label for ="" class="formulario_label">Nom</label>
-              <input type="text" class="formulario_input">
+              <div class="validation"></div>
+
+              <input type="text" class="formulario_input" name="prenom">
               <label for ="" class="formulario_label">Prénom</label>
-              <input type="text" class="formulario_input">
+              <div class="validation"></div>
+
+              <p class="formulaire"><?php if (isset($erreuremail)) echo $erreuremail; ?></p>
+              <input type="text" class="formulario_input" name="email" value="<?php if (isset($email)) echo $email; ?>">
               <label for ="" class="formulario_label">E-mail</label>
-              <input type="text" class="formulario_input">
+              <div class="validation"></div>
+
+              <p class="formulaire"><?php if (isset($erreurmessage)) echo $erreurmessage; ?></p>
+              <input type="text" class="formulario_input" name="message" value="<?php if (isset($message)) echo $message; ?>">
               <label for ="" class="formulario_label">Commentaire</label>
+              <div class="validation"></div>
+
               <input type="submit" class="formulario_submit">
             </form>
           </div>
@@ -344,22 +332,22 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4">
-            <span class="copyright">Copyright &copy; Your Website 2018</span>
+            <span class="copyright">Copyright &copy; <?= date('Y') ?> - Site CV Sara</span>
           </div>
           <div class="col-md-4">
             <ul class="list-inline social-buttons">
               <li class="list-inline-item">
-                <a href="#">
-                  <i class="fa fa-twitter"></i>
+                <a href="https://plus.google.com/u/0/discover" target="_blank">
+                  <i class="fa fa-google-plus"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="#">
-                  <i class="fa fa-facebook"></i>
+                <a href="https://github.com/sarafkaier" target="_blank">
+                  <i class="fa fa-github"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="#">
+                <a href="https://www.linkedin.com/in/sara-fkaier-9069a7146/" target="_blank">
                   <i class="fa fa-linkedin"></i>
                 </a>
               </li>
@@ -368,10 +356,7 @@
           <div class="col-md-4">
             <ul class="list-inline quicklinks">
               <li class="list-inline-item">
-                <a href="#">Privacy Policy</a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">Terms of Use</a>
+                <a href="admin/authentification.php" target="_blank"><i class="fa fa-lock" aria-hidden="true"></i></a>
               </li>
             </ul>
           </div>
@@ -397,7 +382,7 @@
                   <!-- Project Details Go Here -->
                   <h2 class="text-uppercase">Mon site CV</h2>
                   <p class="item-intro text-muted">Fait avec HTML5, CSS3, JS et bootstrap.</p>
-                  <img class="img-fluid d-block mx-auto" src="img/portfolio/site_cv.png" alt="">
+                  <img class="img-fluid d-block mx-auto" src="img/portfolio/site_cv.jpg" alt="">
                   <p>Réalisation de mon premier site CV entièrement responsive.</p>
                   <ul class="list-inline">
                     <li>Date: Juillet 2018</li>
@@ -429,7 +414,7 @@
                   <!-- Project Details Go Here -->
                   <h2 class="text-uppercase">Génér'action solidaire</h2>
                   <p class="item-intro text-muted">Site fait avec wordpress.</p>
-                  <img class="img-fluid d-block mx-auto" src="img/portfolio/generaction.png" alt="">
+                  <img class="img-fluid d-block mx-auto" src="img/portfolio/generaction.jpg" alt="">
                   <p>Site réalisé pour une association qui lutte contre le harcèlement scolaire.</p>
                   <ul class="list-inline">
                     <li>Date: Février 2018</li>
@@ -477,6 +462,9 @@
       </div>
     </div>
 
+    <!-- Lien pour les compétences -->
+    <script src="js/main.js" type="text/javascript"></script>
+
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -490,9 +478,6 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/agency.min.js"></script>
-
-    <!-- Lien pour les compétences -->
-    <script type="js/main.js"></script>
 
   </body>
 

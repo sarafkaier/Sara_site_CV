@@ -4,6 +4,10 @@
   text-shadow: 2px 2px 4px grey;
 }
 
+.navi{
+  font-size: 14px;
+}
+
 .taille{
   font-size: 44px;
   text-shadow: 2px 2px 4px grey;
@@ -14,13 +18,17 @@
 }
 
 .ecart{
-  margin-top: 138px;
+  margin-top: 150px;
 }
 
 .row-ecart{
   margin-bottom: -44px;
 }
 
+#cv:hover{
+  background-color: #ffe121;
+  border-color: #ffe121;
+}
 /**************************COMPETENCES******************************/
 .contenu {
     width: 100%;
@@ -81,6 +89,11 @@
   background-color: white;
 }
 
+/********************************LOISIRS****************************************/
+#team{
+  margin-bottom: -96px;
+}
+
 /*****************************RESEAUX SOCIAUX**************************************/
 .couleur{
   background-image: linear-gradient(#f3d7ca , #f5eee6);
@@ -107,13 +120,17 @@
 }
 
 /*************************************CONTACT******************************************/
+#contact{
+  background-size: 1472px;
+}
+
 .formulario {
   width: 642px;
   margin: auto;
   max-width: 100%;
-  margin-top: 30px;
-  padding: 20px;
-  box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);
+  margin-top: -4px;
+  padding: 37px;
+  box-shadow:0 0 20px 1px rgba(0, 0, 0, 1);
   position: relative;
 }
 
@@ -156,4 +173,37 @@
 
 .fijar {
   margin-top: -135px;
+}
+
+.formulaire{
+  font-size: 15px;
+  color: red;
+}
+
+.validation {
+  display:none;
+  margin: 0 0 10px;
+  font-weight:400;
+  font-size:13px;
+  color: green;
+}
+
+/**************************************BAS DE PAGE***************************************/
+footer{
+  background-color: #212529;
+}
+
+.copyright{
+  color: white;
+}
+
+.fa-lock{
+  color: white;
+  -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
+}
+
+.fa-lock:hover{
+  color: #fed136;
 }
