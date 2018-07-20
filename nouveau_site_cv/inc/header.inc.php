@@ -20,13 +20,14 @@ if (!empty($_POST)) {
     // on crée un nouvel objet (ou une instance) de la class Contact.class.php
     $contact = new Contact();
     // on utilise la méthode insertContact pour insérez en BDD
-    $contact->insertContact($nom, $email, $message);
+    $contact->insertContact($nom, $email, $sujet, $message);
   }
 }
 // on utilise la méthode sendMail de la classe Contact.class.php
 //$contact->sendEmail($sujet, $email, $message);
 // on efface les valeurs du formulaires
 unset($nom);
+unset($sujet);
 unset($message);
 unset($email);
 unset($contact);

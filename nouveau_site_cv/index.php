@@ -302,7 +302,7 @@ include 'inc/init.inc.php';
             <form action="index.php" class="formulario" method="post">
 
               <p class="formulaire"><?php if (isset($erreurnom)) echo $erreurnom; ?></p>
-              <input type="text" class="formulario_input" name="nom" value="<?php if (isset($nom)) echo $nom; ?>">
+              <input type="text" class="formulario_input" id="nom" name="nom" value="<?php if (isset($nom)) echo $nom; ?>">
               <label for ="" class="formulario_label">Nom</label>
               <div class="validation"></div>
 
@@ -311,12 +311,12 @@ include 'inc/init.inc.php';
               <div class="validation"></div>
 
               <p class="formulaire"><?php if (isset($erreuremail)) echo $erreuremail; ?></p>
-              <input type="text" class="formulario_input" name="email" value="<?php if (isset($email)) echo $email; ?>">
+              <input type="email" class="formulario_input" id="email" name="email" value="<?php if (isset($email)) echo $email; ?>">
               <label for ="" class="formulario_label">E-mail</label>
               <div class="validation"></div>
 
               <p class="formulaire"><?php if (isset($erreurmessage)) echo $erreurmessage; ?></p>
-              <input type="text" class="formulario_input" name="message" value="<?php if (isset($message)) echo $message; ?>">
+              <input type="text" class="formulario_input" id="message" name="message" value="<?php if (isset($message)) echo $message; ?>">
               <label for ="" class="formulario_label">Commentaire</label>
               <div class="validation"></div>
 

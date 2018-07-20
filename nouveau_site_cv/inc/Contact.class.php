@@ -29,11 +29,12 @@ class Contact {
        require('inc/init.inc.php');
 
       // on crée une requête puis on l'exécute
-      $req = $bdd->prepare('INSERT INTO t_commentaires (nom, email, message) VALUES (:nom, :email, :message)');
+      $req = $bdd->prepare('INSERT INTO t_commentaires (nom, email, sujet, message) VALUES (:nom, :email, :sujet, :message)');
 
       $req->execute([
         ':nom'	    => $this->nom, //on attribue à la variable co_nom la valeur de l'objet en cours d'instanciation, le nom de l'auteur du message qui vient d'être posté
         ':email'	  => $this->email,
+        ':sujet'	  => $this->sujet,
         ':message'	=> $this->message]);
 
         // on ferme la requête pour protéger des injections
